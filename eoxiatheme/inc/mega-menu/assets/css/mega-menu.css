@@ -1,0 +1,32 @@
+.eoxia-mega-menu {
+	clear: both;	
+	margin-right: 10px;
+	padding: 1em 1em 0 1em;
+}
+.eoxia-mega-menu.-active {
+	background: #f5fafc;
+	padding: 1em;
+}
+.eoxia-mega-menu:before, .eoxia-mega-menu:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.eoxia-mega-menu-options {
+	margin: 0 -.5em;
+}
+.eoxia-mega-menu-options > p {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	width: 50%;
+	margin: 0 !important;
+	float: left;
+	padding: .5em;
+}
+.eoxia-mega-menu input[type="text"], .eoxia-mega-menu input[type="number"], .eoxia-mega-menu select {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	width: 100%;
+}

@@ -1,0 +1,145 @@
+
+/*@import url(https://fonts.googleapis.com/css?family=Exo);*/
+
+.mce-content-body {
+	/*font-family: 'Exo', sans-serif;*/
+	font: normal 16px/1.625em sans-serif;
+}
+
+.chapo {
+	font-size: 1.6em;
+	line-height:  1.2;
+	margin-bottom: .75em;
+}
+blockquote {
+  padding: 1em 1em 1em 2em;
+  margin: 2em;
+  border-left: solid #eee 3px;
+  font-style: italic;
+}
+blockquote p {
+   margin-bottom: .5em;
+}
+.accordeon-header {
+	border: solid #ddd 1px;
+	padding: .5em 1em;
+	font-size: 1.2em;
+}
+.accordeon-content {
+	position: relative;
+	padding: 1em;
+	background: #eee;
+}
+.accordeon-content:after {
+	content:"Cette partie s'ouvre et se ferme lors du clic sur l'entête";
+	position: absolute;
+	top:0;
+	right: 0;
+	color:#fff;
+	background: #aaa;	
+}
+
+.accordeon-content.accordeon-header {
+	position: relative;
+	background: red;
+
+}
+.accordeon-content.accordeon-header:before {
+	content:"Erreur lors de la création de l'accordéon";
+	position: absolute;
+	top:0;
+	left: 0;
+	color:#fff;
+}
+.alerte {
+    font-size: 1em;
+    padding: 1em;
+    margin: 2em 0;
+    overflow: hidden;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: solid #eee 1px;
+}
+.alerte.success {
+  border-left: solid #74c246 4px;
+}
+.alerte.error {
+  border-left: solid #e74c3c 4px;
+}
+.alerte.warning {
+  border-left: solid #fcb231 4px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	word-wrap: break-word;
+}
+
+h1 {
+  font-size: 4.25em;
+  line-height: 1.0588235294117647;
+  margin-top: 0.35294117647058826em;
+  margin-bottom: 0.17647059em;
+}
+h2 {
+  font-size: 2.625em;
+  line-height: 1.1428571428571428;
+  margin-top: 0.5714285714285714em;
+  margin-bottom: 0.28571429em;
+}
+h3 {
+  font-size: 1.625em;
+  line-height: 1.8461538461538463;
+  margin-top: 0.9230769230769231em;
+  margin-bottom: 0.46153846em;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom: .75em;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom:.75em;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-bottom:.75em;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+	padding: 0 0 0 1.5em;
+}
+li {
+	line-height: 1.4;
+	margin: .5em 0;
+}
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
