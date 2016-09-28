@@ -80,6 +80,10 @@ function eox_get_font_transform(){
 }
 
 function eox_google_fonts() {
+
+	// Cancel if no font
+	if( !eox_get_font_url() ) return;
+
 	$query_args = array(
 		'family' => eox_get_font_url(),
 		'subset' => 'latin,latin-ext'
