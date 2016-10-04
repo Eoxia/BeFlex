@@ -95,8 +95,8 @@ function eox_format_atts( $atts ){
 
 	$atts['iscarousel'] = $atts['iscarousel'] ? 'js-flickity' : false;	 /* Création classe carousel  */
 
-	$atts['bloc_class'] = 'bloc-item '.$atts['display'].' '.$atts['itemperline'].' '.$atts['mode'].' '.$atts['displaybutton'].' '.$atts['imgopacity'].' -t-'.$atts['bloctype'].' '.$atts['align'].' '.$atts['displayimg'].' -padding-'.$atts['espacement_bloc'];
-
+	$atts['bloc_class'] = 'bloc-item bloc-item-'.$atts['id'][0].' '.$atts['display'].' '.$atts['itemperline'].' '.$atts['mode'].' '.$atts['displaybutton'].' '.$atts['imgopacity'].' -t-'.$atts['bloctype'].' '.$atts['align'].' '.$atts['displayimg'].' -padding-'.$atts['espacement_bloc'];
+	
 	$atts['bg_style'] = ($atts['mode'] == '-m-background') ? sprintf('%1$s%2$s', ($atts['bgcolor'] ? 'background-color:'.$atts['bgcolor'].';' : false), ($atts['txtcolor'] ? 'color:'.$atts['txtcolor'].';' : false) ) : false;
 
 	$atts['txt_style'] = ($atts['mode'] == '-m-background') ? sprintf('%1$s', ($atts['txtcolor'] ? 'color:'.$atts['txtcolor'].';' : false) ) : false;
