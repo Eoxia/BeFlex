@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<!-- test commit -->
 <div class="site-width">
 	<div class="site-layout">
 		<div id="sidebar" class="widget-area eox-sidebar-droite" role="complementary">
