@@ -190,28 +190,9 @@ function eox_get_last_products( $atts ){
 }
 
 function eox_rewrite_wps_product_tpl( $product_markup, $atts ){
-	
-
-	//print_r( $product_markup );
-
-	// $find = array(
-	// 	'/(.+)<ul[^>]*>(.+)<\/ul>(.+)/i', 
-	// 	'/<li[^>]*>(.*?)<\/li>/i', 
-	// 	'/<span class="wps-caption"[^>]*>(.*?)<\/span>/i', 
-	// 	'/<span class="wps-thumbnail"[^>]*>(.*?)<\/span>/i', 
-	// 	'/<span class="wps-title"[^>]*>(.*?)<\/span>/i'
-	// );
-	// $replace = array(
-	// 	'${1}', 
-	// 	'<div class="'.$atts['bloc_class'].' -product-item">${1}</div>', 
-	// 	'<span class="wps-caption" style="'.$atts['txt_style'] .'">${1}</span>', 
-	// 	'<span class="wps-thumbnail" style="'.$atts['bg_style'] .'">${1}</span>', 
-	// 	'<h3 class="bloc-title" style="'.$atts['txt_style'] .'">${1}</h3>' 
-	// );
 
 	$find = array(
 		'/(.+)<ul(.*?)>(.*?)<\/ul>(.+)/s',
-		// '/(^<ul[^>]*>|<\/ul>$)/i',
 		'/<li(.*?)>(.*?)<\/li>/s',
 		'/<span class="wps-caption"(.*?)>(.*?)<\/span>/s',
 		'/<span class="wps-thumbnail"(.*?)>(.*?)<\/span>/s',
@@ -219,16 +200,13 @@ function eox_rewrite_wps_product_tpl( $product_markup, $atts ){
 	);
 	$replace = array(
 		'$3',
-		//'',
 		'<div class="'.$atts['bloc_class'].' -product-item">$2</div>',
 		'<span class="wps-caption" style="'.$atts['txt_style'] .'">$2</span>',
 		'<span class="wps-thumbnail" style="'.$atts['bg_style'] .'">$2</span>',
 		'<h3 class="bloc-title" style="'.$atts['txt_style'] .'">$2</h3>'
 	);
 
-	//print_r( $product_markup );
 	$product_markup = preg_replace( $find, $replace, $product_markup );
-	//print_r( $product_markup );
 	$product_markup =  preg_replace_callback('/<p class="bloc-excerpt"[^>]*>(.*?)<\/p>/i' , function( $match ) use ( $atts ) { return ( '<p class="bloc-excerpt">'.wp_trim_words($match[1], $atts['excerptlength'] ) ).'</p>'; } , $product_markup);
 	$product_markup = ( $atts['mode'] == '-m-background' ) ? preg_replace('/<div class="bloc-item-padder"[^>]*>(.*?)<\/div>/i', '<div class="bloc-item-padder" style="'.$atts['bg_style'] .'">${1}</div>' , $product_markup) : $product_markup;
 	return $product_markup;
