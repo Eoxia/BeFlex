@@ -77,7 +77,7 @@ function eox_format_atts( $atts ){
 
 	$atts['imgopacity'] = ($atts['mode'] == 'background') ? '-o-'.sanitize_title( round( $atts['imgopacity'] )/100 ) : false;		/* Création classe d'opacité */
 
-	$atts['mode'] = $atts['mode'] ? '-m-'.$atts['mode'] : false;					/* Création classe de mode */
+	$atts['mode'] = $atts['mode'] ? '-m-'.$atts['mode'] : false;	/* Création classe de mode */
 
 	$atts['align'] = '-a-'.$atts['align'];					/* Création classe de mode */
 
@@ -89,7 +89,7 @@ function eox_format_atts( $atts ){
 		'imagesLoaded' => true
 	);		
 
-	$atts['displaybutton'] = $atts['displaybutton'] ? '-d-bton' : false;	 /* Création classe display bouton  */
+	$atts['displaybutton'] = $atts['displaybutton'] ? '-d-bton' : false; /* Création classe display bouton  */
 
 	$atts['displayimg'] = $atts['displayimg'] ? '-d-img' : '-no-img';	 /* Création classe display bouton  */
 
@@ -114,9 +114,7 @@ add_image_size(
 
 /* get blocs collection function */
 
-function eox_get_blocs( $atts ){
-
-	
+function eox_get_blocs( $atts ){	
 
 	if ( $atts['id'][0] ) :
 		
@@ -145,7 +143,13 @@ function eox_get_blocs( $atts ){
 					} else {
 						$atts['bloc_button_style'] = '';
 					}
+
+					$section_atts = $atts;
+
+					$bloc_atts = get_the_title();
 					
+					//$bloc = new flex_bloc( $bloc_atts, $section_atts );
+					//$bloc->render();
 					//print_r( $atts );
 
 					include( locate_template('inc/blocs/tpl/content-'.$atts['bloctype'].'.php') );
