@@ -19,10 +19,10 @@
 	<footer class="site-footer" role="contentinfo">
 		<div class="site-width">
 			<div class="gridwrapper w2">
-				<div>
+				<div class="bloc-item -w-1x2">
 					<?php bloginfo('name'); ?> © <?php the_date('Y');?>
 				</div>
-				<div>
+				<div class="bloc-item -w-1x2">
 					<?php eox_get_widget( 'footer-2' ); ?>
 				</div>
 			</div>
