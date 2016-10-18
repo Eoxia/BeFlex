@@ -30,7 +30,8 @@ function eox_get_font_url(){
 		'Work sans' => 'Work+Sans:400,300,700,800',
 		'Kadwa' => 'Kadwa:400,700',
 		'Poppins' => 'Poppins:400,300,600,700,500',
-		'Palanquin Dark' => 'Palanquin+Dark:400,500,700'
+		'Palanquin Dark' => 'Palanquin+Dark:400,500,700',
+		'Exo 2' => 'Exo+2:300,400i,700'
 	);
 
 	foreach ( $urls_mapping as $key => $url_mapping ) {
