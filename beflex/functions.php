@@ -63,5 +63,10 @@ function eox_remove_some_widgets(){
 }
 add_action( 'widgets_init', 'eox_remove_some_widgets', 11 );
 
+function beflex_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'beflex_custom_excerpt_length', 999 );
+
 
 
