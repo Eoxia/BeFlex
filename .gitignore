@@ -2,3 +2,5 @@ gulpfile.js
 package.json
 processCss.bat
 node_modules/
+index.php
+.gitignore
