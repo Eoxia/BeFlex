@@ -8,7 +8,7 @@
 
 <?php $font_transform = get_field( 'titre_majuscule', 'options' ); ?>
 
-h1, h2, h3, h4, h5, h6, .wps-title, .site-title, .wps-categorie-item-title, .eoxia-mega-menu .menu-item-depth-1 > a, .bloc-banner strong, .author-name, .chapo, .touch-navigation li {
+h1, h2, h3, h4, h5, h6, .wps-title, .site-title, .wps-categorie-item-title, .eoxia-mega-menu .menu-item-depth-1 > a, .bloc-banner strong, .author-name, .chapo, .touch-navigation li, .widget.widget_recent_entries li a, .widget.widget_rss li .rsswidget {
 	font-family: <?php eox_get_font_family(); ?>;
 	font-weight: <?php eox_get_font_weight(); ?>;
 	font-style: <?php eox_get_font_style(); ?>;

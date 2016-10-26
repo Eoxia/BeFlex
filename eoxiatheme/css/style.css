@@ -2514,6 +2514,7 @@ form .wpcf7-not-valid-tip {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: .25em;
+  font-size: 1.1em;
 }
 .widget .widget-title,
 .widget .wps-title,
@@ -2539,6 +2540,7 @@ form .wpcf7-not-valid-tip {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: .25em;
+  font-size: 1.1em;
 }
 .widget.widget_rss li .rss-date {
   font-size: .9em;
