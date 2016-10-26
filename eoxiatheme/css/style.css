@@ -2447,13 +2447,10 @@ form .wpcf7-not-valid-tip {
   margin: 0;
   padding: 0;
 }
-.widget ul ul {
-  font-size: .95em;
-  padding-left: 16px;
-  padding-left: 1rem;
-}
-.widget ul ul ul {
-  font-size: .95em;
+.widget .sub-menu,
+.widget .children {
+  font-size: .9em;
+  padding: .5em 0 .5em .5em;
 }
 .widget li {
   list-style: none;
@@ -2486,6 +2483,11 @@ form .wpcf7-not-valid-tip {
 .widget .diaporama-wrapper button {
   display: none;
 }
+.widget select {
+  margin-top: .5em;
+  padding: .25em;
+  width: 100%;
+}
 .widget_search {
   position: relative;
 }
@@ -2493,6 +2495,46 @@ form .wpcf7-not-valid-tip {
   position: absolute;
   right: 0;
   top: 0;
+}
+.widget_search form {
+  padding-top: .5em;
+  position: relative;
+}
+.widget_search form:before {
+  font-family: "iconsBase";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e153";
+  position: absolute;
+  left: 0;
+  top: 1em;
+  color: #ccc;
+}
+.widget_search input[type="text"] {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 2px 0 0 #ccc;
+          box-shadow: 0 2px 0 0 #ccc;
+  padding-left: 1.5em;
+  padding-bottom: .5em;
+  background: none;
+  -webkit-transition: -webkit-box-shadow 0.1s;
+  transition: -webkit-box-shadow 0.1s;
+  -o-transition: box-shadow 0.1s;
+  -moz-transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+}
+.widget_search input[type="text"]:focus {
+  outline: none;
+  -webkit-box-shadow: 0 4px 0 0 #ccc;
+          box-shadow: 0 4px 0 0 #ccc;
 }
 .site-header {
   position: relative;

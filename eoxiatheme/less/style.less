@@ -602,13 +602,10 @@ form {
 	ul {
 		margin: 0;
 		padding: 0;
-		ul {
-			font-size: .95em;
-			padding-left: 1rem;
-			ul {
-				font-size: .95em;
-			}
-		}
+	}
+	.sub-menu, .children {
+		font-size: .9em;
+		padding: .5em 0 .5em .5em;
 	}
 	li {
 		list-style: none;
@@ -634,6 +631,11 @@ form {
 			display: none;
 		}
 	}
+	select {
+		margin-top: .5em;
+		padding: .25em;
+		width: 100%;
+	}
 }
 
 .widget_search {
@@ -642,6 +644,31 @@ form {
 		position: absolute;
 		right: 0;
 		top: 0;
+	}
+	form {
+		padding-top: .5em;
+		position: relative;
+		&::before {
+			.get_icon();
+			content: "\e153";
+			position: absolute;
+			left: 0;
+			top: 1em;
+			color: #ccc;
+		}
+	}
+	input[type="text"] {
+		outline: none;
+		border: none;
+		box-shadow: 0 2px 0 0 #ccc;
+		padding-left: 1.5em;
+		padding-bottom: .5em;
+		background: none;
+		transition: box-shadow .1s;
+		&:focus {
+			outline: none;
+			box-shadow: 0 4px 0 0 #ccc;
+		}
 	}
 }
 .site-navigation {

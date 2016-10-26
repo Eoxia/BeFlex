@@ -15,10 +15,6 @@ h1, h2, h3, h4, h5, h6, .wps-title, .site-title, .wps-categorie-item-title, .eox
 	text-transform: <?php eox_get_font_transform(); ?>;
 }
 
-.section-title:after, .entry-title:after, .widget-title:after {
-	background: <?php echo $couleur_dominante; ?>;
-}
-
 a, .entry-content ul li:before, .wps-link {
 	color: <?php echo $couleur_dominante; ?>;
 }
@@ -68,6 +64,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .wps-section-taskbar ul li.wps-activ a, .wps-section-taskbar ul li a:hover {
 	color: <?php echo $couleur_dominante; ?>;
 	border-left-color: <?php echo $couleur_dominante; ?>;
+}
+
+.widget .cat-item {
+	color: <?php echo $couleur_dominante; ?>;
 }
 
 ::-moz-selection { color:#fff; background: <?php echo $couleur_dominante; ?>;}

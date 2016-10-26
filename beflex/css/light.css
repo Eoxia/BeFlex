@@ -33,6 +33,28 @@ body {
   background: #444;
   color: #888;
 }
+.site-footer .widget-title {
+  color: #fff;
+}
+.site-footer .widget-title:after {
+  background: #fff;
+}
+.site-footer .widget {
+  color: #fff;
+}
+.site-footer .widget a {
+  color: #bbb;
+}
+.site-footer .widget a:hover {
+  color: #fff;
+}
+.site-footer .wps-title,
+.site-footer .wpshop_products_listing_price {
+  color: #fff;
+}
+.site-footer select {
+  color: #444;
+}
 .wps-numeration-cart {
   color: #fff;
 }

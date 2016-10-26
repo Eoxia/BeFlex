@@ -27,9 +27,9 @@ body {
   left: 0;
   height: .1em;
   width: 2em;
-  opacity: .15;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
-  background: #666 !important;
+  opacity: .25;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+  background: #666;
 }
 .widget-title {
   margin-bottom: .5em;
@@ -146,6 +146,16 @@ article .attachment-thumb-blog {
 }
 .site-footer .gridwrapper {
   margin: 0;
+}
+/* Widgets */
+.widget .alerte {
+  margin: 0;
+}
+.widget .socializer-wrapper {
+  margin-top: 1em;
+}
+.social-item:first-child i {
+  margin-left: 0;
 }
 /* Patch demo */
 .-background .bloc-item .bloc-title {

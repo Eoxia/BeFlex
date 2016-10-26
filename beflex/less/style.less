@@ -26,14 +26,8 @@ body {
 	color: #666;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	// color: #29465a;
-}
-
 .section-title, .entry-title, .widget-title {
 	position: relative;
-	// text-align: center;
-	// margin: 0 0 1em 0;
 	padding-bottom: .15em;
 	margin-bottom: 2rem;
 	&::after {
@@ -42,29 +36,18 @@ h1, h2, h3, h4, h5, h6 {
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		// transform: translate(-50%, 0);
 		height: .1em;
 		width: 2em;
-		opacity: .15;
-		background: #666 !important;
+		opacity: .25;
+		background: #666;
 	}
 }
 .widget-title {
 	margin-bottom: .5em;
 }
-// .content-area {
-// 	margin-top: 2rem;
-// }
-// a {
-// 	color: @a;
-// 	&.button {
-// 		background: @a;
-// 	}
-// }
 
 .site-width {
 	max-width: 100rem;
-	// padding: 1rem;
 }
 
 .button, input[type="submit"], button {
@@ -242,6 +225,27 @@ article {
 		margin: 0;
 	}
 }
+
+/* Widgets */
+
+.widget {
+	.alerte {
+		margin: 0;
+	}
+	
+	.socializer-wrapper {
+		margin-top: 1em;
+	}
+}
+
+.social-item {
+	&:first-child{
+		i {
+			margin-left: 0;
+		}
+	}
+}
+
 
 /* Patch demo */
 
