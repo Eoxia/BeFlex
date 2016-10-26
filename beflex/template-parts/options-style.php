@@ -69,6 +69,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .widget .cat-item {
 	color: <?php echo $couleur_dominante; ?>;
 }
+.widget_recent_entries li a:hover {
+	color: <?php echo $couleur_dominante; ?>;
+}
 
 ::-moz-selection { color:#fff; background: <?php echo $couleur_dominante; ?>;}
 ::selection { color:#fff; background: <?php echo $couleur_dominante; ?>; }

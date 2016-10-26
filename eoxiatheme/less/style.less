@@ -599,10 +599,15 @@ form {
 }
 
 .widget {
+	font-size: .9em;
+	color: #999;
+	.widget-title {
+		margin-bottom: .75em;
+	}
 	ul {
 		margin: 0;
 		padding: 0;
-		font-size: .9em;
+		// font-size: .9em;
 	}
 	.sub-menu, .children {
 		font-size: .9em;
@@ -637,6 +642,31 @@ form {
 		padding: .25em;
 		width: 100%;
 	}
+	[class*="wps-listwrapper"] {
+		margin-top: -.35em;
+	}
+
+	&.widget_recent_entries {
+		li {
+			// display: flex;
+			border-bottom: solid #eee 1px;
+			padding: .5em 0;
+			.post-date {
+				font-size: .9em;
+				display: block;
+				line-height: 1;
+				font-style: italic;
+				margin-bottom: .5em;
+			}
+			a {
+				display: block;
+				font-weight: bold;
+			}
+		}
+	}
+	.widget-title, .wps-title, &.widget_recent_entries li a {
+		color: #444;
+	}
 }
 
 .widget_search {
@@ -647,14 +677,13 @@ form {
 		top: 0;
 	}
 	form {
-		padding-top: .5em;
 		position: relative;
 		&::before {
 			.get_icon();
 			content: "\e153";
 			position: absolute;
 			left: 0;
-			top: 1em;
+			top: .5em;
 			color: #ccc;
 		}
 	}

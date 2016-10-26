@@ -31,9 +31,6 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
   background: #666;
 }
-.widget-title {
-  margin-bottom: .5em;
-}
 .site-width {
   max-width: 1600px;
   max-width: 100rem;
@@ -134,10 +131,6 @@ article .attachment-thumb-blog {
 .site-boxfoot {
   padding: 32px 0;
   padding: 2rem 0;
-}
-.site-boxfoot .widget-title {
-  font-size: 1em;
-  margin-bottom: 1em;
 }
 /* .footer */
 .site-footer {

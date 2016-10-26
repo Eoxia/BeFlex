@@ -2443,10 +2443,16 @@ form .wpcf7-not-valid-tip {
   display: table;
   clear: both;
 }
+.widget {
+  font-size: .9em;
+  color: #999;
+}
+.widget .widget-title {
+  margin-bottom: .75em;
+}
 .widget ul {
   margin: 0;
   padding: 0;
-  font-size: .9em;
 }
 .widget .sub-menu,
 .widget .children {
@@ -2489,6 +2495,29 @@ form .wpcf7-not-valid-tip {
   padding: .25em;
   width: 100%;
 }
+.widget [class*="wps-listwrapper"] {
+  margin-top: -0.35em;
+}
+.widget.widget_recent_entries li {
+  border-bottom: solid #eee 1px;
+  padding: .5em 0;
+}
+.widget.widget_recent_entries li .post-date {
+  font-size: .9em;
+  display: block;
+  line-height: 1;
+  font-style: italic;
+  margin-bottom: .5em;
+}
+.widget.widget_recent_entries li a {
+  display: block;
+  font-weight: bold;
+}
+.widget .widget-title,
+.widget .wps-title,
+.widget.widget_recent_entries li a {
+  color: #444;
+}
 .widget_search {
   position: relative;
 }
@@ -2498,7 +2527,6 @@ form .wpcf7-not-valid-tip {
   top: 0;
 }
 .widget_search form {
-  padding-top: .5em;
   position: relative;
 }
 .widget_search form:before {
@@ -2514,7 +2542,7 @@ form .wpcf7-not-valid-tip {
   content: "\e153";
   position: absolute;
   left: 0;
-  top: 1em;
+  top: .5em;
   color: #ccc;
 }
 .widget_search input[type="text"] {
