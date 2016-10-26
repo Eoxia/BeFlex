@@ -2516,6 +2516,52 @@ form .wpcf7-not-valid-tip {
   margin-bottom: .25em;
   font-size: 1.1em;
 }
+.widget.widget_calendar caption {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: .25em 0;
+}
+.widget.widget_calendar thead {
+  padding-bottom: .5em;
+}
+.widget.widget_calendar tbody a {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+.widget.widget_calendar tbody a:after {
+  display: block;
+  position: absolute;
+  content: '';
+  height: 2.5em;
+  width: 2.5em;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.widget.widget_calendar table {
+  color: #444;
+  text-align: center;
+  width: 100%;
+  font-size: .9em;
+}
+.widget.widget_calendar table td {
+  height: 3em;
+  width: 14.28571429%;
+}
+.widget.widget_calendar #prev a,
+.widget.widget_calendar #next a {
+  color: #fff;
+  display: block;
+}
 .widget .widget-title,
 .widget .wps-title,
 .widget.widget_recent_entries li a,

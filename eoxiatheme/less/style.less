@@ -666,6 +666,58 @@ form {
 				font-size: 1.1em;
 			}
 		}
+		
+	}
+	&.widget_calendar {
+		caption {
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: .25em 0;
+		}
+		thead {
+			padding-bottom: .5em;
+		}
+		tbody {
+			a {
+				position: relative;
+				z-index: 1;
+				font-weight: bold;
+				&::after {
+					display: block;
+					position: absolute;
+					content: '';
+					height: 2.5em;
+					width: 2.5em;						
+					border-radius: 50%;
+					z-index: 0;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: -1;
+				}
+				
+			}
+		}
+		table {
+			color: #444;
+			text-align: center;
+			width: 100%;
+			font-size: .9em;
+			td {
+				height: 3em;
+				width: percentage(1/7);
+				
+			}
+		}
+		#today {
+
+		}
+		#prev, #next {
+			a {
+				color: #fff;
+				display: block;
+			}
+		}
 	}
 	.widget-title, .wps-title, &.widget_recent_entries li a, &.widget_rss li .rsswidget {
 		color: #444;
@@ -700,6 +752,7 @@ form {
 			}			
 		}
 	}
+
 }
 
 .widget_search {

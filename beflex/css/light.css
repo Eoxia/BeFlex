@@ -29,6 +29,9 @@ body {
 .site-boxfoot {
   background: #fafafa;
 }
+.widget.widget_calendar table a {
+  color: #fff;
+}
 .site-footer {
   background: #444;
   color: #888;
