@@ -36,12 +36,6 @@ body {
   background: #444;
   color: #888;
 }
-.site-footer .widget-title {
-  color: #fff;
-}
-.site-footer .widget-title:after {
-  background: #fff;
-}
 .site-footer .widget {
   color: #fff;
 }
@@ -51,12 +45,33 @@ body {
 .site-footer .widget a:hover {
   color: #fff;
 }
+.site-footer .widget .widget-title {
+  color: #fff;
+}
+.site-footer .widget .widget-title a {
+  color: #fff;
+}
+.site-footer .widget .widget-title:after {
+  background: #fff;
+}
+.site-footer .widget.widget_calendar table {
+  color: #eee;
+}
+.site-footer .widget.widget_calendar table #today {
+  color: #fff;
+}
 .site-footer .wps-title,
 .site-footer .wpshop_products_listing_price {
   color: #fff;
 }
 .site-footer select {
   color: #444;
+}
+.site-footer .widget_rss li .rsswidget {
+  color: #fff;
+}
+.site-footer .widget_rss .rssSummary {
+  color: #999;
 }
 .wps-numeration-cart {
   color: #fff;

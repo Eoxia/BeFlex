@@ -62,12 +62,7 @@ body {
 .site-footer {
 	background: #444;
 	color: #888;
-	.widget-title {
-		color: #fff;
-		&::after {
-			background: #fff;
-		}
-	}
+
 	.widget {
 		color: #fff;
 		a {
@@ -76,12 +71,39 @@ body {
 				color: #fff;
 			}
 		}
+		.widget-title {
+			color: #fff;
+			a {
+				color: #fff;
+			}
+			&::after {
+				background: #fff;
+			}
+		}
+		&.widget_calendar {
+			table {
+				color: #eee;
+				#today {
+					color: #fff;
+				}
+			}
+		}
 	}
 	.wps-title, .wpshop_products_listing_price {
 		color: #fff;
 	}
 	select {
 		color: #444;
+	}
+	.widget_rss {
+		li {
+			.rsswidget {
+				color: #fff;
+			}
+		}
+		.rssSummary {
+			color: #999;
+		}
 	}
 }
 
