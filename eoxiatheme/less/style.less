@@ -656,16 +656,47 @@ form {
 				display: block;
 				line-height: 1;
 				font-style: italic;
-				margin-bottom: .5em;
+				margin-bottom: .32em;
 			}
 			a {
 				display: block;
 				font-weight: bold;
+				line-height: 1.2;
+				margin-bottom: .25em;
 			}
 		}
 	}
-	.widget-title, .wps-title, &.widget_recent_entries li a {
+	.widget-title, .wps-title, &.widget_recent_entries li a, &.widget_rss li .rsswidget {
 		color: #444;
+		a {
+			color: inherit;
+		}
+	}
+	&.widget_rss {
+		img {
+			width: auto;
+		}
+		li {
+			border-bottom: solid #eee 1px;
+			padding: .5em 0;
+			a {
+				display: block;
+				font-weight: bold;
+				line-height: 1.2;
+				margin-bottom: .25em;
+			}
+			.rss-date {
+				font-size: .9em;
+				display: block;
+				line-height: 1;
+				font-style: italic;
+				margin-bottom: .5em;
+			}
+			.rssSummary {
+				font-size: .9em;
+				margin-bottom: .2em;
+			}			
+		}
 	}
 }
 

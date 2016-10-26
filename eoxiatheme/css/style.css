@@ -2507,16 +2507,49 @@ form .wpcf7-not-valid-tip {
   display: block;
   line-height: 1;
   font-style: italic;
-  margin-bottom: .5em;
+  margin-bottom: .32em;
 }
 .widget.widget_recent_entries li a {
   display: block;
   font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: .25em;
 }
 .widget .widget-title,
 .widget .wps-title,
-.widget.widget_recent_entries li a {
+.widget.widget_recent_entries li a,
+.widget.widget_rss li .rsswidget {
   color: #444;
+}
+.widget .widget-title a,
+.widget .wps-title a,
+.widget.widget_recent_entries li a a,
+.widget.widget_rss li .rsswidget a {
+  color: inherit;
+}
+.widget.widget_rss img {
+  width: auto;
+}
+.widget.widget_rss li {
+  border-bottom: solid #eee 1px;
+  padding: .5em 0;
+}
+.widget.widget_rss li a {
+  display: block;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: .25em;
+}
+.widget.widget_rss li .rss-date {
+  font-size: .9em;
+  display: block;
+  line-height: 1;
+  font-style: italic;
+  margin-bottom: .5em;
+}
+.widget.widget_rss li .rssSummary {
+  font-size: .9em;
+  margin-bottom: .2em;
 }
 .widget_search {
   position: relative;
