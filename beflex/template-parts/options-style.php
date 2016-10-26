@@ -75,6 +75,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .widget.widget_calendar #prev a, .widget.widget_calendar #next a, .widget.widget_calendar table td a:after {
 	background: <?php echo $couleur_dominante; ?>;
 }
+.wps-bloc-loader:after {
+	border-top-color: <?php echo $couleur_dominante; ?>;
+    border-right-color: <?php echo $couleur_dominante; ?>;
+}
 
 ::-moz-selection { color:#fff; background: <?php echo $couleur_dominante; ?>;}
 ::selection { color:#fff; background: <?php echo $couleur_dominante; ?>; }
