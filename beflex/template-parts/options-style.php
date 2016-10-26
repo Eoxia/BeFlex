@@ -69,7 +69,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .widget .cat-item {
 	color: <?php echo $couleur_dominante; ?>;
 }
-.widget_recent_entries li a:hover, .widget.widget_rss li .rsswidget:hover {
+.widget_recent_entries li a:hover, .widget.widget_rss li .rsswidget:hover, .wps-catalog-sorting li a:hover {
 	color: <?php echo $couleur_dominante; ?>;
 }
 .widget.widget_calendar #prev a, .widget.widget_calendar #next a, .widget.widget_calendar table td a:after {

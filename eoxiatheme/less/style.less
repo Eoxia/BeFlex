@@ -15,7 +15,7 @@ iframe {
 	max-width: 100%;
 }
 aside {
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 ::-moz-selection {
@@ -533,7 +533,6 @@ form {
 }
 
 .site-layout {
-
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -596,7 +595,7 @@ form {
 	font-size: .9em;
 	color: #999;
 	.widget-title {
-		margin-bottom: .75em;
+		margin-bottom: 1em;
 	}
 	ul {
 		margin: 0;
@@ -935,10 +934,7 @@ form {
 	}
 }
 
-// #sidebar {
-// 	width: 20em;
-// 	padding-left: 2em;
-// }
+
 
 .entry-author {
 	display: table;
@@ -1108,7 +1104,8 @@ form {
 		margin: 3em;
 	}
 	ul {
-		margin: 2em 0 2em 0;
+		margin: 1em 0 1em 0;
+    	padding: 0 0 0 .5em;
 		li {
 			list-style: none;
 			position: relative;
@@ -1126,6 +1123,9 @@ form {
 				content: none;
 			}
 		}
+	}
+	.container_product_listing .wps-catalog {
+		padding: 0 0 4em 0;
 	}
 }
 
@@ -2787,6 +2787,9 @@ section.error-404 {
 	}
 	.site-layout #content {
 		order: 0 !important;
+	}
+	.site-layout #sidebar {
+		display: block;
 	}
 	.wps-my-account, .wps-my-cart {
 		display: none !important;

@@ -1857,7 +1857,7 @@ iframe {
   max-width: 100%;
 }
 aside {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 html,
 body {
@@ -2452,7 +2452,7 @@ form .wpcf7-not-valid-tip {
   color: #999;
 }
 .widget .widget-title {
-  margin-bottom: .75em;
+  margin-bottom: 1em;
 }
 .widget ul {
   margin: 0;
@@ -2940,7 +2940,8 @@ form .wpcf7-not-valid-tip {
   margin: 3em;
 }
 .entry-content ul {
-  margin: 2em 0 2em 0;
+  margin: 1em 0 1em 0;
+  padding: 0 0 0 .5em;
 }
 .entry-content ul li {
   list-style: none;
@@ -2967,6 +2968,9 @@ form .wpcf7-not-valid-tip {
 .entry-content .wps-alert li:before,
 .entry-content .wps-itemList li:before {
   content: none;
+}
+.entry-content .container_product_listing .wps-catalog {
+  padding: 0 0 4em 0;
 }
 .site-top [class*="grid"][class*="wrapper"] {
   margin: 0;
@@ -4571,6 +4575,9 @@ section.error-404 {
        -moz-box-ordinal-group: 1 !important;
         -ms-flex-order: 0 !important;
             order: 0 !important;
+  }
+  .site-layout #sidebar {
+    display: block;
   }
   .wps-my-account,
   .wps-my-cart {

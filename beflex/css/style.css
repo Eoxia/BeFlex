@@ -16,6 +16,7 @@ body {
   padding-bottom: .15em;
   margin-bottom: 32px;
   margin-bottom: 2rem;
+  margin-top: -0.2em;
 }
 .section-title:after,
 .entry-title:after,
