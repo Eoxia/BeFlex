@@ -1,0 +1,9 @@
+INSTALLATION DU THEME BEFLEX
+
+    - Décompressez le zip en local
+    - Importer séparement : le thème parent « eoxiatheme » + le thème enfant « Beflex »
+    - Activer le thème Beflex
+    - Installer les extensions requises avec le plugin (elles sont affichées en haut de la page dans une bulle d’aide) Les deux plus importantes : ACF pro, wpshop
+    - Se rendre dans le theme options, et mettre à jour (permet de régler les dimensions par défaut)
+
+Documentation du thème : http://www.wpshop.fr/documentations/theme-beflex/
