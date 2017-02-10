@@ -64,6 +64,11 @@ function eoxia_starter_register_required_plugins() {
 		// 	'image_url'          => AVADA_ADMIN_DIR . '../assets/images/rev_slider.png',
 		// ),
 		array(
+			'name' 			=> 'ACF: Sidebar Selector',
+			'slug'			=> 'acf-sidebar-selector-field',
+			'required' 	=> true
+		),
+		array(
 			'name'      => 'Wpshop',
 			'slug'      => 'wpshop',
 			'required'  => false,

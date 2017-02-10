@@ -110,6 +110,9 @@ body {
 .main-content .diaporama-wrapper img {
   min-width: 60em;
 }
+#sidebar .diaporama-wrapper img {
+  min-width: inherit;
+}
 .owl-prev,
 .owl-next {
   color: #fff;

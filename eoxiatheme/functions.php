@@ -79,7 +79,7 @@ function eox_setup() {
 	require 'editor/editor.php';
 
 	add_editor_style( 'editor/editor-styles.css' );
-	
+
 	if( class_exists('acf') ) {
 
 		/* Get blocs features if ACF installed */
@@ -95,7 +95,7 @@ function eox_setup() {
 		require get_template_directory() . '/inc/diaporama/_init.php';
 
 		/* Get diaporama feature if ACF installed */
-		require get_template_directory() . '/inc/sidebars/_init.php';
+		// require get_template_directory() . '/inc/sidebars/_init.php';
 
 	}
 
@@ -112,7 +112,7 @@ function eox_setup() {
 	// include_once('inc/diaporama.php' );
 
 	if( class_exists('acf') ) {
-		
+
 		acf_add_options_page(array(
 			'page_title' 	=> 'Theme Options',
 			'menu_title'	=> 'Theme Options',
@@ -122,17 +122,17 @@ function eox_setup() {
 		));
 
 		add_image_size(
-			'thumb-blog', 
-			get_field( 'largeur_image_blog', 'options' ), 
-			get_field( 'hauteur_image_blog', 'options' ), 
-			get_field( 'ratio_des_images_blog', 'options' ) 
+			'thumb-blog',
+			get_field( 'largeur_image_blog', 'options' ),
+			get_field( 'hauteur_image_blog', 'options' ),
+			get_field( 'ratio_des_images_blog', 'options' )
 		);
 
-		
-		
+
+
 	}
 
-	
+
 
 }
 endif; // eox_setup
@@ -178,7 +178,7 @@ function eox_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar blog', 'eoxiatheme' ),
 		'id'            => 'sidebar-blog',
-		'description'   => '',
+		'description'   => esc_html__( 'S\'affichera sur les pages blogs / catégories de blog / articles', 'eoxiatheme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -187,7 +187,7 @@ function eox_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 1', 'eoxiatheme' ),
 		'id'            => 'boxfoot-1',
-		'description'   => '',
+		'description'   => esc_html__( '1ere zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer', 'eoxiatheme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -196,7 +196,7 @@ function eox_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 2', 'eoxiatheme' ),
 		'id'            => 'boxfoot-2',
-		'description'   => '',
+		'description'   => esc_html__( '2ème zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer', 'eoxiatheme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -205,7 +205,7 @@ function eox_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 3', 'eoxiatheme' ),
 		'id'            => 'boxfoot-3',
-		'description'   => '',
+		'description'   => esc_html__( '3ème zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer', 'eoxiatheme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -214,7 +214,7 @@ function eox_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 4', 'eoxiatheme' ),
 		'id'            => 'boxfoot-4',
-		'description'   => '',
+		'description'   => esc_html__( '4ème zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer', 'eoxiatheme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -246,7 +246,7 @@ add_action( 'widgets_init', 'eox_widgets_init' );
  */
 function eox_scripts() {
 
-	wp_enqueue_style( 'eox-style', get_template_directory_uri() . '/css/style.css' );	
+	wp_enqueue_style( 'eox-style', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_style( 'eox-userstyle', get_template_directory_uri() . '/style.css' );
 
@@ -334,14 +334,14 @@ function eox_html_link( $label, $link , $classes='', $styles = '' ){
 /* get & echo link */
 
 function eox_the_html_link( $label, $link , $classes='', $styles='' ){
-	echo eox_html_link( $label, $link, $classes, $styles );	
+	echo eox_html_link( $label, $link, $classes, $styles );
 }
 
 
 function eox_html_img( $id, $display = 1, $size = 'thumb-bloc' ){
 	if( $id && $display ):
-		//return wp_get_attachment_image( $id, $size ).eox_html_caption( $id );		
-		return wp_get_attachment_image( $id, $size );		
+		//return wp_get_attachment_image( $id, $size ).eox_html_caption( $id );
+		return wp_get_attachment_image( $id, $size );
 	endif;
 }
 
@@ -362,7 +362,7 @@ function eox_html_caption( $id ){
 	//return 'figcation';
 
 	//print_r( $image_meta );
-	
+
 }
 
 function eox_the_html_img( $id, $display = 1 , $size = 'thumb-bloc' ){
@@ -387,7 +387,7 @@ function eox_get( $string = '', $replace = 0, $display = 1 ){
 		return $replace;
 	} elseif( $string && $display ) {
 		return $string;
-	}	
+	}
 }
 
 function eox_the_post_categories( $id = 0 ){
@@ -419,7 +419,7 @@ function eox_post_footer( $id = 0, $size = 'mini' ){
 	$description = get_the_author_meta( 'description', $user_ID );
 	echo '<div class="entry-author --'.$size.'">';
 	if( $size == 'mini' ){
-		
+
 		$info = '<span class="author-name">'.$prenom.' '.$nom.'</span>';
 		$avatar = get_avatar( $user_ID, 25 );
 	} else {
@@ -451,6 +451,5 @@ function eox_get_shortcode_val( $key, $val ){
 	} else {
 		return $val ? $val : 0;
 	}
-	
-}
 
+}

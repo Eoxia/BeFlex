@@ -12,9 +12,15 @@
  * @since Twenty Ten 1.0
  */
 
+
 get_header(); ?>
-		<div id="primary">
-			<div id="content" role="main" class="site-width site-layout">
+<div class="site-width">
+	<div class="site-layout">
+
+		<?php get_sidebar('boutique'); ?>
+
+		<div id="content" class="content">
+			<main id="main" class="site-main" role="main">
 
 <?php
 	/* Queue the first post, that way we know
@@ -101,8 +107,11 @@ get_header(); ?>
 					</div>
 					</article>
 				</div><!-- wps-taxonomy-wrapper -->
-			</div><!-- #content -->
-		</div><!-- #container -->
+
+				</main>
+			</div>
+		</div><!-- #content -->
+	</div><!-- #container -->
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
