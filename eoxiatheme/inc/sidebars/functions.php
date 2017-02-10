@@ -12,8 +12,8 @@ function eox_get_sidebar( $atts ){
 		$type = $atts['type'] ? $atts['type'] : 'grid';
 		$nb_per_line = $atts['nb_per_line'] ? $atts['nb_per_line'] : 4;
 
-	}	
-	
+	}
+
 	// if( have_rows('liens_reseaux', 'options') ):
 
 	// 	echo '<div class="socializer-wrapper '.$type.'wrapper w'.$nb_per_line.'">';
@@ -26,7 +26,7 @@ function eox_get_sidebar( $atts ){
 	//     echo '</div>';
 
 	// else :
-		
+
 	// 	$edit_link = '<a href="'.home_url().'/wp-admin/admin.php?page=theme-options">'.__('Ajouter', 'eoxiatheme').'</a>';
 
 	// 	eox_get_alert( __('Pas de sidebar', 'eoxiatheme').' : '.$edit_link );
@@ -53,7 +53,7 @@ function eox_register_sidebars(){
 
 add_action( 'widgets_init', 'eox_register_sidebars' );
 
-add_action( 'add_meta_boxes', 'eox_add_metabox_page' );
+// add_action( 'add_meta_boxes', 'eox_add_metabox_page' );
 function eox_add_metabox_page (){
 	add_meta_box( 'eox-sidebar-page', 'Sidebar de la page', 'eox_add_metabox_page_content', 'page', 'side', 'high' );
 }
@@ -116,8 +116,8 @@ function eox_add_metabox_page_content (){
 		</script>
 	<?php //endif;
 }
+// add_action( 'save_post', 'eox_add_metabox_page_content_save' );
 
-add_action( 'save_post', 'eox_add_metabox_page_content_save' );
 function eox_add_metabox_page_content_save( $post_id )
 {
 

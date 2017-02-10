@@ -95,7 +95,7 @@ function eox_setup() {
 		require get_template_directory() . '/inc/diaporama/_init.php';
 
 		/* Get diaporama feature if ACF installed */
-		// require get_template_directory() . '/inc/sidebars/_init.php';
+		require get_template_directory() . '/inc/sidebars/_init.php';
 
 	}
 
