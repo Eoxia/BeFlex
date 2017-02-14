@@ -170,6 +170,12 @@ article .attachment-thumb-blog {
     display: none;
   }
 }
+.site-layout.sidebar-active #content {
+  max-width: 70%;
+}
+.site-layout #content {
+  max-width: 100%;
+}
 .touch-navigation-content {
   padding-top: 64px;
   padding-top: 4rem;

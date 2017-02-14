@@ -296,7 +296,14 @@ article {
 }
 
 .site-layout {
-
+	&.sidebar-active {
+		#content {
+			max-width: 70%;
+		}
+	}
+	#content {
+		max-width: 100%;	
+	}
 	// padding-top: 2em;
 	// padding-bottom: 3em;
 }

@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div class="site-width">
-	<div class="site-layout">
+	<div class="site-layout <?php if ( is_active_sidebar( 'sidebar-boutique' ) ) : echo 'sidebar-active';  endif; ?>">
 
 		<?php get_sidebar('boutique'); ?>
 
