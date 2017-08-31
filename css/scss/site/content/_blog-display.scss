@@ -1,0 +1,34 @@
+.blog, .author, .archive, .category {
+	.post {
+		@include flexbox();
+		flex-wrap: nowrap;
+
+		@media ( max-width: $media__medium ) {
+			flex-wrap: wrap;
+		}
+		&:after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+		.post-thumbnail {
+			min-width: 50%;
+			max-width: 50%;
+			padding-right: 2em;
+			@media ( max-width: $media__medium ) {
+				min-width: 100%;
+				max-width: 100%;
+			}
+		}
+		.post-content {
+			width: 100%;
+
+			.entry-header .entry-title {
+				margin: 0;
+			}
+			.entry-content {
+				margin-top: 0.2em;
+			}
+		}
+	}
+}

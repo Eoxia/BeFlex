@@ -1,0 +1,30 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	@include center-block;
+}
+
+.site-width {
+	max-width: $size__site-width;
+	width: 100%;
+	margin: auto;
+	@media ( max-width: $media__medium ) {
+		padding-left: 1em !important;
+		padding-right: 1em !important;
+	}
+}
+
+#content {
+	padding-top: 80px;
+}

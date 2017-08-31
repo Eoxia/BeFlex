@@ -1,0 +1,494 @@
+{
+    "key": "group_56275ada5e83d",
+    "title": "Options",
+    "fields": [
+        {
+            "key": "field_56275b613720e",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56275c7978484",
+            "label": "Logo",
+            "name": "logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57445ed6d5482",
+            "label": "Theme",
+            "name": "theme",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Clair",
+                "dark": "Sombre"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_57445f27d5483",
+            "label": "Couleur de dominante",
+            "name": "couleur_de_dominante",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0e6eff"
+        },
+        {
+            "key": "field_574edd67616bc",
+            "label": "Typographie des titres",
+            "name": "typographie_des_titres",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Caveat Brush": "Caveat Brush",
+                "Dosis": "Dosis",
+                "Droid Serif": "Droid Serif",
+                "Exo 2": "Exo 2",
+                "Hind": "Hind",
+                "Kadwa": "Kadwa",
+                "Lora": "Lora",
+                "Merriweather": "Merriweather",
+                "Nunito": "Nunito",
+                "Open sans": "Open sans",
+                "Oswald": "Oswald",
+                "Palanquin Dark": "Palanquin Dark",
+                "Playfair": "Playfair",
+                "Poppins": "Poppins",
+                "Raleway": "Raleway",
+                "Roboto": "Roboto",
+                "Work sans": "Work sans"
+            },
+            "default_value": [
+                "Open sans"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_574ee01565f06",
+            "label": "Titre gras",
+            "name": "titre_gras",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 25,
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "light",
+                "normal": "normal",
+                "bold": "bold",
+                "extrabold": "extrabold"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_574ee03365f07",
+            "label": "Titre italic",
+            "name": "titre_italic",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 25,
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_574ee09f65f08",
+            "label": "Titre majuscule",
+            "name": "titre_majuscule",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_56a8ed05992b9",
+            "label": "Blocs",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56a8df9b836dd",
+            "label": "Largeur vignette",
+            "name": "largeur_des_images_bloc",
+            "type": "number",
+            "instructions": "Largeur des vignettes bloc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 500,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": "",
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_56a8dfdb836de",
+            "label": "Hauteur vignette",
+            "name": "hauteur_des_images_bloc",
+            "type": "number",
+            "instructions": "Hauteur des vignettes bloc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 340,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": "",
+            "max": "",
+            "step": 1,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56a8e1223df66",
+            "label": "Ratio des images bloc",
+            "name": "ratio_des_images_bloc",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "message": "Décocher pour garder le ratio initial",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_56c34fcbf2958",
+            "label": "Diaporama",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56c34fe4f2959",
+            "label": "Largeur diaporama",
+            "name": "largeur_des_images_diaporama",
+            "type": "number",
+            "instructions": "Largeur des vignettes diaporama",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1400,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": "",
+            "max": "",
+            "step": 1,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c35003f295a",
+            "label": "Hauteur diaporama",
+            "name": "hauteur_des_images_diaporama",
+            "type": "number",
+            "instructions": "Hauteur des vignettes bloc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 600,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px",
+            "min": "",
+            "max": "",
+            "step": 1,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c35019f295b",
+            "label": "Ratio des images diaporama",
+            "name": "ratio_des_images_diaporama",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333333",
+                "class": "",
+                "id": ""
+            },
+            "message": "Décocher pour garder le ratio initial",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_57615f01d7407",
+            "label": "Sidebars",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_57615f12d7408",
+            "label": "Sidebars",
+            "name": "sidebars",
+            "type": "repeater",
+            "instructions": "Vous pouvez ajoutez de nouvelles sidebars utilisables pour ce thème. Rendez-vous ensuite dans l'onglet \"Apparence\" -> \"Widgets\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Ajouter un élément",
+            "sub_fields": [
+                {
+                    "key": "field_57615f1bd7409",
+                    "label": "Sidebar",
+                    "name": "sidebar",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_57615f24d740a",
+                    "label": "Sidebar description",
+                    "name": "sidebar_description",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_59a6c9696b47f",
+            "label": "Modules",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a6c97a6b480",
+            "label": "Modules BeFlex",
+            "name": "beflex_modules",
+            "type": "checkbox",
+            "instructions": "Cocher les modules à utiliser pour votre site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bloc": "Bloc ( module principal, il est déconseillé de le désactiver )",
+                "diaporama": "Diaporama",
+                "menu": "Méga Menu",
+                "annuaire": "Annuaire"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [
+                "bloc",
+                "diaporama",
+                "menu"
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1504163677
+}

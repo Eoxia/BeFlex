@@ -1,0 +1,88 @@
+.notification {
+	position: relative;
+	font-size: 1em;
+	padding: 1em 1em 1em 2.5rem;
+	overflow: hidden;
+	border-radius: 3px;
+	border: solid #eee 1px;
+
+	p {
+		margin-bottom: 0;
+	}
+	.alerte-title {
+		font-weight: 600;
+	}
+	.full {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&.info {
+		border-left: solid #2e75bf 4px;
+		color: #2e75bf;
+		a {
+			color: #2e75bf;
+		}
+		&::before {
+			content: $fa-var-info-circle;
+		}
+	}
+	&.empty {
+		padding: 1em;
+		border: dashed #ddd 1px;
+		border-radius: 1em;
+		color:#ccc;
+	}
+	&.error {
+		border-left: solid #e74c3c 4px;
+		color: #e74c3c;
+		a {
+			color: #e74c3c;
+		}
+		&::before {
+			content: $fa-var-exclamation-circle;
+		}
+	}
+	&.success {
+		border-left: solid #74c246 4px;
+		color: #74c246;
+		a {
+			color: #74c246;
+		}
+		&::before {
+			content: $fa-var-check-circle;
+		}
+	}
+	&.warning {
+		border-left: solid #fcb231 4px;
+		color: #fcb231;
+		a {
+			color: #fcb231;
+		}
+		&::before {
+			content: $fa-var-bell;
+		}
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		font-size: 1rem;
+		@include fa-icon();
+		position: absolute;
+		top: 50%;
+		left: .75em;
+		transform: translate(0, -50%);
+	}
+	@media (max-width: 770px) {
+
+	}
+	@media (max-width: 480px) {
+		padding: 1em;
+		&::before {
+			display: none;
+		}
+	}
+}

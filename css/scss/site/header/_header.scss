@@ -1,0 +1,138 @@
+#masthead {
+	position: relative;
+	padding: 0 1em;
+	@include flexbox();
+
+	.site-branding {
+		width: 30%;
+	}
+	.site-navigation {
+		width: 60%;
+	}
+	.site-tool {
+		width: 10%;
+	}
+	.site-navigation, .site-tool {
+		margin-left: auto;
+	}
+	@media ( max-width: $media__medium ) {
+		.site-branding {
+			width: 50%;
+			padding-left: 1rem;
+		}
+		.site-branding {
+			order: 2;
+		}
+		.site-navigation {
+			order: 3;
+			margin-left: auto;
+			width: auto;
+			padding-right: 1rem;
+		}
+		.site-tool {
+			width: 100%;
+			order: 1;
+		}
+	}
+	@media ( max-width: $media__medium ) {
+		padding: 0;
+	}
+}
+
+// Site branding, logo & subtitle
+#masthead .site-branding {
+	margin: auto 0;
+	line-height: 1;
+
+	.site-title, .site-description {
+		margin: 0;
+	}
+	.site-title a {
+		color: $color__text-main;
+		@include font-size( 1.4 );
+	}
+	.site-title img {
+		max-width: 280px;
+		max-height: 60px;
+	}
+	.site-description {
+		@include font-size( 0.86 );
+	}
+}
+
+#masthead .site-navigation {
+	@include flexbox();
+	flex-wrap: nowrap;
+	#main-navigation {
+		margin-left: auto;
+	}
+}
+
+#masthead .site-tool {
+	padding: 0 0.6em;
+	@include flexbox();
+	flex-wrap: nowrap;
+
+	> a {
+		line-height: 1;
+		@include transition();
+		padding: 2.3em 0.6em;
+		display: inline-block;
+		color: $color__text-main;
+
+		&:hover {
+			color: lighten($color__text-main, 30);
+		}
+		&:focus {
+			outline: none;
+		}
+		&.wps-action-mini-cart-opener {
+			position: relative;
+			.wps-numeration-cart {
+				position: absolute;
+				top: 30%;
+				right: 0px;
+				width: 14px;
+				height: 14px;
+				font-size: 10px;
+				text-align: center;
+				line-height: 10px;
+				background: $color__primary;
+				display: inline-block;
+				color: #fff;
+				border-radius: 50%;
+			}
+		}
+		@media ( max-width: $media__medium ) {
+			padding: 0.6em 0.6em !important;
+			color: #fff;
+		}
+	}
+	@media( max-width: $media__medium ) {
+		display: block;
+		background: $color__primary;
+		text-align: right;
+	}
+}
+
+/* Sitcky Header */
+#masthead {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background: #fff;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0);
+	&.-sticky {
+		top: 0;
+		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+		#main-navigation .menu-item-depth-0 > .menu-link, .site-tool > *, #main-navigation .simple-navigation > li > a {
+			padding-top: 1.2em;
+			padding-bottom: 1.2em;
+		}
+	}
+}
+@media ( min-width: 600px ) {
+	body.admin-bar #masthead.-sticky {
+		top: 32px;
+	}
+}

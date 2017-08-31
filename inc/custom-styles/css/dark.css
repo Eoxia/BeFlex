@@ -1,0 +1,26 @@
+/**
+ * Dark theme CSS
+ */
+
+ body {
+	 background: #0e0e0e;
+   color: #fff;
+ }
+ #masthead {
+	background: #0e0e0e;
+	border-bottom: solid #1a1a1b 1px;
+ }
+#boxfoot {
+	background: #1a1a1b;
+}
+#colophon {
+	background: #060606;
+}
+input:not([type="submit"]), textarea {
+	background: #1a1a1b;
+	color: #fff;
+	border: 1px solid #2f2f2f;
+}
+pre {
+	color: #000;
+}
