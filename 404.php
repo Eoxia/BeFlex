@@ -16,9 +16,6 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="link-home">
-						<img src="<?php echo esc_html( get_template_directory_uri() ); ?>/img/404-default.jpg" class="error-image" />
-					</a>
 					<h1 class="page-title"><?php esc_html_e( 'Oups ! Cette page n\'a pas été trouvée', 'beflex' ); ?></h1>
 				</header><!-- .page-header -->
 
