@@ -116,13 +116,13 @@
 }
 
 /* Sitcky Header */
-#masthead {
+#masthead.sticky {
 	position: fixed;
 	width: 100%;
 	z-index: 100;
 	background: #fff;
 	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0);
-	&.-sticky {
+	&.-scroll {
 		top: 0;
 		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
 		#main-navigation .menu-item-depth-0 > .menu-link, .site-tool > *, #main-navigation .simple-navigation > li > a {
@@ -132,7 +132,7 @@
 	}
 }
 @media ( min-width: 600px ) {
-	body.admin-bar #masthead.-sticky {
+	body.admin-bar #masthead.-scroll {
 		top: 32px;
 	}
 }

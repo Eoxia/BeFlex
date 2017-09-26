@@ -4307,6 +4307,9 @@ body {
 /*--------------------------------------------------------------
 # WpShop
 --------------------------------------------------------------*/
+.wpsjq-modal-opened {
+  overflow: auto !important; }
+
 body [class*="wps-bton-first"], body [class*="wps-bton-second"] {
   text-transform: uppercase;
   font-weight: 700;

@@ -35,15 +35,15 @@
 	 * Sticky Navigation
 	 */
 	 if ( isSticky() ) {
-		 $( '#masthead' ).addClass( '-sticky' );
+		 $( '#masthead.sticky' ).addClass( '-scroll' );
 	 }
 
 	 $( window ).scroll( function ( event ) {
 		 if ( isSticky() ) {
-			 $( '#masthead' ).addClass( '-sticky' );
+			 $( '#masthead.sticky' ).addClass( '-scroll' );
 		 }
 		 else {
-			 $( '#masthead' ).removeClass( '-sticky' );
+			 $( '#masthead.sticky' ).removeClass( '-scroll' );
 		 }
 	 });
 
@@ -54,7 +54,7 @@
 	 * @return {Boolean}
 	 */
 	function isSticky() {
-		if ( $( window ).scrollTop() >= $( '.site-header' ).height() ) {
+		if ( $( window ).scrollTop() >= $( '.site-header.sticky' ).height() ) {
 			return true;
 		}
 		else {
