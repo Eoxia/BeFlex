@@ -8,12 +8,12 @@
  * @package beflex
  */
 
-if ( ! class_exists( 'beflex_bloc' ) ) :
-	return;
-endif;
+ if ( ! class_exists( '\beflex_pro\beflex_bloc' ) ) :
+ 	return;
+ endif;
 
-$flexible_atts = Beflex_Bloc_Helper::g()->beflex_get_template_atts( get_the_ID() );
-$bloc = new Beflex_Bloc( $flexible_atts );
+ $flexible_atts = \beflex_pro\Beflex_Bloc_Helper::g()->beflex_get_template_atts( get_the_ID() );
+ $bloc = new \beflex_pro\Beflex_Bloc( $flexible_atts );
 
 $carousel_base_options = array(
 	'responsive' => array(

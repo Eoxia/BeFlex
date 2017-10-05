@@ -427,6 +427,95 @@
             ]
         },
         {
+            "key": "field_59ca76f63ee62",
+            "label": "Réseaux sociaux",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59ca770d3ee63",
+            "label": "Réseaux sociaux",
+            "name": "social_list",
+            "type": "repeater",
+            "instructions": "Les réseaux sociaux du thème fonctionnent par shortcode et widget. Veuillez au préalable activer le module dans l'onglet \"modules\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_59ca77313ee64",
+                    "label": "Type de réseau",
+                    "name": "social_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "facebook": "Facebook",
+                        "twitter": "Twitter",
+                        "google-plus": "Google +",
+                        "linkedin": "Linkedin",
+                        "instagram": "Instagram",
+                        "snapchat": "Snapchat",
+                        "pinterest": "Pinterest",
+                        "github": "Github",
+                        "slack": "Slack",
+                        "trello": "Trello"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_59ca77f13ee65",
+                    "label": "Lien du réseau",
+                    "name": "social_link",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "exemple : https:\/\/fr-fr.facebook.com\/Eoxia-114645355229742\/",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_59a6c9696b47f",
             "label": "Modules",
             "name": "",
@@ -459,14 +548,16 @@
                 "bloc": "Bloc ( module principal, il est déconseillé de le désactiver )",
                 "diaporama": "Diaporama",
                 "menu": "Méga Menu",
-                "annuaire": "Annuaire"
+                "annuaire": "Annuaire",
+                "social": "Réseaux sociaux"
             },
             "allow_custom": 0,
             "save_custom": 0,
             "default_value": [
                 "bloc",
                 "diaporama",
-                "menu"
+                "menu",
+                "social"
             ],
             "layout": "vertical",
             "toggle": 0,
@@ -490,5 +581,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1504163677
+    "modified": 1506441338
 }
