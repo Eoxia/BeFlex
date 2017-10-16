@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Ajouter un \u00e9l\u00e9ment",
+            "button_label": "Ajouter un élément",
             "min": "",
             "max": "",
             "layouts": [
@@ -84,7 +84,7 @@
                         },
                         {
                             "key": "field_58e50c64ab5d9",
-                            "label": "Plein \u00e9cran",
+                            "label": "Plein écran",
                             "name": "full_screen",
                             "type": "true_false",
                             "instructions": "",
@@ -95,7 +95,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Cocher pour afficher le diaporama en plein \u00e9cran",
+                            "message": "Cocher pour afficher le diaporama en plein écran",
                             "default_value": 1,
                             "ui": 0,
                             "ui_on_text": "",
@@ -230,7 +230,7 @@
                             "min": 0,
                             "max": 0,
                             "layout": "block",
-                            "button_label": "Ajouter un \u00e9diteur",
+                            "button_label": "Ajouter un éditeur",
                             "sub_fields": [
                                 {
                                     "key": "field_599a932171007",
@@ -351,6 +351,132 @@
                             },
                             "allow_null": 1,
                             "default_value": ""
+                        },
+                        {
+                            "key": "field_59e4b946198a4",
+                            "label": "Fond de la section",
+                            "name": "background",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Cocher pour afficher une couleur \/ image de fond",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_59e4b98f198a5",
+                            "label": "Couleur de fond",
+                            "name": "couleur_de_fond_de_la_section",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_59e4b946198a4",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_59e4b9ab198a6",
+                            "label": "Couleur de texte",
+                            "name": "couleur_du_texte_de_la_section",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_59e4b946198a4",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_59e4b9ed198a8",
+                            "label": "Opacité du fond de couleur",
+                            "name": "opacite_de_limage_section",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_59e4b946198a4",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 60,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 100,
+                            "step": 10
+                        },
+                        {
+                            "key": "field_59e4b9c3198a7",
+                            "label": "Image de fond",
+                            "name": "image_de_fond_de_la_section",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_59e4b946198a4",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -448,7 +574,7 @@
                             "min": 0,
                             "max": 0,
                             "layout": "block",
-                            "button_label": "Ajouter un \u00e9l\u00e9ment",
+                            "button_label": "Ajouter un élément",
                             "sub_fields": [
                                 {
                                     "key": "field_577292dd950d2",
@@ -691,7 +817,7 @@
                         },
                         {
                             "key": "field_5773d316a9040",
-                            "label": "Opacit\u00e9 de l'image",
+                            "label": "Opacité de l'image",
                             "name": "opacite_de_limage",
                             "type": "number",
                             "instructions": "",
@@ -829,7 +955,7 @@
                                 "left": "Gauche",
                                 "center": "Centre",
                                 "right": "Droite",
-                                "justify": "Justifi\u00e9"
+                                "justify": "Justifié"
                             },
                             "allow_null": 0,
                             "other_choice": 0,
@@ -945,7 +1071,7 @@
                         },
                         {
                             "key": "field_57c7f6d93257c",
-                            "label": "Opacit\u00e9 du fond de couleur",
+                            "label": "Opacité du fond de couleur",
                             "name": "opacite_de_limage_section",
                             "type": "number",
                             "instructions": "",
@@ -1073,5 +1199,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1503654694
+    "modified": 1508162564
 }
