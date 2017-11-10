@@ -51,11 +51,11 @@
 				<?php
 				$user = wp_get_current_user();
 				if ( has_nav_menu( 'menu-1' ) ) :
-					if ( class_exists( 'Beflex_Mega_Menu' ) ) :
+					if ( class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
-							'walker'  => new Beflex_Mega_Menu(),
+							'walker'  => new \beflex_pro\Beflex_Mega_Menu(),
 						) );
 					else :
 						wp_nav_menu( array(
