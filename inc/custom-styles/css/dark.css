@@ -2,19 +2,10 @@
  * Dark theme CSS
  */
 
- body {
-	 background: #0e0e0e;
-   color: #fff;
- }
- #masthead {
+/** General */
+body {
 	background: #0e0e0e;
-	border-bottom: solid #1a1a1b 1px;
- }
-#boxfoot {
-	background: #1a1a1b;
-}
-#colophon {
-	background: #060606;
+	color: #fff;
 }
 input:not([type="submit"]), textarea {
 	background: #1a1a1b;
@@ -23,4 +14,41 @@ input:not([type="submit"]), textarea {
 }
 pre {
 	color: #000;
+}
+
+/** Header */
+#masthead {
+	background: #0e0e0e;
+	border-bottom: solid #1a1a1b 1px;
+}
+#masthead .site-tool > a {
+	color: rgba(255,255,255,0.7);
+}
+#masthead .site-tool > a:hover {
+	color: rgba(255,255,255,1);
+}
+#masthead .site-branding .site-title a {
+	color: #fff;
+}
+
+/** Navigation */
+#main-navigation .simple-navigation > li > a {
+	color: rgba(255,255,255,0.8);
+}
+#main-navigation .menu-item-depth-0 > .menu-link {
+	color: rgba(255,255,255,0.8);
+}
+.site-navigation .menu-toggle {
+	color: rgba(255,255,255,0.7);
+}
+.site-navigation .menu-toggle:hover {
+	color: rgba(255,255,255,1);
+}
+
+/** Footer */
+#boxfoot {
+	background: #1a1a1b;
+}
+#colophon {
+	background: #060606;
 }

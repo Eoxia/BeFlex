@@ -215,6 +215,26 @@ function beflex_scripts() {
 add_action( 'wp_enqueue_scripts', 'beflex_scripts' );
 
 /**
+ * Ajoute la classe du theme choisi dans le body?
+ *
+ * @method beflex_add_theme_class
+ * @param Array $classes body classes.
+ * @return Array $classes body classes.
+ */
+function beflex_add_theme_class( $classes ) {
+	// Récupère le choix du thème dans les options.
+	$theme = get_field( 'theme', 'option' );
+	if ( empty( $theme ) ) :
+		$theme = 'light';
+	endif;
+
+	// Ajoute la classe dans le body.
+	$classes[] = $theme;
+	return $classes;
+}
+add_filter( 'body_class', 'beflex_add_theme_class' );
+
+/**
  * Affiche le bloc du plugin Yoast SEO tout en bas des pages
  *
  * @method beflex_display_yoast_bottom
