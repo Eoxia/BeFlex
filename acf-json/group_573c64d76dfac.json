@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter une section",
             "min": "",
             "max": "",
             "layouts": [
@@ -108,7 +108,7 @@
                 {
                     "key": "573c856f01b3d",
                     "name": "flexible_wysiwyg",
-                    "label": "Wysiwyg",
+                    "label": "Éditeur de texte",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -485,7 +485,7 @@
                 {
                     "key": "574447a9858fb",
                     "name": "flexible_bloc",
-                    "label": "Section",
+                    "label": "Bloc",
                     "display": "block",
                     "sub_fields": [
                         {
