@@ -72,7 +72,7 @@
 				'menu_id'        => 'primary-menu',
 			) );
 		elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
-			echo beflex_notification( __( 'Veuillez définir un menu en "Navigation principale" pour qu\'il apparaisse ici', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
+			echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
 		endif;
 		?>
 	</div><!-- #burger-menu -->

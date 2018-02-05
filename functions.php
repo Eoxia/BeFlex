@@ -46,7 +46,7 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Navigation principale', 'beflex' ),
+			'menu-1' => esc_html__( 'Main Navigation', 'beflex' ),
 		) );
 
 		/*
@@ -109,7 +109,7 @@ function beflex_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar Blog', 'beflex' ),
 		'id'            => 'sidebar-blog',
-		'description'   => esc_html__( 'S\'affichera sur les pages blogs / catégories de blog / articles.', 'beflex' ),
+		'description'   => esc_html__( 'Display on blog / post / archive pages.', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -132,9 +132,9 @@ function beflex_widgets_init() {
 	endif;
 	if ( is_wpshop() ) :
 		register_sidebar( array(
-			'name'          => esc_html__( 'Boutique', 'beflex' ),
+			'name'          => esc_html__( 'Shop', 'beflex' ),
 			'id'            => 'boutique',
-			'description'   => esc_html__( 'Cette sidebar s\'affiche sur les pages de votre boutique.', 'beflex' ),
+			'description'   => esc_html__( 'Display on shop pages', 'beflex' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -144,7 +144,7 @@ function beflex_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 1', 'beflex' ),
 		'id'            => 'boxfoot-1',
-		'description'   => esc_html__( '1ere zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer.', 'beflex' ),
+		'description'   => esc_html__( '1 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -153,7 +153,7 @@ function beflex_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 2', 'beflex' ),
 		'id'            => 'boxfoot-2',
-		'description'   => esc_html__( '2eme zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer.', 'beflex' ),
+		'description'   => esc_html__( '2 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -162,7 +162,7 @@ function beflex_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 3', 'beflex' ),
 		'id'            => 'boxfoot-3',
-		'description'   => esc_html__( '3eme zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer.', 'beflex' ),
+		'description'   => esc_html__( '3 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -171,7 +171,7 @@ function beflex_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 4', 'beflex' ),
 		'id'            => 'boxfoot-4',
-		'description'   => esc_html__( '4eme zone du Boxfoot. Le Boxfoot s\'affiche juste avant le footer.', 'beflex' ),
+		'description'   => esc_html__( '4 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -180,7 +180,7 @@ function beflex_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'beflex' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'S\'affiche à droite dans le footer', 'beflex' ),
+		'description'   => esc_html__( 'Display on right in Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

@@ -28,13 +28,13 @@ if ( ! function_exists( 'beflex_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Le %s', 'post date', 'beflex' ),
+			esc_html_x( 'The %s', 'post date', 'beflex' ),
 			'<a href="' . esc_url( get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'par %s', 'post author', 'beflex' ),
+			esc_html_x( 'by %s', 'post author', 'beflex' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 

@@ -38,7 +38,7 @@ if ( post_password_required() ) {
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s commentaire sur &ldquo;%2$s&rdquo;', '%1$s commentaires sur &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'beflex' ) ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'beflex' ) ),
 					number_format_i18n( $comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -51,8 +51,8 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'beflex' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Anciens commentaires', 'beflex' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Nouveaux commentaires', 'beflex' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'beflex' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'beflex' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -72,8 +72,8 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'beflex' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Anciens commentaires', 'beflex' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Nouveaux commentaires', 'beflex' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'beflex' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'beflex' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->

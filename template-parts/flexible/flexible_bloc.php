@@ -55,7 +55,7 @@ $bloc_class = $bloc->get_bloc_class(); ?>
 				$id = ( ! empty( $bloc->id ) ) ? $bloc->id : $post->ID;
 				$edit_url = home_url() . '/wp-admin/post.php?post=' . $id . '&action=edit';
 				if ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
-					echo beflex_notification( __( 'Le bloc est vide. Cliquez ici pour le configurer', 'beflex' ), 'warning', $edit_url ); // WPCS: XSS ok.
+					echo beflex_notification( __( 'The Bloc is empty. Click here to configure', 'beflex' ), 'warning', $edit_url ); // WPCS: XSS ok.
 				endif;
 			endif; ?>
 		</div>

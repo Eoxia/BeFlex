@@ -16,11 +16,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oups ! Cette page n\'a pas été trouvée', 'beflex' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Oops, that page can\'t be found', 'beflex' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'Essayez la recherche ci-dessous', 'beflex' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Perhaps searching can help ? ', 'beflex' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
