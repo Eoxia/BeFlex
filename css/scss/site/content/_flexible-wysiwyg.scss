@@ -1,11 +1,3 @@
-.flexible-wysiwyg {
-	&.-opacite- {
-
-	}
-}
-
-
-
 // Section background opacity
 .flexible-item .section-content {
 	.section-opacity {
@@ -19,5 +11,11 @@
 		&.-opacity-#{$i}0 > .section-opacity {
 			opacity: $i/10;
 		}
+	}
+}
+
+.flexible-wysiwyg.grid  {
+	.site-layout > .content {
+		padding: 1em;
 	}
 }

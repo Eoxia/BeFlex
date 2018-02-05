@@ -92,7 +92,7 @@ if ( ! function_exists( 'beflex_get_font_url' ) ) :
 	function beflex_get_font_url() {
 		$url = '';
 		$name = get_field( 'typographie_des_titres', 'options' );
-		$urls_mapping = array(
+		$native_urls = array(
 			'Caveat Brush' => 'Caveat+Brush',
 			'Dosis' => 'Dosis:400,300,600,700',
 			'Droid Serif' => 'Droid+Serif:400,400italic,700,700italic',
@@ -111,6 +111,7 @@ if ( ! function_exists( 'beflex_get_font_url' ) ) :
 			'Roboto' => 'Roboto:400,300,300italic,400italic,700,700italic,900,900italic',
 			'Work sans' => 'Work+Sans:400,300,700,800',
 		);
+		$urls_mapping = apply_filters( 'font_url', $native_urls );
 
 		foreach ( $urls_mapping as $key => $value ) :
 			( $key === $name ) ? $url = $value : false;

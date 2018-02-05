@@ -8,28 +8,23 @@
  * @package beflex
  */
 
-?>
-<div class="content-grid">
-	<?php
-	if ( have_rows( 'liste_wysiwyg' ) ) :
-		while ( have_rows( 'liste_wysiwyg' ) ) : the_row();
+if ( have_rows( 'liste_wysiwyg' ) ) :
+	while ( have_rows( 'liste_wysiwyg' ) ) : the_row();
 
-			$title = get_sub_field( 'titre_de_la_section' );
-			$width = get_sub_field( 'largeur' ); ?>
+		$title = get_sub_field( 'titre_de_la_section' );
+		$width = get_sub_field( 'largeur' ) ? get_sub_field( 'largeur' ) : '100'; ?>
 
-			<div class="content" style="width: <?php echo esc_html( $width ); ?>%;">
-				<?php if ( ! empty( $title ) ) : ?>
-					<header class="entry-header">
-						<h2 class="section-title"><?php echo esc_html( $title ); ?></h2>
-					</header><!-- .entry-header -->
-				<?php endif; ?>
+		<div class="content" style="width: <?php echo esc_html( $width ); ?>%;">
+			<?php if ( ! empty( $title ) ) : ?>
+				<header class="entry-header">
+					<h2 class="section-title"><?php echo esc_html( $title ); ?></h2>
+				</header><!-- .entry-header -->
+			<?php endif; ?>
 
-				<div class="bloc-container">
-					<?php the_sub_field( 'relation_wysiwyg' ); ?>
-				</div>
-			</div> <?php
+			<div class="bloc-container">
+				<?php the_sub_field( 'relation_wysiwyg' ); ?>
+			</div>
+		</div> <?php
 
-		endwhile;
-	endif;
-	?>
-</div>
+	endwhile;
+endif;

@@ -16,6 +16,7 @@ $section_background_color = '';
 $section_class = '';
 $section_style = '';
 
+$section_class .= $display_type . ' ';
 if ( $section_background ) :
 	$section_background_color = get_sub_field( 'couleur_de_fond_de_la_section' );
 	$section_text_color = get_sub_field( 'couleur_du_texte_de_la_section' );
@@ -33,7 +34,11 @@ endif;
 ?>
 
 <div class="flexible-wysiwyg section-content -padding-1 <?php echo esc_html( $section_class ); ?>" style="<?php echo esc_html( $section_style ); ?>">
-	<span class="section-opacity" style="background: <?php echo esc_html( $section_background_color ); ?>"></span>
+
+	<?php if ( $section_background ) : ?>
+		<span class="section-opacity" style="background: <?php echo esc_html( $section_background_color ); ?>"></span>
+	<?php endif; ?>
+
 	<div class="site-layout site-width">
 
 		<?php if ( $display_sidebar && $sidebar_name ) : ?>
