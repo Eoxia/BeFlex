@@ -36,6 +36,8 @@ endif;
 					</div> <?php
 
 				endwhile;
+			else :
+				the_content();
 			endif;
 		else :
 			the_content();
