@@ -1194,10 +1194,8 @@
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1508162564
+    "modified": 1517823021
 }
