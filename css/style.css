@@ -2957,7 +2957,7 @@ a:hover, a:active {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   background: #2b2b2b;
-  z-index: 10; }
+  z-index: 901; }
 
 #main-navigation .menu-item-depth-0 .menu-depth-1 .menu-item-depth-1 {
   position: relative; }
@@ -3001,7 +3001,7 @@ a:hover, a:active {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   background: #2b2b2b;
   padding: 0.8em 0;
-  z-index: 11; }
+  z-index: 902; }
 
 #main-navigation .menu-item-depth-2 .sub-menu {
   display: none; }
@@ -3131,7 +3131,8 @@ a:hover, a:active {
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  background: #2b2b2b; }
+  background: #2b2b2b;
+  z-index: 901; }
 
 #main-navigation .simple-navigation > li > .sub-menu > li {
   position: relative; }
@@ -3174,7 +3175,8 @@ a:hover, a:active {
   transition: all 0.2s ease-out;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   background: #2b2b2b;
-  padding: 0.8em 0; }
+  padding: 0.8em 0;
+  z-index: 902; }
 
 #main-navigation .simple-navigation li.menu-item-has-children > a:after {
   display: block;

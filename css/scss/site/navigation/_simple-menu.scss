@@ -51,6 +51,7 @@
 		pointer-events: none;
 		@include transition();
 		background: #2b2b2b;
+		z-index: 901;
 
 		> li {
 			position: relative;
@@ -91,6 +92,7 @@
 		border-left: 1px solid rgba(0,0,0,0.1);
 		background: #2b2b2b;
 		padding: 0.8em 0;
+		z-index: 902;
 	}
 
 	li.menu-item-has-children {

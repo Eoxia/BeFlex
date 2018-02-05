@@ -41,7 +41,7 @@
 		pointer-events: none;
 		@include transition();
 		background: #2b2b2b;
-		z-index: 10;
+		z-index: 901;
 
 		.menu-item-depth-1 {
 			position: relative;
@@ -81,7 +81,7 @@
 		border-left: 1px solid rgba(0,0,0,0.1);
 		background: #2b2b2b;
 		padding: 0.8em 0;
-		z-index: 11;
+		z-index: 902;
 	}
 	// Les niveaux suivants n'existent pas
 	.menu-item-depth-2 .sub-menu {
