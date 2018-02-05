@@ -17,5 +17,25 @@
 .flexible-wysiwyg.grid  {
 	.site-layout > .content {
 		padding: 1em;
+
+		@media ( max-width: $media__small ) {
+			width: 100% !important;
+			padding: 0;
+		}
+	}
+}
+
+/** Grid */
+.flexible-wysiwyg .site-layout {
+	display: flex;
+	flex-wrap: wrap;
+
+	> .content {
+		flex-grow: 0;
+
+		@media ( max-width: $media__small ) {
+			width: 100% !important;
+			padding: 0;
+		}
 	}
 }
