@@ -38,23 +38,17 @@
 
 		<div class="entry-content">
 			<?php
-				the_content( sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Lire la suite<span class="screen-reader-text"> "%s"</span>', 'beflex' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				) );
+			$trim_size = ( get_field( 'is_post_trim', 'options' ) ) ? get_field( 'post_trim_size', 'options' ) : '-1';
+			if ( is_single() ) :
+				the_content( esc_html( 'Lire la suite', 'beflex' ) );
+			else :
+				echo esc_html( wp_trim_words( get_the_content(), $trim_size, ' (...)' ) );
+			endif;
 
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
-					'after'  => '</div>',
-				) );
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
+				'after'  => '</div>',
+			) );
 			?>
 		</div><!-- .entry-content -->
 
