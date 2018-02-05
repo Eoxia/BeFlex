@@ -1,6 +1,11 @@
 #page {
 	overflow-x: hidden;
 }
+.post {
+	.post-thumbnail img {
+		width: 100%;
+	}
+}
 
 .sticky {
 	display: block;
