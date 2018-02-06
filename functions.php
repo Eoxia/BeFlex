@@ -88,6 +88,30 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'beflex_setup' );
 
+if ( ! function_exists( 'beflex_hide_wp_editor' ) ) :
+	/**
+	 * Masque l'éditeur de WordPress sur les pages sans contenu
+	 *
+	 * @method beflex_hide_wp_editor
+	 * @return void
+	 */
+	function beflex_hide_wp_editor() {
+		// Stop la fonction si on ne trouve pas la variable post.
+		if ( empty( $_GET['post'] ) ) return;
+
+		// Récupère le Post ID.
+		$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+		if ( ! isset( $post_id ) ) return;
+
+		// Supprime l'éditeur si pas de contenu.
+		$page_content = get_post_field( 'post_content', $post_id );
+		if ( empty( $page_content ) ) :
+			remove_post_type_support( 'page', 'editor' );
+		endif;
+	}
+endif;
+add_action( 'admin_init', 'beflex_hide_wp_editor' );
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
