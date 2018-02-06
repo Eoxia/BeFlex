@@ -36,12 +36,18 @@ endif;
 					</div> <?php
 
 				endwhile;
-			else :
-				the_content();
 			endif;
-		else :
-			the_content();
 		endif;
+
+		// Affiche le contenu standard de l'éditeur de WordPress s'il existe.
+		$basic_content = get_the_content();
+		if ( ! empty( $basic_content ) ) : ?>
+			<div class="site-width">
+				<?php the_content(); ?>
+			</div> <?php
+		endif;
+
+
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
