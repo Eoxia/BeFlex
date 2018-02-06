@@ -15,32 +15,34 @@
 
 	</div><!-- #content -->
 
-	<div id="boxfoot">
-		<div class="site-width">
-			<div class="gridwrapper w4">
-				<aside class="sidebar">
-					<?php if ( is_active_sidebar( 'boxfoot-1' ) ) :
-						dynamic_sidebar( 'boxfoot-1' );
-					endif; ?>
-				</aside>
-				<aside class="sidebar">
-					<?php if ( is_active_sidebar( 'boxfoot-2' ) ) :
-						dynamic_sidebar( 'boxfoot-2' );
-					endif; ?>
-				</aside>
-				<aside class="sidebar">
-					<?php if ( is_active_sidebar( 'boxfoot-3' ) ) :
-						dynamic_sidebar( 'boxfoot-3' );
-					endif; ?>
-				</aside>
-				<aside class="sidebar">
-					<?php if ( is_active_sidebar( 'boxfoot-4' ) ) :
-						dynamic_sidebar( 'boxfoot-4' );
-					endif; ?>
-				</aside>
-			</div><!-- .gridwrapper -->
-		</div><!-- .site-width -->
-	</div><!-- #boxfoot -->
+	<?php if ( is_active_sidebar( 'boxfoot-1' ) || is_active_sidebar( 'boxfoot-2' ) || is_active_sidebar( 'boxfoot-3' ) || is_active_sidebar( 'boxfoot-4' ) ) : ?>
+		<div id="boxfoot">
+			<div class="site-width">
+				<div class="gridwrapper w4">
+					<aside class="sidebar">
+						<?php if ( is_active_sidebar( 'boxfoot-1' ) ) :
+							dynamic_sidebar( 'boxfoot-1' );
+						endif; ?>
+					</aside>
+					<aside class="sidebar">
+						<?php if ( is_active_sidebar( 'boxfoot-2' ) ) :
+							dynamic_sidebar( 'boxfoot-2' );
+						endif; ?>
+					</aside>
+					<aside class="sidebar">
+						<?php if ( is_active_sidebar( 'boxfoot-3' ) ) :
+							dynamic_sidebar( 'boxfoot-3' );
+						endif; ?>
+					</aside>
+					<aside class="sidebar">
+						<?php if ( is_active_sidebar( 'boxfoot-4' ) ) :
+							dynamic_sidebar( 'boxfoot-4' );
+						endif; ?>
+					</aside>
+				</div><!-- .gridwrapper -->
+			</div><!-- .site-width -->
+		</div><!-- #boxfoot -->
+	<?php endif; ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-width">
