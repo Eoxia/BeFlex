@@ -24,9 +24,9 @@
 	}
 	.close-burger {
 		position: absolute;
-		top: 2em;
-		right: 2em;
-		@include font-size(1.2);
+		top: 1em;
+		right: 1em;
+		font-size: 28px;
 		@include transition();
 		color: rgba(255,255,255,1);
 		&:hover {

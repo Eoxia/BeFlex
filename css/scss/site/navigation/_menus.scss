@@ -91,31 +91,38 @@
 	// Fleche Sous menu
 	[class*="menu-item-depth-"].menu-item-has-children {
 		> .menu-link:after {
-			display: block;
-			font: normal normal normal 14px/1 FontAwesome;
-			display: inline-block;
+			display: none;
+			font-family: "Font Awesome 5 Light";
+		}
+		> .menu-link .svg-inline--fa {
 			vertical-align: middle;
+			display: inline-block;
 		}
 	}
 	// Fleche Sous menu, premier niveau
 	.menu-item-depth-0.menu-item-has-children {
 		> .menu-link:after {
-			content: $fa-var-angle-down;
+			content: '\f107';
+		}
+		> .menu-link .svg-inline--fa {
 			margin-left: .5em;
 			margin-bottom: .25em;
 			color: rgba(0,0,0,.4);
 		}
-		&:hover > .menu-link:after {
-			content: $fa-var-angle-up;
-		}
+		// Hover ne fonctionne pas, à corriger dans une prochaine version
+		// &:hover > .menu-link:after {
+		// 	content: '\f106';
+		// }
 	}
 	// Fleche Sous menu, second niveau
 	.menu-item-depth-1.menu-item-has-children {
 		> .menu-link:after {
-			content: $fa-var-angle-right;
+			content: '\f105';
+		}
+		> .menu-link .svg-inline--fa {
 			position: absolute;
 			right: 1em;
-			margin-bottom: .25em;
+			top: 0.8em;
 			color: rgba(255,255,255,.4);
 		}
 	}
@@ -138,7 +145,7 @@
 /* Toggle Link */
 .site-navigation {
 	.menu-toggle {
-		@include font-size(0.9);
+		@include font-size(0.8);
     font-weight: 600;
 		padding: 2.4em 1.4em;
     height: 100%;
@@ -149,6 +156,12 @@
 		&:hover {
 			cursor: pointer;
 			color: rgba(0,0,0,0.9);
+		}
+		.svg-inline--fa {
+			color: $color__primary;
+			@media ( max-width: $media__small ) {
+				@include font-size(1.2);
+			}
 		}
 		.fa {
 			padding-right: 0.6em;

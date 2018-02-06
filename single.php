@@ -20,8 +20,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', get_post_format() );
 
 			the_post_navigation( array(
-				'prev_text' => '<i class="fa fa-angle-left"></i> %title',
-				'next_text' => '%title <i class="fa fa-angle-right"></i>',
+				'prev_text' => '<i class="far fa-angle-left fa-fw"></i> %title',
+				'next_text' => '%title <i class="far fa-angle-right fa-fw"></i>',
 			));
 
 			// If comments are open or we have at least one comment, load up the comment template.

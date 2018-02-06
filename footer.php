@@ -65,7 +65,7 @@
 
 	<div id="burger-menu">
 		<div class="navigation-overlay"></div>
-		<span class="close-burger"><i class="fa fa-times"></i></span>
+		<span class="close-burger"><i class="fal fa-times"></i></span>
 		<?php
 		$user = wp_get_current_user();
 		if ( has_nav_menu( 'menu-1' ) ) :

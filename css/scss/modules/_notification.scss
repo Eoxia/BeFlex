@@ -6,6 +6,18 @@
 	border-radius: 3px;
 	border: solid #eee 1px;
 
+	&::before {
+		display: none;
+		font-family: "Font Awesome 5 Solid";
+		content: '\f05a';
+	}
+	.svg-inline--fa {
+		position: absolute;
+		top: 50%;
+		left: .75em;
+		transform: translate(0, -50%);
+		font-size: 1rem;
+	}
 	p {
 		margin-bottom: 0;
 	}
@@ -19,6 +31,8 @@
 		width: 100%;
 		height: 100%;
 	}
+
+	// Info
 	&.info {
 		border-left: solid #2e75bf 4px;
 		color: #2e75bf;
@@ -26,15 +40,19 @@
 			color: #2e75bf;
 		}
 		&::before {
-			content: $fa-var-info-circle;
+			content: '\f05a';
 		}
 	}
+
+	// Empty
 	&.empty {
 		padding: 1em;
 		border: dashed #ddd 1px;
 		border-radius: 1em;
 		color:#ccc;
 	}
+
+	// Error
 	&.error {
 		border-left: solid #e74c3c 4px;
 		color: #e74c3c;
@@ -42,9 +60,11 @@
 			color: #e74c3c;
 		}
 		&::before {
-			content: $fa-var-exclamation-circle;
+			content: '\f06a';
 		}
 	}
+
+	// Success
 	&.success {
 		border-left: solid #74c246 4px;
 		color: #74c246;
@@ -52,9 +72,11 @@
 			color: #74c246;
 		}
 		&::before {
-			content: $fa-var-check-circle;
+			content: '\f058';
 		}
 	}
+
+	// Warning
 	&.warning {
 		border-left: solid #fcb231 4px;
 		color: #fcb231;
@@ -62,20 +84,11 @@
 			color: #fcb231;
 		}
 		&::before {
-			content: $fa-var-bell;
+			content: '\f0f3';
 		}
 	}
 
-	&::before {
-		display: block;
-		content: '';
-		font-size: 1rem;
-		@include fa-icon();
-		position: absolute;
-		top: 50%;
-		left: .75em;
-		transform: translate(0, -50%);
-	}
+
 	@media (max-width: 770px) {
 
 	}

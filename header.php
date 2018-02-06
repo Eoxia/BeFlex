@@ -69,11 +69,11 @@
 				endif;
 				?>
 			</nav><!-- #main-navigation -->
-			<a href="#" class="menu-toggle"><i class="fa fa-bars"></i><span><?php esc_html_e( 'Navigation', 'beflex' ); ?></span></a>
+			<a href="#" class="menu-toggle"><i class="far fa-bars fa-fw"></i><span><?php esc_html_e( 'Navigation', 'beflex' ); ?></span></a>
 		</div><!-- .site-navigation -->
 
 		<div class="site-tool">
-			<a href="#" class="js-search"><i class="fa fa-search"></i></a>
+			<a href="#" class="js-search"><i class="far fa-search"></i></a>
 			<?php if ( is_wpshop() ) : ?>
 				<a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option( 'wpshop_myaccount_page_id' ) ) ); /* WPCS: xss ok. */ ?>" class="wps-my-account"><i class="wps-icon-user"></i></a>
 				<a href="#" class="wps-action-mini-cart-opener wps-my-cart"><i class="wps-icon-basket"></i><?php echo do_shortcode( '[wps-numeration-cart]' ); ?></a>
@@ -84,7 +84,7 @@
 	<div id="search-area">
 		<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<label>
-				<i class="fa fa-search"></i>
+				<span class="search-icon"><i class="far fa-search"></i></span>
 				<input type="search" class="search-field"
 						placeholder="<?php echo esc_attr_x( 'Enter a Keyword', 'placeholder', 'beflex' ) ?>"
 						value="<?php echo get_search_query() ?>" name="s"
