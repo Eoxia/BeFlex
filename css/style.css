@@ -1078,7 +1078,7 @@ body.sticky-nav #content {
 
 #masthead {
   position: relative;
-  padding: 0 1em;
+  padding: 0 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1095,21 +1095,22 @@ body.sticky-nav #content {
   -webkit-flex: 0 1 auto;
      -moz-box-flex: 0;
       -ms-flex: 0 1 auto;
-          flex: 0 1 auto; }
+          flex: 0 1 auto;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
 
 #masthead .site-branding {
   width: 30%; }
 
 #masthead .site-navigation {
-  width: 60%; }
-
-#masthead .site-tool {
-  width: 10%; }
-
-#masthead .site-navigation, #masthead .site-tool {
-  margin-left: auto; }
+  width: 100%; }
 
 @media (max-width: 770px) {
+  #masthead {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
   #masthead .site-branding {
     width: 50%;
     padding-left: 1rem; }
@@ -1139,6 +1140,12 @@ body.sticky-nav #content {
 @media (max-width: 770px) {
   #masthead {
     padding: 0; } }
+
+@media (max-width: 480px) {
+  #masthead .site-branding {
+    width: 70%; }
+  #masthead .site-branding img {
+    width: 100%; } }
 
 #masthead .site-branding {
   margin: auto 0;
@@ -1185,7 +1192,7 @@ body.sticky-nav #content {
   margin-left: auto; }
 
 #masthead .site-tool {
-  padding: 0 0.6em;
+  padding: 0 0 0 0.6em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
