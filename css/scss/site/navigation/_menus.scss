@@ -122,7 +122,8 @@
 		> .menu-link .svg-inline--fa {
 			position: absolute;
 			right: 1em;
-			top: 0.8em;
+			top: 50%;
+			transform: translateY(-50%);
 			color: rgba(255,255,255,.4);
 		}
 	}
