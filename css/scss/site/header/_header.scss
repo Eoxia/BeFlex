@@ -53,7 +53,8 @@
 	}
 	.site-title img {
 		max-width: 280px;
-		max-height: 60px;
+		max-height: 50px;
+		display: block;
 	}
 	.site-description {
 		@include font-size( 0.86 );

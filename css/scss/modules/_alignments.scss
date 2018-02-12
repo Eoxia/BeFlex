@@ -25,6 +25,7 @@
 	}
 }
 
-#content {
+/** Ajoute une marge en haut de la page si la navigation est en absolute */
+body.sticky-nav #content {
 	padding-top: 80px;
 }

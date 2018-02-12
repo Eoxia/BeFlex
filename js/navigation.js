@@ -31,6 +31,12 @@
 		}   // esc
 	});
 
+
+	/** Affiche une classe dans le body si la navigation est sticky */
+	if ( $( '#masthead' ).hasClass('sticky') ) {
+		$( 'body' ).addClass( 'sticky-nav' );
+	}
+
 	/**
 	 * Sticky Navigation
 	 */
