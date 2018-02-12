@@ -38,7 +38,12 @@
 
 		<div class="entry-content">
 			<?php
-			$trim_size = ( get_field( 'is_post_trim', 'options' ) ) ? get_field( 'post_trim_size', 'options' ) : '-1';
+			if ( is_acf() ) :
+				$trim_size = ( get_field( 'is_post_trim', 'options' ) ) ? get_field( 'post_trim_size', 'options' ) : '-1';
+			else :
+				$trim_size = '-1';
+			endif;
+
 			if ( is_single() ) :
 				the_content( esc_html( 'Read more', 'beflex' ) );
 			else :
