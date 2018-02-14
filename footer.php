@@ -50,7 +50,7 @@
 				<div class="site-info">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					<?php echo esc_html( '©' ); ?>
-					<?php the_date( 'Y' ); ?>
+					<?php echo esc_html( date( 'Y' ) ); ?>
 				</div><!-- .site-info -->
 				<div class="sidebar">
 					<aside class="sidebar">
