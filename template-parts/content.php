@@ -39,9 +39,9 @@
 		<div class="entry-content">
 			<?php
 			if ( is_acf() ) :
-				$trim_size = ( get_field( 'is_post_trim', 'options' ) ) ? get_field( 'post_trim_size', 'options' ) : '-1';
+				$trim_size = ( get_field( 'is_post_trim', 'options' ) ) ? get_field( 'post_trim_size', 'options' ) : '100';
 			else :
-				$trim_size = '-1';
+				$trim_size = '100';
 			endif;
 
 			if ( is_single() ) :
