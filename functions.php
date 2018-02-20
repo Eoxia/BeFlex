@@ -44,6 +44,9 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		// Autorise les extraits sur les pages.
+		add_post_type_support( 'page', 'excerpt' );
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Main Navigation', 'beflex' ),
