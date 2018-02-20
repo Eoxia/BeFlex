@@ -800,25 +800,6 @@
                             "endpoint": 0
                         },
                         {
-                            "key": "field_5772a4cd67128",
-                            "label": "Carousel",
-                            "name": "bloc_carousel",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 50,
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Afficher en carousel ?",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
                             "key": "field_57444b1c66d15",
                             "label": "Design",
                             "name": "mode_daffichage",
@@ -827,7 +808,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -928,7 +909,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "33.333333",
                                 "class": "",
                                 "id": ""
                             },
@@ -943,24 +924,40 @@
                             "key": "field_574449e601c86",
                             "label": "Nb de blocs par ligne",
                             "name": "nb_de_blocs_par_ligne",
-                            "type": "number",
+                            "type": "range",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": 50,
+                                "width": "33.333333",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": 3,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
+                            "default_value": "",
                             "min": 1,
-                            "max": 10,
+                            "max": 6,
                             "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5772a4cd67128",
+                            "label": "Carousel",
+                            "name": "bloc_carousel",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Afficher en carousel ?",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_578650dc37121",
@@ -993,6 +990,36 @@
                             "layout": "horizontal",
                             "toggle": 1,
                             "return_format": "value"
+                        },
+                        {
+                            "key": "field_5a8c3cf43c399",
+                            "label": "Couleur de fond du bouton",
+                            "name": "button_background_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_5a8c3d003c39a",
+                            "label": "Couleur de texte du bouton",
+                            "name": "button_text_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
                         },
                         {
                             "key": "field_57c6eb892a6e5",
@@ -1292,52 +1319,6 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        },
-                        {
-                            "key": "field_5a8c3cf43c399",
-                            "label": "Couleur de fond du bouton",
-                            "name": "button_background_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_57c7f164de94f",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": ""
-                        },
-                        {
-                            "key": "field_5a8c3d003c39a",
-                            "label": "Couleur de texte du bouton",
-                            "name": "button_text_color",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_57c7f164de94f",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": ""
                         }
                     ],
                     "min": "",
@@ -1363,5 +1344,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519141509
+    "modified": 1519144445
 }
