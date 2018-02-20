@@ -29,3 +29,19 @@
 		}
 	}
 }
+
+/** Alignement */
+.flexible-wysiwyg {
+	&.-a-left {
+		text-align: left;
+	}
+	&.-a-center {
+		text-align: center;
+	}
+	&.-a-right {
+		text-align: right;
+	}
+	&.-a-justify {
+		text-align: justify;
+	}
+}

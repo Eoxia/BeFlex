@@ -8,19 +8,19 @@
  * @package beflex
  */
 
-$display_sidebar = get_sub_field( 'afficher_une_sidebar' );
-$sidebar_name = get_sub_field( 'choisir_une_sidebar' );
-$display_type = get_sub_field( 'affichage' ) ? get_sub_field( 'affichage' ) : 'default';
-$section_background = get_sub_field( 'background' );
+$display_sidebar          = get_sub_field( 'afficher_une_sidebar' );
+$sidebar_name             = get_sub_field( 'choisir_une_sidebar' );
+$display_type             = get_sub_field( 'affichage' ) ? get_sub_field( 'affichage' ) : 'default';
+$section_background       = get_sub_field( 'background' );
 $section_background_color = '';
-$section_class = '';
-$section_style = '';
+$section_class            = '';
+$section_style            = '';
 
 $section_class .= $display_type . ' ';
 if ( $section_background ) :
 	$section_background_color = get_sub_field( 'couleur_de_fond_de_la_section' );
-	$section_text_color = get_sub_field( 'couleur_du_texte_de_la_section' );
-	$section_image_opacity = get_sub_field( 'opacite_de_limage_section' );
+	$section_text_color       = get_sub_field( 'couleur_du_texte_de_la_section' );
+	$section_image_opacity    = get_sub_field( 'opacite_de_limage_section' );
 	$section_background_image = get_sub_field( 'image_de_fond_de_la_section' );
 
 	$section_class .= ( $section_image_opacity ) ? '-opacity-' . get_sub_field( 'opacite_de_limage_section' ) : '';
@@ -31,6 +31,7 @@ if ( $section_background ) :
 	endif;
 	$section_style .= ( $section_text_color ) ? 'color: ' . $section_text_color . ';' : '';
 endif;
+$section_class .= get_sub_field( 'alignement' ) ? '-a-' . get_sub_field( 'alignement' ) : '-a-left';
 ?>
 
 <div class="flexible-wysiwyg section-content -padding-1 <?php echo esc_html( $section_class ); ?>" style="<?php echo esc_html( $section_style ); ?>">
