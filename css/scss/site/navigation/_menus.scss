@@ -127,6 +127,12 @@
 			color: rgba(255,255,255,.4);
 		}
 	}
+	// Pas de fleches après les autres niveaux
+	.menu-item-depth-2.menu-item-has-children {
+		> .menu-link .svg-inline--fa {
+			display: none;
+		}
+	}
 }
 
 /* Toggle Menu */

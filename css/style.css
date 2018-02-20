@@ -684,6 +684,9 @@ a:hover, a:active {
           transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.4); }
 
+#main-navigation .menu-item-depth-2.menu-item-has-children > .menu-link .svg-inline--fa {
+  display: none; }
+
 .site-navigation .menu-toggle {
   display: block; }
 
