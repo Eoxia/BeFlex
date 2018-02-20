@@ -310,6 +310,64 @@
                             "endpoint": 0
                         },
                         {
+                            "key": "field_5a8c3a2171048",
+                            "label": "Général",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 1,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_5a8c37d16e24e",
+                            "label": "Alignement",
+                            "name": "alignement",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "<i class=\"dashicons dashicons-editor-alignleft\"><\/i>",
+                                "center": "<i class=\"dashicons dashicons-editor-aligncenter\"><\/i>",
+                                "right": "<i class=\"dashicons dashicons-editor-alignright\"><\/i>",
+                                "justify": "<i class=\"dashicons dashicons-editor-justify\"><\/i>"
+                            },
+                            "allow_null": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5a8c3a2d71049",
+                            "label": "Sidebar",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
                             "key": "field_589dd476bc44f",
                             "label": "Afficher une sidebar",
                             "name": "afficher_une_sidebar",
@@ -353,6 +411,23 @@
                             "default_value": ""
                         },
                         {
+                            "key": "field_5a8c3a327104a",
+                            "label": "Couleur",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
                             "key": "field_59e4b946198a4",
                             "label": "Fond de la section",
                             "name": "background",
@@ -361,7 +436,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -845,27 +920,24 @@
                             "step": 10
                         },
                         {
-                            "key": "field_57cfe6f80b205",
+                            "key": "field_5a8c37a5c2811",
                             "label": "Espacement Bloc",
                             "name": "espacement_bloc",
-                            "type": "number",
+                            "type": "range",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": 50,
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": 1,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
+                            "default_value": "",
                             "min": 0,
-                            "max": 4,
-                            "step": 1,
-                            "readonly": 0,
-                            "disabled": 0
+                            "max": 10,
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_574449e601c86",
@@ -939,10 +1011,27 @@
                             "endpoint": 0
                         },
                         {
+                            "key": "field_5a8c39b098f9e",
+                            "label": "Général",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 1,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
                             "key": "field_5786499f78fe9",
                             "label": "Alignement",
                             "name": "alignement",
-                            "type": "radio",
+                            "type": "button_group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -952,23 +1041,21 @@
                                 "id": ""
                             },
                             "choices": {
-                                "left": "Gauche",
-                                "center": "Centre",
-                                "right": "Droite",
-                                "justify": "Justifié"
+                                "left": "<i class=\"dashicons dashicons-editor-alignleft\"><\/i>",
+                                "center": "<i class=\"dashicons dashicons-editor-aligncenter\"><\/i>",
+                                "right": "<i class=\"dashicons dashicons-editor-alignright\"><\/i>",
+                                "justify": "<i class=\"dashicons dashicons-editor-justify\"><\/i>"
                             },
                             "allow_null": 0,
-                            "other_choice": 0,
-                            "save_other_choice": 0,
                             "default_value": "",
                             "layout": "horizontal",
                             "return_format": "value"
                         },
                         {
-                            "key": "field_57cfe65a8d83f",
+                            "key": "field_5a8c3765704d3",
                             "label": "Espacement Section",
                             "name": "espacement_section",
-                            "type": "number",
+                            "type": "range",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -977,13 +1064,12 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
+                            "default_value": "",
                             "min": 0,
-                            "max": 4,
-                            "step": 1
+                            "max": 10,
+                            "step": 1,
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_57c6ec9801c87",
@@ -1005,6 +1091,83 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_5a8c399e98f9d",
+                            "label": "Sidebar",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
+                            "key": "field_57c6ecf601c88",
+                            "label": "Afficher une sidebar",
+                            "name": "afficher_une_sidebar",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Afficher une sidebar",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_57c6ed1001c89",
+                            "label": "Choisir une sidebar",
+                            "name": "choisir_une_sidebar",
+                            "type": "sidebar_selector",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_57c6ecf601c88",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "allow_null": 1,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_5a8c3913c271d",
+                            "label": "Couleurs",
+                            "name": "",
+                            "type": "accordion",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "open": 0,
+                            "multi_expand": 1,
+                            "endpoint": 0
+                        },
+                        {
                             "key": "field_57c7f164de94f",
                             "label": "Background",
                             "name": "background",
@@ -1013,7 +1176,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -1063,7 +1226,7 @@
                                 ]
                             ],
                             "wrapper": {
-                                "width": 50,
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -1131,35 +1294,16 @@
                             "mime_types": ""
                         },
                         {
-                            "key": "field_57c6ecf601c88",
-                            "label": "Afficher une sidebar",
-                            "name": "afficher_une_sidebar",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Afficher une sidebar",
-                            "default_value": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
-                            "key": "field_57c6ed1001c89",
-                            "label": "Choisir une sidebar",
-                            "name": "choisir_une_sidebar",
-                            "type": "sidebar_selector",
+                            "key": "field_5a8c3cf43c399",
+                            "label": "Couleur de fond du bouton",
+                            "name": "button_background_color",
+                            "type": "color_picker",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
-                                        "field": "field_57c6ecf601c88",
+                                        "field": "field_57c7f164de94f",
                                         "operator": "==",
                                         "value": "1"
                                     }
@@ -1170,7 +1314,29 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "allow_null": 1,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_5a8c3d003c39a",
+                            "label": "Couleur de texte du bouton",
+                            "name": "button_text_color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_57c7f164de94f",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
                             "default_value": ""
                         }
                     ],
@@ -1197,5 +1363,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1517823021
+    "modified": 1519140218
 }
