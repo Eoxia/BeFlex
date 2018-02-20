@@ -1588,16 +1588,16 @@ body.sticky-nav #content {
     width: 100% !important;
     padding: 0; } }
 
-.flexible-wysiwyg.-a-left {
+.flexible-wysiwyg.-align-left {
   text-align: left; }
 
-.flexible-wysiwyg.-a-center {
+.flexible-wysiwyg.-align-center {
   text-align: center; }
 
-.flexible-wysiwyg.-a-right {
+.flexible-wysiwyg.-align-right {
   text-align: right; }
 
-.flexible-wysiwyg.-a-justify {
+.flexible-wysiwyg.-align-justify {
   text-align: justify; }
 
 .site-content {

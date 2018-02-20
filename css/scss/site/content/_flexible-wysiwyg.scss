@@ -32,16 +32,16 @@
 
 /** Alignement */
 .flexible-wysiwyg {
-	&.-a-left {
+	&.-align-left {
 		text-align: left;
 	}
-	&.-a-center {
+	&.-align-center {
 		text-align: center;
 	}
-	&.-a-right {
+	&.-align-right {
 		text-align: right;
 	}
-	&.-a-justify {
+	&.-align-justify {
 		text-align: justify;
 	}
 }
