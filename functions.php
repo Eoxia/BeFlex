@@ -64,6 +64,9 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add custom style for tinymce.
+		add_editor_style( 'css/custom-editor-style.css' );
+
 		/**
 		 * Create the option page with the ACF plugin
 		 */
@@ -273,6 +276,44 @@ function beflex_display_yoast_bottom() {
 }
 add_filter( 'wpseo_metabox_prio', 'beflex_display_yoast_bottom' );
 
+/**
+ * [beflex_init_tiny_buttons description]
+ *
+ * @param  Array $buttons liste des boutons.
+ * @return Array $buttons liste des boutons.
+ */
+function beflex_init_tiny_buttons( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+add_filter( 'mce_buttons_2', 'beflex_init_tiny_buttons' );
+
+/**
+ * Ajoute des boutons personnalisés dans la barre de Tiny MCE
+ *
+ * @param  Array $init_array Liste des boutons.
+ * @return Array Liste des boutons.
+ */
+function beflex_add_custom_formats( $init_array ) {
+	$style_formats = array(
+		array(
+			'title'   => 'Entete',
+			'block'   => 'div',
+			'classes' => 'beflex-entete',
+			'wrapper' => true,
+		),
+		array(
+			'title'   => 'Bouton',
+			'block'   => 'a',
+			'classes' => 'button primary',
+			'wrapper' => true,
+		),
+	);
+
+	$init_array['style_formats'] = wp_json_encode( $style_formats );
+	return $init_array;
+}
+add_filter( 'tiny_mce_before_init', 'beflex_add_custom_formats' );
 
 /**
  * Custom template tags for this theme.
