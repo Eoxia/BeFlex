@@ -31,7 +31,7 @@ if ( $section_background ) :
 	endif;
 	$section_style .= ( $section_text_color ) ? 'color: ' . $section_text_color . ';' : '';
 endif;
-$section_class .= get_sub_field( 'alignement' ) ? '-align-' . get_sub_field( 'alignement' ) : '-align-left';
+$section_class .= get_sub_field( 'alignement' ) ? ' -align-' . get_sub_field( 'alignement' ) : ' -align-left';
 ?>
 
 <div class="flexible-wysiwyg section-content -padding-1 <?php echo esc_html( $section_class ); ?>" style="<?php echo esc_html( $section_style ); ?>">
