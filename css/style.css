@@ -1578,7 +1578,7 @@ body.sticky-nav #content {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
 
-.flexible-wysiwyg.grid .site-layout > .content {
+.flexible-wysiwyg.grid .site-layout .grid-content {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
      -moz-box-flex: 0;
@@ -1587,7 +1587,7 @@ body.sticky-nav #content {
   padding: 1em; }
 
 @media (max-width: 480px) {
-  .flexible-wysiwyg.grid .site-layout > .content {
+  .flexible-wysiwyg.grid .site-layout .grid-content {
     width: 100% !important;
     padding: 0; } }
 
