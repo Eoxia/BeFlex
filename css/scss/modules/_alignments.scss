@@ -19,10 +19,13 @@
 	max-width: $size__site-width;
 	width: 100%;
 	margin: auto;
-	@media ( max-width: $media__medium ) {
-		padding-left: 1em !important;
-		padding-right: 1em !important;
-	}
+	padding-left: 1em;
+	padding-right: 1em;
+}
+/** Garde seulement la marge du site-width global */
+#content.site-width .site-width {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 /** Ajoute une marge en haut de la page si la navigation est en absolute */

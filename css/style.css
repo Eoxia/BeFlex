@@ -1048,12 +1048,13 @@ a:hover, a:active {
 .site-width {
   max-width: 1260px;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em; }
 
-@media (max-width: 770px) {
-  .site-width {
-    padding-left: 1em !important;
-    padding-right: 1em !important; } }
+#content.site-width .site-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 body.sticky-nav #content {
   padding-top: 80px; }
