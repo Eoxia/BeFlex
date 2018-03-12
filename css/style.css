@@ -1518,6 +1518,21 @@ body.sticky-nav #content {
 .blog .post .post-content .entry-content, .author .post .post-content .entry-content, .archive .post .post-content .entry-content, .category .post .post-content .entry-content {
   margin-top: 0.2em; }
 
+#primary .post-categories .post-categorie {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  margin: 0.2em 0;
+  background: #ececec;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
+
+#primary .post-categories .post-categorie:hover {
+  background: lightgray; }
+
 .single .entry-title {
   margin-bottom: 0; }
 

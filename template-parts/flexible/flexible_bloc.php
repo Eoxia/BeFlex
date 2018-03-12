@@ -8,24 +8,24 @@
  * @package beflex
  */
 
- if ( ! class_exists( '\beflex_pro\beflex_bloc' ) ) :
- 	return;
- endif;
+if ( ! class_exists( '\beflex_pro\beflex_bloc' ) ) :
+	return;
+endif;
 
- $flexible_atts = \beflex_pro\Beflex_Bloc_Helper::g()->beflex_get_template_atts( get_the_ID() );
- $bloc = new \beflex_pro\Beflex_Bloc( $flexible_atts );
+$flexible_atts = \beflex_pro\Beflex_Bloc_Helper::g()->beflex_get_template_atts( get_the_ID() );
+$bloc          = new \beflex_pro\Beflex_Bloc( $flexible_atts );
 
-$carousel_base_options = array(
+$carousel_base_options    = array(
 	'responsive' => array(
-		0 => array( 'items' => 1 ),
-		600 => array( 'items' => ( 3 < $bloc->item_per_line ? 3 : 1 ) ),
+		0    => array( 'items' => 1 ),
+		600  => array( 'items' => ( 3 < $bloc->item_per_line ? 3 : 1 ) ),
 		1000 => array( 'items' => $bloc->item_per_line ),
 	),
 );
-$section_class = $bloc->get_section_class();
-$section_style = $bloc->get_section_style();
+$section_class            = $bloc->get_section_class();
+$section_style            = $bloc->get_section_style();
 $section_background_color = ( $bloc->section_background_color ) ? 'background: ' . $bloc->section_background_color : '';
-$bloc_class = $bloc->get_bloc_class(); ?>
+$bloc_class               = $bloc->get_bloc_class(); ?>
 
 <div class="flexible-bloc section-content <?php echo esc_html( $section_class ); ?>" style="<?php echo esc_html( $section_style ); ?>">
 	<span class="section-opacity" style="<?php echo esc_html( $section_background_color ); ?>"></span>
@@ -51,8 +51,8 @@ $bloc_class = $bloc->get_bloc_class(); ?>
 					?>
 				</div> <?php
 			else :
-				$user = wp_get_current_user();
-				$id = ( ! empty( $bloc->id ) ) ? $bloc->id : $post->ID;
+				$user     = wp_get_current_user();
+				$id       = ( ! empty( $bloc->id ) ) ? $bloc->id : $post->ID;
 				$edit_url = home_url() . '/wp-admin/post.php?post=' . $id . '&action=edit';
 				if ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
 					echo beflex_notification( __( 'The Bloc is empty. Click here to configure', 'beflex' ), 'warning', $edit_url ); // WPCS: XSS ok.

@@ -28,10 +28,19 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 
+			$categories = wp_get_post_categories( get_the_ID() );
+			if ( 'post' === get_post_type() && ! empty( $categories ) ) : ?>
+				<div class="post-categories">
+					<?php foreach ( $categories as $cat ) : ?>
+						<a class="post-categorie" href="<?php echo esc_url( get_category_link( $cat ) ); ?>"><?php echo esc_html( get_cat_name( $cat ) ); ?></a>
+					<?php endforeach; ?>
+				</div> <?php
+			endif;
+
 			if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php beflex_posted_on(); ?>
-			</div><!-- .entry-meta -->
+				<div class="entry-meta">
+					<?php beflex_posted_on(); ?>
+				</div><!-- .entry-meta -->
 			<?php
 			endif; ?>
 		</header><!-- .entry-header -->

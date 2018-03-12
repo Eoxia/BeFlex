@@ -32,3 +32,18 @@
 		}
 	}
 }
+
+/** Catégories */
+#primary .post-categories .post-categorie {
+	display: inline-block;
+	padding: 0.2em 0.6em;
+	margin: 0.2em 0;
+	background: #ececec;
+	color: rgba(0,0,0,0.6);
+	transition: all 0.2s ease-out;
+	border-radius: 4px;
+
+	&:hover {
+		background: darken(#ececec, 10%);
+	}
+}
