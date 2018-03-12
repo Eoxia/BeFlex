@@ -265,7 +265,7 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": 50,
+                                    "placeholder": 100,
                                     "prepend": "",
                                     "append": "%",
                                     "min": "",
@@ -1344,5 +1344,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519144445
+    "modified": 1520863923
 }
