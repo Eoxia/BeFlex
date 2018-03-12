@@ -1,0 +1,18 @@
+#primary .entry-footer {
+	margin: 1em auto;
+
+	.edit-link {
+		display: inline-block;
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		z-index: 80;
+	}
+	.post-edit-link {
+		padding: 0.4em 0.8em;
+		background: $color__primary;
+		color: $color__primary-text;
+		border-radius: 6px;
+		display: inline-block;
+	}
+}

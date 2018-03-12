@@ -57,7 +57,7 @@ endif;
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer site-width">
 			<?php
 				edit_post_link(
 					sprintf(

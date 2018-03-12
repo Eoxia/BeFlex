@@ -66,7 +66,7 @@
 			?>
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
+		<footer class="entry-footer site-width">
 			<?php beflex_edit_link(); ?>
 		</footer><!-- .entry-footer -->
 	</div><!-- .content -->

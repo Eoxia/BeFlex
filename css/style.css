@@ -1447,6 +1447,9 @@ body.sticky-nav #content {
 #page {
   overflow-x: hidden; }
 
+#primary {
+  position: relative; }
+
 .post .post-thumbnail img {
   width: 100%; }
 
@@ -1626,6 +1629,24 @@ body.sticky-nav #content {
 
 .flexible-wysiwyg.-align-justify {
   text-align: justify; }
+
+#primary .entry-footer {
+  margin: 1em auto; }
+
+#primary .entry-footer .edit-link {
+  display: inline-block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 80; }
+
+#primary .entry-footer .post-edit-link {
+  padding: 0.4em 0.8em;
+  background: #0e6eff;
+  color: #fff;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  display: inline-block; }
 
 .site-content {
   display: -webkit-box;
