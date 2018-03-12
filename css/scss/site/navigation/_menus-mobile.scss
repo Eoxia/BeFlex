@@ -17,10 +17,23 @@
 	.navigation-overlay {
 		display: block;
 		content: '';
-		@include full-size();
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		opacity: 0.9;
 		background: $color__primary;
 		z-index: -1;
+	}
+	.burger-container {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		overflow-y: auto;
+		
 	}
 	.close-burger {
 		position: absolute;

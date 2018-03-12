@@ -65,18 +65,20 @@
 
 	<div id="burger-menu">
 		<div class="navigation-overlay"></div>
-		<span class="close-burger"><i class="fal fa-times"></i></span>
-		<?php
-		$user = wp_get_current_user();
-		if ( has_nav_menu( 'menu-1' ) ) :
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-		elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
-			echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
-		endif;
-		?>
+		<div class="burger-container">
+			<span class="close-burger"><i class="fal fa-times"></i></span>
+			<?php
+			$user = wp_get_current_user();
+			if ( has_nav_menu( 'menu-1' ) ) :
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+			elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
+				echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
+			endif;
+			?>
+		</div><!-- .burger-container -->
 	</div><!-- #burger-menu -->
 
 	<?php

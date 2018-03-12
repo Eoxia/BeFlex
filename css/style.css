@@ -883,7 +883,7 @@ a:hover, a:active {
 #burger-menu .navigation-overlay {
   display: block;
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -892,6 +892,14 @@ a:hover, a:active {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   background: #0e6eff;
   z-index: -1; }
+
+#burger-menu .burger-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow-y: auto; }
 
 #burger-menu .close-burger {
   position: absolute;
