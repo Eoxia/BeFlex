@@ -27,4 +27,10 @@ $diaporamas = get_sub_field( 'relation_diaporama' );
 		</div>
 
 	</div>
+
+	<?php if ( get_edit_post_link( $diaporama->ID ) ) : ?>
+		<footer class="entry-footer flexible site-width">
+			<?php edit_post_link( esc_html__( 'Edit Diaporama', 'beflex' ), '', '', $diaporama->ID ); ?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </div>

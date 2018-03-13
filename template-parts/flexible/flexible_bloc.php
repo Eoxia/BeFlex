@@ -61,4 +61,10 @@ $bloc_class               = $bloc->get_bloc_class(); ?>
 		</div>
 
 	</div>
+
+	<?php if ( get_edit_post_link( $bloc->id ) ) : ?>
+		<footer class="entry-footer flexible site-width">
+			<?php edit_post_link( esc_html__( 'Edit Bloc', 'beflex' ), '', '', $bloc->id ); ?>
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
 </div>
