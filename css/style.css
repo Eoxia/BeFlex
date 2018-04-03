@@ -1630,6 +1630,9 @@ body.sticky-nav #content {
 .flexible-wysiwyg.-align-justify {
   text-align: justify; }
 
+.owl-carousel .owl-stage-outer {
+  overflow: visible; }
+
 #primary .entry-footer .edit-link {
   display: inline-block;
   margin: 1.6em auto; }
