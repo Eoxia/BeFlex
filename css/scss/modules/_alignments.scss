@@ -1,0 +1,34 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	@include center-block;
+}
+
+.site-width {
+	max-width: $size__site-width;
+	width: 100%;
+	margin: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+/** Garde seulement la marge du site-width global */
+#content.site-width .site-width {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/** Ajoute une marge en haut de la page si la navigation est en absolute */
+body.sticky-nav #content {
+	padding-top: 80px;
+}

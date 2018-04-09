@@ -1,0 +1,4 @@
+/** Fix scroll bug on chrome */
+.owl-carousel .owl-stage-outer {
+	overflow: visible;
+}
