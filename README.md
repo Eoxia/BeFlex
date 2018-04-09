@@ -1,1 +1,2 @@
-# eoxia-themes
+# BeFlex
+A premium theme from the Eoxia company.

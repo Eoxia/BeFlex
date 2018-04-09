@@ -1,0 +1,14 @@
+/**
+ * Light theme CSS
+ */
+
+/** General */
+ body {
+   color: #444;
+ }
+
+ /** Header */
+ #masthead {
+	background: #fff;
+	border-bottom: solid #f7f7f7 1px;
+ }

@@ -1,0 +1,99 @@
+/** Gallery section padding */
+.flexible-item .section-content.flexible-gallery {
+	@for $i from 0 through 10 {
+		&.-padding-#{$i} {
+			padding: #{$i}em 0;
+		}
+	}
+}
+
+/** Gallery Padding 0 -> 10 */
+.flexible-gallery .gallery-container {
+	@for $i from 0 through 10 {
+		&.-padding-#{$i} {
+			margin: 0 -#{$i}em;
+			.gallery { padding: #{$i}em; }
+		}
+	}
+}
+
+.flexible-gallery {
+	position: relative;
+
+	.gallery {
+		margin-bottom: 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+/** Attributs */
+.flexible-gallery .gallery {
+	.content {
+		position: relative;
+		display: block;
+
+		&::before {
+			display: none;
+			font-family: "Font Awesome 5 Light";
+			content: "\f002";
+		}
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color__primary, 0.4);
+			opacity: 0;
+			@include transition;
+			z-index: 4;
+		}
+		.svg-inline--fa {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, 20%);
+			color: #fff;
+			font-size: 22px;
+			z-index: 5;
+			opacity: 0;
+			@include transition;
+		}
+	}
+	.gallery-attr {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 1em;
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	}
+	.gallery-title {
+		display: inline-block;
+		color: #fff;
+		font-weight: 400;
+		font-size: 14px;
+		@include transition;
+	}
+}
+
+/** Hover effect */
+.flexible-gallery .gallery:hover {
+	.gallery-title {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	.content::after {
+		opacity: 1;
+	}
+	.svg-inline--fa {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
