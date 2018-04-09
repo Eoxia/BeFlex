@@ -72,3 +72,53 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
 		echo str_replace( 'page/1/','', paginate_links( $pagination ) ); // WPCS: XSS ok.
 	}
 }
+
+if ( ! function_exists( 'beflex_section_class' ) ) {
+	/**
+	 * Return global section classes
+	 *
+	 * @param  int $id Id of section.
+	 * @return string
+	 */
+	function beflex_section_class( $id ) {
+		$section_background = get_sub_field( 'background', $id );
+		$section_class      = '';
+
+		if ( $section_background ) :
+			$section_image_opacity = get_sub_field( 'opacite_de_limage_section', $id );
+			$section_class        .= ( $section_image_opacity ) ? '-opacity-' . get_sub_field( 'opacite_de_limage_section', $id ) : '';
+		endif;
+		$section_class .= get_sub_field( 'alignement', $id ) ? ' -align-' . get_sub_field( 'alignement', $id ) : ' -align-left';
+		$section_class .= get_sub_field( 'espacement_section', $id ) ? ' -padding-' . get_sub_field( 'espacement_section', $id ) : ' -padding-1';
+
+		return $section_class;
+	}
+}
+
+if ( ! function_exists( 'beflex_section_style' ) ) {
+	/**
+	 * Return global section classes
+	 *
+	 * @param  int $id Id of section.
+	 * @return string
+	 */
+	function beflex_section_style( $id ) {
+		$section_background = get_sub_field( 'background', $id );
+		$section_style      = '';
+
+		if ( $section_background ) :
+			$section_background_color = get_sub_field( 'couleur_de_fond_de_la_section', $id );
+			$section_text_color       = get_sub_field( 'couleur_du_texte_de_la_section', $id );
+			$section_background_image = get_sub_field( 'image_de_fond_de_la_section', $id );
+
+			if ( $section_background_image ) :
+				$section_style .= ( $section_background_image ) ? 'background: url(' . $section_background_image['url'] . ') 50% 50%; background-size: cover; ' : '';
+			else :
+				$section_style .= ( $section_background_color ) ? 'background: ' . $section_background_color . '; ' : '';
+			endif;
+			$section_style .= ( $section_text_color ) ? 'color: ' . $section_text_color . ';' : '';
+		endif;
+
+		return $section_style;
+	}
+}

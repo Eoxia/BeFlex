@@ -8,9 +8,9 @@
  * @package beflex
  */
 
-$title = get_sub_field( 'titre_de_la_section' );
-$content = get_sub_field( 'relation_wysiwyg' );
-$full_size = get_sub_field( 'full_screen' );
+$title      = get_sub_field( 'titre_de_la_section' );
+$content    = get_sub_field( 'relation_wysiwyg' );
+$full_size  = get_sub_field( 'full_screen' );
 $diaporamas = get_sub_field( 'relation_diaporama' );
 ?>
 <div class="flexible-diaporama section-content">
