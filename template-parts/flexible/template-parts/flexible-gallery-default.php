@@ -21,7 +21,7 @@ $display_att    = get_sub_field( 'affichage_elt' );
 
 		<div class="gallery">
 			<a class="content" href="<?php echo esc_url( $image['url'] ); ?>">
-				<img src="<?php echo esc_url( $image['sizes']['beflex_bloc'] ); ?>" alt="<?php echo esc_html( $image['title'] ); ?>" />
+				<img src="<?php echo ( class_exists( '\beflex_pro\beflex_bloc' ) ) ? esc_url( $image['sizes']['beflex_bloc'] ) : esc_url( $image['sizes']['medium'] ); ?>" alt="<?php echo esc_html( $image['title'] ); ?>" />
 
 				<?php if ( ! empty( $display_att ) ) : ?>
 					<div class="gallery-attr">
