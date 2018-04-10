@@ -14,6 +14,7 @@ $display_type             = get_sub_field( 'affichage' ) ? get_sub_field( 'affic
 $section_background       = get_sub_field( 'background' );
 $section_background_color = get_sub_field( 'couleur_de_fond_de_la_section' );
 $section_class            = beflex_section_class( get_the_ID() );
+$section_class           .= ' ' . $display_type;
 $section_style            = beflex_section_style( get_the_ID() );
 ?>
 
