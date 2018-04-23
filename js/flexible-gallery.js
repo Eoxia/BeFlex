@@ -14,11 +14,15 @@
 		var i = 0;
 		var lightbox = [];
 		$('.flexible-gallery').each(function() {
-			lightbox[i] = $(this).find('.gallery .content').simpleLightbox({
+			var content = $(this).find('.gallery .content');
+
+			var args = {
 				showCounter: false,
 				navText    : ['<i class="fal fa-angle-left"></i>','<i class="fal fa-angle-right"></i>'],
 				closeText  : '<i class="fal fa-times"></i>'
-			});
+			};
+
+			lightbox[i] = content.simpleLightbox( $.extend( args, content.data('lightbox') ) );
 			i++;
 		})
 
