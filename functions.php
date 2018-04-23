@@ -224,6 +224,7 @@ add_action( 'widgets_init', 'beflex_widgets_init' );
  */
 function beflex_scripts() {
 	// Enqueue Style.
+	wp_enqueue_style( 'font-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' );
 	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/css/style.css' );
 	wp_enqueue_style( 'beflex-custom-style', get_stylesheet_uri() );
 	if ( class_exists( 'acf' ) ) :
