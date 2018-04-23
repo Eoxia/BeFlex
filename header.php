@@ -24,61 +24,65 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beflex' ); ?></a>
 
 	<header id="masthead" class="site-header sticky" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_acf() ) :
-				$site_logo = get_field( 'logo', 'options' );
-			endif;
-			if ( ! empty( $site_logo ) ) : ?>
-				<p class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo esc_html( $site_logo['url'] ); ?>" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>" />
-					</a>
-				</p> <?php
-			else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> <?php
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description ) : ?>
-					<p class="site-description"><?php echo esc_html( $description ); ?></p>
-				<?php
-				endif;
-			endif;
-			?>
-		</div><!-- .site-branding -->
+		<div class="site-width">
 
-		<div class="site-navigation">
-			<nav id="main-navigation" role="navigation">
+			<div class="site-branding">
 				<?php
-				$user = wp_get_current_user();
-				if ( has_nav_menu( 'menu-1' ) ) :
-					if ( class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'walker'  => new \beflex_pro\Beflex_Mega_Menu(),
-						) );
-					else :
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'menu_class' => 'simple-navigation',
-						) );
+				if ( is_acf() ) :
+					$site_logo = get_field( 'logo', 'options' );
+				endif;
+				if ( ! empty( $site_logo ) ) : ?>
+					<p class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo esc_html( $site_logo['url'] ); ?>" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>" />
+						</a>
+					</p> <?php
+				else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> <?php
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description ) : ?>
+						<p class="site-description"><?php echo esc_html( $description ); ?></p>
+					<?php
 					endif;
-				elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
-					echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
 				endif;
 				?>
-			</nav><!-- #main-navigation -->
-			<a href="#" class="menu-toggle"><i class="far fa-bars fa-fw"></i><span><?php esc_html_e( 'Navigation', 'beflex' ); ?></span></a>
-		</div><!-- .site-navigation -->
+			</div><!-- .site-branding -->
 
-		<div class="site-tool">
-			<a href="#" class="js-search"><i class="far fa-search"></i></a>
-			<?php if ( is_wpshop() ) : ?>
-				<a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option( 'wpshop_myaccount_page_id' ) ) ); /* WPCS: xss ok. */ ?>" class="wps-my-account"><i class="wps-icon-user"></i></a>
-				<a href="#" class="wps-action-mini-cart-opener wps-my-cart"><i class="wps-icon-basket"></i><?php echo do_shortcode( '[wps-numeration-cart]' ); ?></a>
-			<?php endif; ?>
-		</div><!-- .site-tool -->
+			<div class="site-navigation">
+				<nav id="main-navigation" role="navigation">
+					<?php
+					$user = wp_get_current_user();
+					if ( has_nav_menu( 'menu-1' ) ) :
+						if ( class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'walker'  => new \beflex_pro\Beflex_Mega_Menu(),
+							) );
+						else :
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class' => 'simple-navigation',
+							) );
+						endif;
+					elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
+						echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
+					endif;
+					?>
+				</nav><!-- #main-navigation -->
+				<a href="#" class="menu-toggle"><i class="far fa-bars fa-fw"></i><span><?php esc_html_e( 'Navigation', 'beflex' ); ?></span></a>
+			</div><!-- .site-navigation -->
+
+			<div class="site-tool">
+				<a href="#" class="js-search"><i class="far fa-search"></i></a>
+				<?php if ( is_wpshop() ) : ?>
+					<a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option( 'wpshop_myaccount_page_id' ) ) ); /* WPCS: xss ok. */ ?>" class="wps-my-account"><i class="wps-icon-user"></i></a>
+					<a href="#" class="wps-action-mini-cart-opener wps-my-cart"><i class="wps-icon-basket"></i><?php echo do_shortcode( '[wps-numeration-cart]' ); ?></a>
+				<?php endif; ?>
+			</div><!-- .site-tool -->
+
+		</div><!-- .site-width -->
 	</header><!-- #masthead -->
 
 	<div id="search-area">
