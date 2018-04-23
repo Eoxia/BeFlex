@@ -6,12 +6,10 @@
 	border-radius: 3px;
 	border: solid #eee 1px;
 
+	@include fa-icon;
+	@extend .fas;
+
 	&::before {
-		display: none;
-		font-family: "Font Awesome 5 Solid";
-		content: '\f05a';
-	}
-	.svg-inline--fa {
 		position: absolute;
 		top: 50%;
 		left: .75em;
@@ -40,7 +38,7 @@
 			color: #2e75bf;
 		}
 		&::before {
-			content: '\f05a';
+			content: fa-content($fa-var-info-circle);
 		}
 	}
 
@@ -60,7 +58,7 @@
 			color: #e74c3c;
 		}
 		&::before {
-			content: '\f06a';
+			content: fa-content($fa-var-times-circle);
 		}
 	}
 
@@ -72,7 +70,7 @@
 			color: #74c246;
 		}
 		&::before {
-			content: '\f058';
+			content: fa-content($fa-var-check-circle);
 		}
 	}
 
@@ -84,7 +82,7 @@
 			color: #fcb231;
 		}
 		&::before {
-			content: '\f0f3';
+			content: fa-content($fa-var-exclamation-triangle);
 		}
 	}
 

@@ -36,10 +36,20 @@
 		position: relative;
 		display: block;
 
+
 		&::before {
-			display: none;
-			font-family: "Font Awesome 5 Light";
-			content: "\f002";
+			@include fa-icon;
+			@extend .fas;
+			content: fa-content($fa-var-search);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, 20%);
+			color: #fff;
+			font-size: 22px;
+			z-index: 5;
+			@include transition;
+			opacity: 0;
 		}
 		&::after {
 			display: block;
@@ -53,17 +63,6 @@
 			opacity: 0;
 			@include transition;
 			z-index: 4;
-		}
-		.svg-inline--fa {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, 20%);
-			color: #fff;
-			font-size: 22px;
-			z-index: 5;
-			opacity: 0;
-			@include transition;
 		}
 	}
 	.gallery-attr {
@@ -85,15 +84,17 @@
 
 /** Hover effect */
 .flexible-gallery .gallery:hover {
+	.content {
+		&::before {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
 	.gallery-title {
 		transform: translateY(20px);
 		opacity: 0;
-	}
-	.content::after {
-		opacity: 1;
-	}
-	.svg-inline--fa {
-		opacity: 1;
-		transform: translate(-50%, -50%);
 	}
 }

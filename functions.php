@@ -235,7 +235,6 @@ function beflex_scripts() {
 
 	// Enqueue Scripts.
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'beflex-config', get_template_directory_uri() . '/js/config.js', array(), '', true );
 	wp_enqueue_script( 'beflex-fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', array(), '', true );
 	wp_enqueue_script( 'beflex-isotope', get_template_directory_uri() . '/js/isotope.min.js', array(), '', true );
 	wp_enqueue_script( 'beflex-lightbox', get_template_directory_uri() . '/js/simple-lightbox.min.js', array(), '', true );
