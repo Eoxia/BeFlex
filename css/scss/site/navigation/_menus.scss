@@ -91,10 +91,8 @@
 	// Fleche Sous menu
 	[class*="menu-item-depth-"].menu-item-has-children {
 		> .menu-link:after {
-			display: none;
-			font-family: "Font Awesome 5 Light";
-		}
-		> .menu-link .svg-inline--fa {
+			@include fa-icon;
+			@extend .fas;
 			vertical-align: middle;
 			display: inline-block;
 		}
@@ -102,34 +100,29 @@
 	// Fleche Sous menu, premier niveau
 	.menu-item-depth-0.menu-item-has-children {
 		> .menu-link:after {
-			content: '\f107';
-		}
-		> .menu-link .svg-inline--fa {
+			content: fa-content($fa-var-angle-down);
 			margin-left: .5em;
 			margin-bottom: .25em;
 			color: rgba(0,0,0,.4);
 		}
-		// Hover ne fonctionne pas, à corriger dans une prochaine version
-		// &:hover > .menu-link:after {
-		// 	content: '\f106';
-		// }
+		&:hover > .menu-link:after {
+			content: fa-content($fa-var-angle-up);
+		}
 	}
 	// Fleche Sous menu, second niveau
 	.menu-item-depth-1.menu-item-has-children {
 		> .menu-link:after {
-			content: '\f105';
-		}
-		> .menu-link .svg-inline--fa {
+			content: fa-content($fa-var-angle-right);
 			position: absolute;
 			right: 1em;
 			top: 50%;
-			transform: translateY(-50%);
+			transform: translateY(-80%);
 			color: rgba(255,255,255,.4);
 		}
 	}
 	// Pas de fleches après les autres niveaux
 	.menu-item-depth-2.menu-item-has-children {
-		> .menu-link .svg-inline--fa {
+		> .menu-link::after {
 			display: none;
 		}
 	}

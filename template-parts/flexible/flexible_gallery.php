@@ -17,6 +17,7 @@ $section_class            = beflex_section_class( get_the_ID() );
 $section_style            = beflex_section_style( get_the_ID() );
 ?>
 
+
 <div class="flexible-gallery section-content <?php echo esc_html( $section_class ); ?>" style="<?php echo esc_html( $section_style ); ?>">
 
 	<?php if ( $section_background ) : ?>

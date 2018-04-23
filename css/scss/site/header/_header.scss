@@ -1,9 +1,10 @@
 #masthead {
 	position: relative;
-	padding: 0 2em;
-	@include flexbox();
-	flex-wrap: nowrap;
 
+	> .site-width {
+		@include flexbox();
+		flex-wrap: nowrap;
+	}
 	.site-branding {
 		width: 30%;
 	}
@@ -11,8 +12,10 @@
 		width: 100%;
 	}
 	@media ( max-width: $media__medium ) {
-		flex-wrap: wrap;
-
+		> .site-width {
+			flex-wrap: wrap;
+			padding: 0;
+		}
 		.site-branding {
 			width: 50%;
 			padding-left: 1rem;
