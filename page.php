@@ -16,9 +16,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-
+	<main id="primary" class="content-area" role="main">
 		<?php
 		while ( have_posts() ) : the_post();
 
@@ -31,13 +29,11 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
+	</main><!-- #primary -->
 
-	</main><!-- #main -->
-</div><!-- #primary -->
-
-<?php
-if ( is_acf() && get_field( 'display_page_sidebar' ) ) :
-	get_sidebar();
-endif;
+	<?php
+	if ( is_acf() && get_field( 'display_page_sidebar' ) ) :
+		get_sidebar();
+	endif;
 
 get_footer();
