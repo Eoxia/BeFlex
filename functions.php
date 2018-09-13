@@ -73,7 +73,7 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		/**
 		 * Create the option page with the ACF plugin
 		 */
-		if ( is_acf() ) :
+		if ( is_acf() && function_exists( 'acf_add_options_page' ) ) :
 			acf_add_options_page( array(
 				'page_title' => 'Theme Options',
 				'menu_title' => 'Theme Options',
