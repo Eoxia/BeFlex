@@ -105,6 +105,9 @@ $font_transform = beflex_get_font_transform();
 		#masthead .site-tool > a.wps-action-mini-cart-opener .wps-numeration-cart {
 			background: <?php echo esc_html( $primary ); ?>;
 		}
+		.flexible-gallery .gallery .content:after {
+			background: <?php echo esc_html( $primary ); ?>;
+		}
 
 		@media ( max-width: 770px ) {
 			#masthead .site-tool {

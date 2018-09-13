@@ -6672,7 +6672,7 @@ body.sticky-nav #content {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(14, 110, 255, 0.4);
+  background: #0e6eff;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   -webkit-transition: all 0.2s ease-out;
@@ -6709,8 +6709,8 @@ body.sticky-nav #content {
           transform: translate(-50%, -50%); }
 
 .flexible-gallery .gallery:hover .content:after {
-  opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"; }
 
 .flexible-gallery .gallery:hover .gallery-title {
   -webkit-transform: translateY(20px);
