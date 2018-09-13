@@ -19,6 +19,11 @@
 	display: flex;
 	flex-wrap: wrap;
 
+	.site-layout.content {
+		margin-left: -1em;
+		margin-right: -1em;
+	}
+
 	.grid-content {
 		flex-grow: 0;
 		padding: 1em;

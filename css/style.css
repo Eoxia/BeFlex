@@ -6309,6 +6309,10 @@ body.sticky-nav #content {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
 
+.flexible-wysiwyg.grid .site-layout .site-layout.content {
+  margin-left: -1em;
+  margin-right: -1em; }
+
 .flexible-wysiwyg.grid .site-layout .grid-content {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
