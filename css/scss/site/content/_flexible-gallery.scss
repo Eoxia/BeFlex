@@ -8,9 +8,9 @@
 }
 
 /** Gallery Padding 0 -> 10 */
-.flexible-gallery .gallery-container {
+.flexible-gallery .gallery-container.gridwrapper {
 	@for $i from 0 through 10 {
-		&.-padding-#{$i} {
+		&.grid-gap-#{$i} {
 			margin: 0 -#{$i}em;
 			.gallery { padding: #{$i}em; }
 		}

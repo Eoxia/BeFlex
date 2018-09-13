@@ -18,7 +18,7 @@
 	<?php if ( is_active_sidebar( 'boxfoot-1' ) || is_active_sidebar( 'boxfoot-2' ) || is_active_sidebar( 'boxfoot-3' ) || is_active_sidebar( 'boxfoot-4' ) ) : ?>
 		<div id="boxfoot">
 			<div class="site-width">
-				<div class="gridwrapper w4">
+				<div class="gridlayout grid-4">
 					<aside class="sidebar">
 						<?php if ( is_active_sidebar( 'boxfoot-1' ) ) :
 							dynamic_sidebar( 'boxfoot-1' );
@@ -46,7 +46,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-width">
-			<div class="gridwrapper w2">
+			<div class="gridlayout grid-2">
 				<div class="site-info">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					<?php echo esc_html( '©' ); ?>

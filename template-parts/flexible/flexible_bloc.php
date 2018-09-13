@@ -45,7 +45,7 @@ $bloc_class               = $bloc->get_bloc_class(); ?>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $bloc->data ) ) : ?>
-				<div class="bloc-container gridwrapper <?php echo esc_html( $bloc_class ); ?> <?php echo ( $bloc->carousel ) ? 'owl-carousel bloc-diaporama' : ''; ?>" data-carousel=<?php echo wp_json_encode( $carousel_base_options ); ?>>
+				<div class="bloc-container gridlayout <?php echo esc_html( $bloc_class ); ?> <?php echo ( $bloc->carousel ) ? 'owl-carousel bloc-diaporama' : ''; ?>" data-carousel=<?php echo wp_json_encode( $carousel_base_options ); ?>>
 					<?php
 					$bloc->render( $bloc->type_data );
 					?>

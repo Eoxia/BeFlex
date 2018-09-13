@@ -1,0 +1,47 @@
+
+/** Mages */
+.gridlayout {
+	@for $i from 0 through 6 {
+		&.grid-margin-#{$i} {
+			margin: #{$i}em  0;
+		}
+	}
+}
+
+/** Gouttières */
+.gridlayout {
+	@for $i from 0 through 6 {
+		&.grid-gap-#{$i} {
+			grid-gap: #{$i}em  #{$i}em;
+		}
+	}
+}
+
+
+/** Définition des hauteur des enfants */
+.gridlayout {
+	@for $i from 1 through 6 {
+		> .gridh-#{$i} {
+			grid-row: auto / span $i;
+
+			@media ( max-width: $media__medium ) {
+				grid-row: auto / span 1 !important;
+			}
+		}
+	}
+}
+
+/** Media queries */
+.gridlayout {
+	@media ( max-width: $media__medium ) {
+		grid-template-columns: repeat( 2, 1fr ) !important;
+	}
+	@media ( max-width: $media__small ) {
+		grid-template-columns: repeat( 1, 1fr ) !important;
+	}
+	> * {
+		@media ( max-width: $media__small ) {
+			grid-column: auto / span 1 !important;
+		}
+	}
+}
