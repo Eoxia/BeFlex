@@ -6321,18 +6321,16 @@ body.sticky-nav #content {
        -o-transform: translate(-50%, -60%);
           transform: translate(-50%, -60%); }
 
-#boxfoot {
-  background: #f7f7f7;
-  padding: 2em 0; }
-
 #colophon {
-  background: #1a1a1b;
-  color: rgba(255, 255, 255, 0.6);
+  background: #f7f7f7;
   padding: 2em 0;
-  font-size: 12px; }
+  font-size: 14px; }
 
 #colophon .sidebar * {
   margin: 0; }
+
+#colophon #boxfoot {
+  margin-bottom: 1em; }
 
 #page {
   overflow-x: hidden; }
