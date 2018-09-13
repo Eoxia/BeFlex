@@ -19,7 +19,7 @@ $font_transform = beflex_get_font_transform();
 
 <style>
 
-	h1, h2, h3, h4, h5, h6, .owl-carousel .diaporama-item-padder .diaporama-title {
+	h1, h2, h3, h4, h5, h6, .owl-carousel .diaporama-item-padder .diaporama-title, .widget-title {
 		<?php if ( ! empty( $font_family ) ) : ?>
 			font-family: '<?php echo esc_html( $font_family ); ?>';
 		<?php endif; ?>

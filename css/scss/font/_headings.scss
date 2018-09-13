@@ -29,7 +29,7 @@ h3 {
 	@include font-size(1.6);
 }
 
-h4 {
+h4, .widget-title {
 	@include font-size(1.2);
 }
 
