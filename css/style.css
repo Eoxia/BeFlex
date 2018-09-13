@@ -5140,16 +5140,26 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"], #comments .comment-list .comment-reply-link {
   display: inline-block;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 11.2px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+  text-decoration: none;
+  padding: 6px 14px;
+  line-height: 1.4;
+  vertical-align: middle;
+  height: auto;
+  -webkit-border-radius: 0;
+          border-radius: 0;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  line-height: 1;
-  padding: 0.8em 1.4em;
+  position: relative;
   border-width: 3px;
   border-style: solid;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
   background: #333333;
   border-color: #333333;
   color: #fff; }
@@ -5178,52 +5188,53 @@ input[type="reset"]:focus,
 input[type="submit"]:focus, #comments .comment-list .comment-reply-link:focus {
   outline: none; }
 
-.button.primary, button,
+.button.button-primary, button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"], #comments .comment-list .primary.comment-reply-link {
+input[type="submit"], #comments .comment-list .button-primary.comment-reply-link {
   background: #0e6eff;
   border-color: #0e6eff;
   color: #fff; }
 
-.button.light, button.light,
-input.light[type="button"],
-input.light[type="reset"],
-input.light[type="submit"], #comments .comment-list .light.comment-reply-link {
+.button.button-light, button.button-light,
+input.button-light[type="button"],
+input.button-light[type="reset"],
+input.button-light[type="submit"], #comments .comment-list .button-light.comment-reply-link {
   background: #fff;
   border-color: #fff;
   color: #333333; }
 
-.button.light:hover, button.light:hover,
-input.light[type="button"]:hover,
-input.light[type="reset"]:hover,
-input.light[type="submit"]:hover, #comments .comment-list .light.comment-reply-link:hover {
+.button.button-light:hover, button.button-light:hover,
+input.button-light[type="button"]:hover,
+input.button-light[type="reset"]:hover,
+input.button-light[type="submit"]:hover, #comments .comment-list .button-light.comment-reply-link:hover {
   -webkit-box-shadow: inset 0 -2.6em rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 -2.6em rgba(0, 0, 0, 0.1); }
+          box-shadow: inset 0 -2.6em rgba(0, 0, 0, 0.1);
+  color: #333333; }
+
+.button.button-dark, button.button-dark,
+input.button-dark[type="button"],
+input.button-dark[type="reset"],
+input.button-dark[type="submit"], #comments .comment-list .button-dark.comment-reply-link {
+  background: #333333;
+  border-color: #333333; }
 
 .button.bordered, button.bordered,
 input.bordered[type="button"],
 input.bordered[type="reset"],
 input.bordered[type="submit"], #comments .comment-list .comment-reply-link {
   background: none;
-  color: #333333; }
+  border-color: #0e6eff;
+  color: #0e6eff; }
 
-.button.bordered:hover, button.bordered:hover,
-input.bordered[type="button"]:hover,
-input.bordered[type="reset"]:hover,
-input.bordered[type="submit"]:hover, #comments .comment-list .comment-reply-link:hover {
-  -webkit-box-shadow: inset 0 -2.6em #333333;
-          box-shadow: inset 0 -2.6em #333333;
-  color: #fff; }
-
-.button.bordered.primary, button.bordered,
+.button.bordered.button-primary, button.bordered,
 input.bordered[type="button"],
 input.bordered[type="reset"],
 input.bordered[type="submit"], #comments .comment-list .comment-reply-link {
   border-color: #0e6eff;
   color: #0e6eff; }
 
-.button.bordered.primary:hover, button.bordered:hover,
+.button.bordered.button-primary:hover, button.bordered:hover,
 input.bordered[type="button"]:hover,
 input.bordered[type="reset"]:hover,
 input.bordered[type="submit"]:hover, #comments .comment-list .comment-reply-link:hover {
@@ -5231,20 +5242,192 @@ input.bordered[type="submit"]:hover, #comments .comment-list .comment-reply-link
           box-shadow: inset 0 -2.6em #0e6eff;
   color: #fff; }
 
-.button.bordered.light, button.bordered.light,
-input.bordered.light[type="button"],
-input.bordered.light[type="reset"],
-input.bordered.light[type="submit"], #comments .comment-list .light.comment-reply-link {
+.button.bordered.button-light, button.bordered.button-light,
+input.bordered.button-light[type="button"],
+input.bordered.button-light[type="reset"],
+input.bordered.button-light[type="submit"], #comments .comment-list .button-light.comment-reply-link {
   border-color: #fff;
   color: #fff; }
 
-.button.bordered.light:hover, button.bordered.light:hover,
-input.bordered.light[type="button"]:hover,
-input.bordered.light[type="reset"]:hover,
-input.bordered.light[type="submit"]:hover, #comments .comment-list .light.comment-reply-link:hover {
+.button.bordered.button-light:hover, button.bordered.button-light:hover,
+input.bordered.button-light[type="button"]:hover,
+input.bordered.button-light[type="reset"]:hover,
+input.bordered.button-light[type="submit"]:hover, #comments .comment-list .button-light.comment-reply-link:hover {
   -webkit-box-shadow: inset 0 -2.6em #fff;
           box-shadow: inset 0 -2.6em #fff;
   color: #333333; }
+
+.button.bordered.button-dark, button.bordered.button-dark,
+input.bordered.button-dark[type="button"],
+input.bordered.button-dark[type="reset"],
+input.bordered.button-dark[type="submit"], #comments .comment-list .button-dark.comment-reply-link {
+  border-color: #333333;
+  color: #333333; }
+
+.button.bordered.button-dark:hover, button.bordered.button-dark:hover,
+input.bordered.button-dark[type="button"]:hover,
+input.bordered.button-dark[type="reset"]:hover,
+input.bordered.button-dark[type="submit"]:hover, #comments .comment-list .button-dark.comment-reply-link:hover {
+  -webkit-box-shadow: inset 0 -2.6em #333333;
+          box-shadow: inset 0 -2.6em #333333; }
+
+.button.bordered:hover, button.bordered:hover,
+input.bordered[type="button"]:hover,
+input.bordered[type="reset"]:hover,
+input.bordered[type="submit"]:hover, #comments .comment-list .comment-reply-link:hover {
+  -webkit-box-shadow: inset 0 -2.6em #0e6eff;
+          box-shadow: inset 0 -2.6em #0e6eff;
+  color: #fff; }
+
+.button .button-icon, button .button-icon,
+input[type="button"] .button-icon,
+input[type="reset"] .button-icon,
+input[type="submit"] .button-icon, #comments .comment-list .comment-reply-link .button-icon, .button span, button span,
+input[type="button"] span,
+input[type="reset"] span,
+input[type="submit"] span, #comments .comment-list .comment-reply-link span {
+  position: relative; }
+
+.button .button-icon ~ span, button .button-icon ~ span,
+input[type="button"] .button-icon ~ span,
+input[type="reset"] .button-icon ~ span,
+input[type="submit"] .button-icon ~ span, #comments .comment-list .comment-reply-link .button-icon ~ span {
+  margin-left: 10px; }
+
+.button span ~ .button-icon, button span ~ .button-icon,
+input[type="button"] span ~ .button-icon,
+input[type="reset"] span ~ .button-icon,
+input[type="submit"] span ~ .button-icon, #comments .comment-list .comment-reply-link span ~ .button-icon {
+  margin-left: 10px; }
+
+.button.button-strong span, button.button-strong span,
+input.button-strong[type="button"] span,
+input.button-strong[type="reset"] span,
+input.button-strong[type="submit"] span, #comments .comment-list .button-strong.comment-reply-link span {
+  font-weight: 800; }
+
+.button.button-uppercase span, button.button-uppercase span,
+input.button-uppercase[type="button"] span,
+input.button-uppercase[type="reset"] span,
+input.button-uppercase[type="submit"] span, #comments .comment-list .button-uppercase.comment-reply-link span {
+  text-transform: uppercase;
+  font-size: 14px; }
+
+.button[class*="button-square-"], button[class*="button-square-"],
+input[class*="button-square-"][type="button"],
+input[class*="button-square-"][type="reset"],
+input[class*="button-square-"][type="submit"], #comments .comment-list [class*="button-square-"].comment-reply-link {
+  text-align: center;
+  overflow: hidden;
+  padding: 0; }
+
+.button.button-square-30, button.button-square-30,
+input.button-square-30[type="button"],
+input.button-square-30[type="reset"],
+input.button-square-30[type="submit"], #comments .comment-list .button-square-30.comment-reply-link {
+  width: 30px;
+  height: 30px;
+  line-height: 24px; }
+
+.button.button-square-30 .button-icon, button.button-square-30 .button-icon,
+input.button-square-30[type="button"] .button-icon,
+input.button-square-30[type="reset"] .button-icon,
+input.button-square-30[type="submit"] .button-icon, #comments .comment-list .button-square-30.comment-reply-link .button-icon {
+  font-size: 12px; }
+
+.button.button-square-40, button.button-square-40,
+input.button-square-40[type="button"],
+input.button-square-40[type="reset"],
+input.button-square-40[type="submit"], #comments .comment-list .button-square-40.comment-reply-link {
+  width: 40px;
+  height: 40px;
+  line-height: 34px; }
+
+.button.button-square-50, button.button-square-50,
+input.button-square-50[type="button"],
+input.button-square-50[type="reset"],
+input.button-square-50[type="submit"], #comments .comment-list .button-square-50.comment-reply-link {
+  width: 50px;
+  height: 50px;
+  line-height: 44px; }
+
+.button.button-square-60, button.button-square-60,
+input.button-square-60[type="button"],
+input.button-square-60[type="reset"],
+input.button-square-60[type="submit"], #comments .comment-list .button-square-60.comment-reply-link {
+  width: 60px;
+  height: 60px;
+  line-height: 54px; }
+
+.button.button-float-left, button.button-float-left,
+input.button-float-left[type="button"],
+input.button-float-left[type="reset"],
+input.button-float-left[type="submit"], #comments .comment-list .button-float-left.comment-reply-link {
+  float: left; }
+
+.button.button-float-right, button.button-float-right,
+input.button-float-right[type="button"],
+input.button-float-right[type="reset"],
+input.button-float-right[type="submit"], #comments .comment-list .button-float-right.comment-reply-link {
+  float: right; }
+
+.button.button-margin, button.button-margin,
+input.button-margin[type="button"],
+input.button-margin[type="reset"],
+input.button-margin[type="submit"], #comments .comment-list .button-margin.comment-reply-link {
+  margin: 1em 0; }
+
+.button.button-radius-1, button.button-radius-1,
+input.button-radius-1[type="button"],
+input.button-radius-1[type="reset"],
+input.button-radius-1[type="submit"], #comments .comment-list .button-radius-1.comment-reply-link {
+  -webkit-border-radius: 2px;
+          border-radius: 2px; }
+
+.button.button-radius-2, button.button-radius-2,
+input.button-radius-2[type="button"],
+input.button-radius-2[type="reset"],
+input.button-radius-2[type="submit"], #comments .comment-list .button-radius-2.comment-reply-link {
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
+
+.button.button-radius-3, button.button-radius-3,
+input.button-radius-3[type="button"],
+input.button-radius-3[type="reset"],
+input.button-radius-3[type="submit"], #comments .comment-list .button-radius-3.comment-reply-link {
+  -webkit-border-radius: 6px;
+          border-radius: 6px; }
+
+.button.button-rounded, button.button-rounded,
+input.button-rounded[type="button"],
+input.button-rounded[type="reset"],
+input.button-rounded[type="submit"], #comments .comment-list .button-rounded.comment-reply-link {
+  -webkit-border-radius: 50%;
+          border-radius: 50%; }
+
+.button.button-size-small, button.button-size-small,
+input.button-size-small[type="button"],
+input.button-size-small[type="reset"],
+input.button-size-small[type="submit"], #comments .comment-list .button-size-small.comment-reply-link {
+  font-size: 14px; }
+
+.button.button-size-small.button-uppercase span, button.button-size-small.button-uppercase span,
+input.button-size-small.button-uppercase[type="button"] span,
+input.button-size-small.button-uppercase[type="reset"] span,
+input.button-size-small.button-uppercase[type="submit"] span, #comments .comment-list .button-size-small.button-uppercase.comment-reply-link span {
+  font-size: 12px; }
+
+.button.button-size-large, button.button-size-large,
+input.button-size-large[type="button"],
+input.button-size-large[type="reset"],
+input.button-size-large[type="submit"], #comments .comment-list .button-size-large.comment-reply-link {
+  font-size: 18px; }
+
+.button.button-size-large.button-uppercase span, button.button-size-large.button-uppercase span,
+input.button-size-large.button-uppercase[type="button"] span,
+input.button-size-large.button-uppercase[type="reset"] span,
+input.button-size-large.button-uppercase[type="submit"] span, #comments .comment-list .button-size-large.button-uppercase.comment-reply-link span {
+  font-size: 16px; }
 
 a {
   color: #0e6eff;
