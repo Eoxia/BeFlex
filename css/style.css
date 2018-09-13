@@ -6074,6 +6074,11 @@ body.sticky-nav #content {
   max-height: 50px;
   display: block; }
 
+@media (max-width: 480px) {
+  #masthead .site-branding .site-title img {
+    max-width: 180px;
+    max-height: none; } }
+
 #masthead .site-branding .site-description {
   font-size: 12.04px; }
 

@@ -64,6 +64,11 @@
 		max-width: 280px;
 		max-height: 50px;
 		display: block;
+
+		@media ( max-width: $media__small ) {
+			max-width: 180px;
+			max-height: none;
+		}
 	}
 	.site-description {
 		@include font-size( 0.86 );
