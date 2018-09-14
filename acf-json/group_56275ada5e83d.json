@@ -565,16 +565,17 @@
                         "id": ""
                     },
                     "choices": {
-                        "facebook": "Facebook",
-                        "twitter": "Twitter",
-                        "google-plus": "Google +",
-                        "linkedin": "Linkedin",
-                        "instagram": "Instagram",
-                        "snapchat": "Snapchat",
-                        "pinterest": "Pinterest",
-                        "github": "Github",
-                        "slack": "Slack",
-                        "trello": "Trello"
+											  "facebook": "Facebook",
+												"github": "Github",
+												"google-plus": "Google +",
+												"instagram": "Instagram",
+												"linkedin": "Linkedin",
+												"pinterest": "Pinterest",
+												"slack": "Slack",
+												"snapchat": "Snapchat",
+												"twitter": "Twitter",
+												"trello": "Trello",
+												"youtube": "Youtube"
                     },
                     "default_value": [],
                     "allow_null": 0,
