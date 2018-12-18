@@ -10,8 +10,8 @@
 
 $images         = get_sub_field( 'image_list' );
 $gallery_class  = '';
-$gallery_class .= get_sub_field( 'espacement_images' ) ? '-padding-' . get_sub_field( 'espacement_images' ) : '-padding-0';
-$gallery_class .= get_sub_field( 'nb_images_par_ligne' ) ? ' gridwrapper w' . get_sub_field( 'nb_images_par_ligne' ) : ' gridwrapper w3';
+$gallery_class .= get_sub_field( 'espacement_images' ) ? 'grid-gap-' . get_sub_field( 'espacement_images' ) : 'grid-gap-1';
+$gallery_class .= get_sub_field( 'nb_images_par_ligne' ) ? ' gridlayout grid-' . get_sub_field( 'nb_images_par_ligne' ) : ' gridlayout grid-3';
 $display_att    = get_sub_field( 'affichage_elt' );
 $attr           = array(
 	'captions' => ( ! empty( $display_att ) && in_array( 'displaytitle', $display_att, true ) ) ? true : false,

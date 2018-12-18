@@ -15,53 +15,54 @@
 
 	</div><!-- #content -->
 
-	<?php if ( is_active_sidebar( 'boxfoot-1' ) || is_active_sidebar( 'boxfoot-2' ) || is_active_sidebar( 'boxfoot-3' ) || is_active_sidebar( 'boxfoot-4' ) ) : ?>
-		<div id="boxfoot">
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			<?php if ( is_active_sidebar( 'boxfoot-1' ) || is_active_sidebar( 'boxfoot-2' ) || is_active_sidebar( 'boxfoot-3' ) || is_active_sidebar( 'boxfoot-4' ) ) : ?>
+				<div id="boxfoot" class="site-width">
+					<div class="gridlayout grid-4">
+						<aside class="sidebar">
+							<?php if ( is_active_sidebar( 'boxfoot-1' ) ) :
+								dynamic_sidebar( 'boxfoot-1' );
+							endif; ?>
+						</aside>
+						<aside class="sidebar">
+							<?php if ( is_active_sidebar( 'boxfoot-2' ) ) :
+								dynamic_sidebar( 'boxfoot-2' );
+							endif; ?>
+						</aside>
+						<aside class="sidebar">
+							<?php if ( is_active_sidebar( 'boxfoot-3' ) ) :
+								dynamic_sidebar( 'boxfoot-3' );
+							endif; ?>
+						</aside>
+						<aside class="sidebar">
+							<?php if ( is_active_sidebar( 'boxfoot-4' ) ) :
+								dynamic_sidebar( 'boxfoot-4' );
+							endif; ?>
+						</aside>
+					</div><!-- .gridwrapper -->
+				</div><!-- .site-width -->
+			<?php endif; ?>
+
 			<div class="site-width">
-				<div class="gridwrapper w4">
-					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-1' ) ) :
-							dynamic_sidebar( 'boxfoot-1' );
-						endif; ?>
-					</aside>
-					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-2' ) ) :
-							dynamic_sidebar( 'boxfoot-2' );
-						endif; ?>
-					</aside>
-					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-3' ) ) :
-							dynamic_sidebar( 'boxfoot-3' );
-						endif; ?>
-					</aside>
-					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-4' ) ) :
-							dynamic_sidebar( 'boxfoot-4' );
-						endif; ?>
-					</aside>
+				<div class="gridlayout grid-2">
+					<div class="site-info">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						<?php echo esc_html( '©' ); ?>
+						<?php echo esc_html( date( 'Y' ) ); ?>
+					</div><!-- .site-info -->
+					<div class="sidebar">
+						<aside class="sidebar">
+							<?php if ( is_active_sidebar( 'footer-1' ) ) :
+								dynamic_sidebar( 'footer-1' );
+							endif; ?>
+						</aside>
+					</div>
 				</div><!-- .gridwrapper -->
 			</div><!-- .site-width -->
-		</div><!-- #boxfoot -->
-	<?php endif; ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-width">
-			<div class="gridwrapper w2">
-				<div class="site-info">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					<?php echo esc_html( '©' ); ?>
-					<?php echo esc_html( date( 'Y' ) ); ?>
-				</div><!-- .site-info -->
-				<div class="sidebar">
-					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'footer-1' ) ) :
-							dynamic_sidebar( 'footer-1' );
-						endif; ?>
-					</aside>
-				</div>
-			</div><!-- .gridwrapper -->
-		</div><!-- .site-width -->
-	</footer><!-- #colophon -->
+		</footer><!-- #colophon -->
 
 	<div id="burger-menu">
 		<div class="navigation-overlay"></div>

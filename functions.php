@@ -73,7 +73,7 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		/**
 		 * Create the option page with the ACF plugin
 		 */
-		if ( is_acf() ) :
+		if ( is_acf() && function_exists( 'acf_add_options_page' ) ) :
 			acf_add_options_page( array(
 				'page_title' => 'Theme Options',
 				'menu_title' => 'Theme Options',
@@ -142,8 +142,8 @@ function beflex_widgets_init() {
 		'description'   => esc_html__( 'Display on blog / post / archive pages.', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 	// Enregistrement des sidebars personnalisées par l'utilisateur.
 	if ( is_acf() && have_rows( 'sidebars', 'options' ) ) :
@@ -155,8 +155,8 @@ function beflex_widgets_init() {
 					'description'   => esc_html( get_sub_field( 'sidebar_description', 'options' ) ),
 					'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</aside>',
-					'before_title'  => '<h3 class="widget-title">',
-					'after_title'   => '</h3>',
+					'before_title'  => '<div class="widget-title">',
+					'after_title'   => '</div>',
 				) );
 			endwhile;
 	endif;
@@ -167,8 +167,8 @@ function beflex_widgets_init() {
 			'description'   => esc_html__( 'Display on shop pages', 'beflex' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<div class="widget-title">',
+			'after_title'   => '</div>',
 		) );
 	endif;
 	register_sidebar( array(
@@ -177,8 +177,8 @@ function beflex_widgets_init() {
 		'description'   => esc_html__( '1 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 2', 'beflex' ),
@@ -186,8 +186,8 @@ function beflex_widgets_init() {
 		'description'   => esc_html__( '2 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 3', 'beflex' ),
@@ -195,8 +195,8 @@ function beflex_widgets_init() {
 		'description'   => esc_html__( '3 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Boxfoot 4', 'beflex' ),
@@ -204,8 +204,8 @@ function beflex_widgets_init() {
 		'description'   => esc_html__( '4 Boxfoot. Boxfoot display before Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'beflex' ),
@@ -213,8 +213,8 @@ function beflex_widgets_init() {
 		'description'   => esc_html__( 'Display on right in Footer', 'beflex' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<div class="widget-title">',
+		'after_title'   => '</div>',
 	) );
 }
 add_action( 'widgets_init', 'beflex_widgets_init' );
@@ -225,7 +225,8 @@ add_action( 'widgets_init', 'beflex_widgets_init' );
 function beflex_scripts() {
 	// Enqueue Style.
 	wp_enqueue_style( 'font-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' );
-	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'beflex-font-awesome', get_template_directory_uri() . '/css/fontawesome/fontawesome-all.min.css' );
+	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/css/style.min.css' );
 	wp_enqueue_style( 'beflex-custom-style', get_stylesheet_uri() );
 	if ( class_exists( 'acf' ) ) :
 		$theme = get_field( 'theme', 'options' );
@@ -236,13 +237,12 @@ function beflex_scripts() {
 
 	// Enqueue Scripts.
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'beflex-fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', array(), '', true );
-	wp_enqueue_script( 'beflex-isotope', get_template_directory_uri() . '/js/isotope.min.js', array(), '', true );
-	wp_enqueue_script( 'beflex-lightbox', get_template_directory_uri() . '/js/simple-lightbox.min.js', array(), '', true );
-	wp_enqueue_script( 'beflex-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'beflex-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'beflex-search', get_template_directory_uri() . '/js/search.js', array(), '', true );
-	wp_enqueue_script( 'beflex-flexible-gallery', get_template_directory_uri() . '/js/flexible-gallery.js', array(), '', true );
+	wp_enqueue_script( 'beflex-fontawesome', get_template_directory_uri() . '/js/inc/fontawesome-all.min.js', array(), '', true );
+	wp_enqueue_script( 'beflex-isotope', get_template_directory_uri() . '/js/inc/isotope.min.js', array(), '', true );
+	wp_enqueue_script( 'beflex-lightbox', get_template_directory_uri() . '/js/inc/simple-lightbox.min.js', array(), '', true );
+	wp_enqueue_script( 'beflex-skip-link-focus-fix', get_template_directory_uri() . '/js/inc/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'beflex-main-js', get_template_directory_uri() . '/js/main.min.js', array(), '', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

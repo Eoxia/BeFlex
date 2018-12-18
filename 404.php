@@ -11,22 +11,18 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="primary" class="content-area error-404 not-found" role="main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops, that page can\'t be found', 'beflex' ); ?></h1>
-				</header><!-- .page-header -->
+		<header class="primary-header">
+			<h1 class="page-title"><?php esc_html_e( 'Oops, that page can\'t be found', 'beflex' ); ?></h1>
+		</header><!-- .primary-header -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Perhaps searching can help ? ', 'beflex' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+		<div class="primary-content">
+			<p><?php esc_html_e( 'It looks like nothing was found at this location. Perhaps searching can help ? ', 'beflex' ); ?></p>
+			<?php get_search_form(); ?>
+		</div><!-- .primary-content -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #primary -->
 
 <?php
 get_footer();

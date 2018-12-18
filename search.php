@@ -11,18 +11,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="primary" class="content-area" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="primary-header">
 				<h1 class="page-title"><?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'beflex' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
-			</header><!-- .page-header -->
+			</header><!-- .primary-header -->
 
 			<?php
 			/* Start the Loop */
@@ -45,8 +44,7 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</main><!-- #primary -->
 
 <?php
 get_sidebar( 'blog' );
