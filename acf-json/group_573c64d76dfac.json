@@ -307,23 +307,6 @@
                             "endpoint": 0
                         },
                         {
-                            "key": "field_5a8c3a2171048",
-                            "label": "Général",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 1,
-                            "multi_expand": 1,
-                            "endpoint": 0
-                        },
-                        {
                             "key": "field_5a8c37d16e24e",
                             "label": "Alignement",
                             "name": "alignement",
@@ -346,23 +329,6 @@
                             "default_value": "",
                             "layout": "horizontal",
                             "return_format": "value"
-                        },
-                        {
-                            "key": "field_5a8c3a2d71049",
-                            "label": "Sidebar",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 0,
-                            "multi_expand": 1,
-                            "endpoint": 0
                         },
                         {
                             "key": "field_589dd476bc44f",
@@ -406,23 +372,6 @@
                             },
                             "allow_null": 1,
                             "default_value": ""
-                        },
-                        {
-                            "key": "field_5a8c3a327104a",
-                            "label": "Couleur",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 0,
-                            "multi_expand": 1,
-                            "endpoint": 0
                         },
                         {
                             "key": "field_59e4b946198a4",
@@ -989,33 +938,33 @@
                             "toggle": 1,
                             "return_format": "value"
                         },
-												{
-														"key": "field_5b9fba69024b6",
-														"label": "Niveau de titre",
-														"name": "title_level",
-														"type": "radio",
-														"instructions": "",
-														"required": 0,
-														"conditional_logic": 0,
-														"wrapper": {
-																"width": "100",
-																"class": "",
-																"id": ""
-														},
-														"choices": {
-																"h2": "h2",
-																"h3": "h3",
-																"h4": "h4",
-																"h5": "h5",
-																"h6": "h6"
-														},
-														"allow_null": 0,
-														"other_choice": 0,
-														"default_value": "h2",
-														"layout": "horizontal",
-														"return_format": "value",
-														"save_other_choice": 0
-												},
+                        {
+                            "key": "field_5b9fba69024b6",
+                            "label": "Niveau de titre",
+                            "name": "title_level",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "h2": "h2",
+                                "h3": "h3",
+                                "h4": "h4",
+                                "h5": "h5",
+                                "h6": "h6"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "h2",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
                         {
                             "key": "field_5a8c3cf43c399",
                             "label": "Couleur de fond du bouton",
@@ -1060,23 +1009,6 @@
                                 "id": ""
                             },
                             "placement": "top",
-                            "endpoint": 0
-                        },
-                        {
-                            "key": "field_5a8c39b098f9e",
-                            "label": "Général",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 1,
-                            "multi_expand": 1,
                             "endpoint": 0
                         },
                         {
@@ -1143,23 +1075,6 @@
                             "ui_off_text": ""
                         },
                         {
-                            "key": "field_5a8c399e98f9d",
-                            "label": "Sidebar",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 0,
-                            "multi_expand": 1,
-                            "endpoint": 0
-                        },
-                        {
                             "key": "field_57c6ecf601c88",
                             "label": "Afficher une sidebar",
                             "name": "afficher_une_sidebar",
@@ -1201,23 +1116,6 @@
                             },
                             "allow_null": 1,
                             "default_value": ""
-                        },
-                        {
-                            "key": "field_5a8c3913c271d",
-                            "label": "Couleurs",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 0,
-                            "multi_expand": 1,
-                            "endpoint": 0
                         },
                         {
                             "key": "field_57c7f164de94f",
@@ -1535,23 +1433,6 @@
                             "endpoint": 0
                         },
                         {
-                            "key": "field_5ac39fa219573",
-                            "label": "Général",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 1,
-                            "multi_expand": 1,
-                            "endpoint": 0
-                        },
-                        {
                             "key": "field_5ac39fa219575",
                             "label": "Espacement Section",
                             "name": "espacement_section",
@@ -1570,23 +1451,6 @@
                             "step": 1,
                             "prepend": "",
                             "append": ""
-                        },
-                        {
-                            "key": "field_5ac39fa219577",
-                            "label": "Sidebar",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 0,
-                            "multi_expand": 1,
-                            "endpoint": 0
                         },
                         {
                             "key": "field_5ac39fa219578",
@@ -1630,23 +1494,6 @@
                             },
                             "allow_null": 1,
                             "default_value": ""
-                        },
-                        {
-                            "key": "field_5ac39fa21957a",
-                            "label": "Couleurs",
-                            "name": "",
-                            "type": "accordion",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "open": 0,
-                            "multi_expand": 1,
-                            "endpoint": 0
                         },
                         {
                             "key": "field_5ac39fa21957b",
@@ -1801,5 +1648,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1523262490
+    "modified": 1546944162
 }
