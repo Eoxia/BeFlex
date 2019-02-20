@@ -2,11 +2,12 @@
 /**
  * The header of theme Beflex
  *
- * @author Eoxia <contact@eoxia.com>
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- * @since 1.0.0
- * @version 2.0.0
- * @package beflex
  */
 
 ?><!doctype html>
@@ -27,25 +28,18 @@
 		<div class="site-width">
 
 			<div class="site-branding">
-				<?php
-				if ( is_acf() ) :
-					$site_logo = get_field( 'logo', 'options' );
-				endif;
-				if ( ! empty( $site_logo ) ) : ?>
-					<p class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo esc_html( $site_logo['url'] ); ?>" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>" />
-						</a>
-					</p> <?php
-				else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> <?php
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description ) : ?>
+				<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
+					<?php the_custom_logo(); ?>
+				<?php endif; ?>
+
+				<div class="site-branding-container">
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+
+					<?php $description = get_bloginfo( 'description', 'display' ); ?>
+					<?php if ( $description ) : ?>
 						<p class="site-description"><?php echo esc_html( $description ); ?></p>
-					<?php
-					endif;
-				endif;
-				?>
+					<?php endif; ?>
+				</div>
 			</div><!-- .site-branding -->
 
 			<div class="site-navigation">
@@ -63,7 +57,6 @@
 							wp_nav_menu( array(
 								'theme_location' => 'menu-1',
 								'menu_id'        => 'primary-menu',
-								'menu_class' => 'simple-navigation',
 							) );
 						endif;
 					elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
@@ -71,11 +64,11 @@
 					endif;
 					?>
 				</nav><!-- #main-navigation -->
-				<a href="#" class="menu-toggle"><i class="far fa-bars fa-fw"></i><span><?php esc_html_e( 'Navigation', 'beflex' ); ?></span></a>
+				<a href="#" class="menu-toggle"><i class="fas fa-bars fa-fw"></i><span><?php esc_html_e( 'Navigation', 'beflex' ); ?></span></a>
 			</div><!-- .site-navigation -->
 
 			<div class="site-tool">
-				<a href="#" class="js-search"><i class="far fa-search"></i></a>
+				<a href="#" class="js-search"><i class="fas fa-search"></i></a>
 				<?php if ( is_wpshop() ) : ?>
 					<a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option( 'wpshop_myaccount_page_id' ) ) ); /* WPCS: xss ok. */ ?>" class="wps-my-account"><i class="wps-icon-user"></i></a>
 					<a href="#" class="wps-action-mini-cart-opener wps-my-cart"><i class="wps-icon-basket"></i><?php echo do_shortcode( '[wps-numeration-cart]' ); ?></a>
@@ -88,7 +81,7 @@
 	<div id="search-area">
 		<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<label>
-				<span class="search-icon"><i class="far fa-search"></i></span>
+				<span class="search-icon"><i class="fas fa-search"></i></span>
 				<input type="search" class="search-field"
 						placeholder="<?php echo esc_attr_x( 'Enter a Keyword', 'placeholder', 'beflex' ) ?>"
 						value="<?php echo get_search_query() ?>" name="s"
@@ -100,9 +93,10 @@
 
 	<?php
 	if ( is_page() && is_acf() ) :
-		$site_width = ( get_field( 'display_page_sidebar', $post->ID ) ) ? 'site-width' : '';
+		$is_sidebar = ( get_field( 'display_page_sidebar', $post->ID ) ) ? 'active-sidebar' : '';
 	else :
-		$site_width = 'site-width';
+		$is_sidebar = '';
 	endif;
 	?>
-	<div id="content" class="site-content <?php echo esc_html( $site_width ); ?>">
+
+	<div id="content" class="site-content site-width <?php echo esc_html( $is_sidebar ); ?>">

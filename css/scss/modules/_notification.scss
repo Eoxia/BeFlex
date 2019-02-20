@@ -6,10 +6,8 @@
 	border-radius: 3px;
 	border: solid #eee 1px;
 
-	@include fa-icon;
-	@extend .fas;
-
 	&::before {
+		@extend .fas;
 		position: absolute;
 		top: 50%;
 		left: .75em;

@@ -6,19 +6,22 @@
 		padding: 0;
 		list-style-type: none;
 	}
-	// Premier niveau
-	.menu-item-depth-0 {
+	.menu a {
+		font-size: 12px;
+	}
+
+	/** Premier niveau */
+	.menu > .menu-item {
 		float: left;
 		position: relative;
 
-		> .menu-link {
+		> a {
 			padding: 2.4em 1.4em;
 			height: 100%;
 			display: block;
 			text-transform: uppercase;
 			color: $color__text-main;
 			@include transition();
-			@include font-size(0.9);
 			font-weight: 600;
 		}
 		&.current_page_item > a,
@@ -28,13 +31,14 @@
 			color: $color__primary;
 		}
 	}
-	// Second niveau
-	.menu-item-depth-0:hover .menu-depth-1 {
+
+	/** Second niveau */
+	.menu > .menu-item:hover > .sub-menu {
 		opacity: 1;
 		top: 100%;
 		pointer-events: all;
 	}
-	.menu-item-depth-0 .menu-depth-1 {
+	.menu > .menu-item > .sub-menu {
 		position: absolute;
 		opacity: 0;
 		top: 110%;
@@ -43,7 +47,7 @@
 		background: #2b2b2b;
 		z-index: 901;
 
-		.menu-item-depth-1 {
+		> .menu-item {
 			position: relative;
 			&:first-child > a {
 				padding-top: 1.4em;
@@ -52,12 +56,11 @@
 				padding-bottom: 1.4em;
 			}
 		}
-		.menu-item-depth-1 a {
+		a {
 			padding: 0.6em 1.6em;
 			display: inline-block;
 			width: 160px;
 			color: rgba(255,255,255,0.8);
-			@include font-size(0.9);
 			text-transform: uppercase;
 			@include transition();
 			&:hover {
@@ -65,13 +68,14 @@
 			}
 		}
 	}
-	// Troisième niveau
-	.menu-item-depth-1:hover .menu-depth-2 {
+
+	/** Troisieme niveau */
+	.menu > .menu-item > .sub-menu > .menu-item:hover > .sub-menu {
 		opacity: 1;
 		left: 100%;
 		pointer-events: all;
 	}
-	.menu-item-depth-1 .menu-depth-2 {
+	.menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
 		position: absolute;
 		opacity: 0;
 		top: 0;
@@ -83,35 +87,36 @@
 		padding: 0.8em 0;
 		z-index: 902;
 	}
-	// Les niveaux suivants n'existent pas
-	.menu-item-depth-2 .sub-menu {
+
+	/** Les niveaux suivants n'existent pas */
+	.menu > .menu-item > .sub-menu > .menu-item > .sub-menu .sub-menu {
 		display: none;
 	}
 
-	// Fleche Sous menu
-	[class*="menu-item-depth-"].menu-item-has-children {
-		> .menu-link:after {
-			@include fa-icon;
-			@extend .fas;
-			vertical-align: middle;
+	.menu-item.menu-item-has-children {
+		> a:after {
 			display: inline-block;
+			vertical-align: middle;
+			@extend .fas;
+			content: '';
 		}
 	}
+
 	// Fleche Sous menu, premier niveau
-	.menu-item-depth-0.menu-item-has-children {
-		> .menu-link:after {
+	.menu > .menu-item.menu-item-has-children {
+		> a:after {
 			content: fa-content($fa-var-angle-down);
 			margin-left: .5em;
 			margin-bottom: .25em;
 			color: rgba(0,0,0,.4);
 		}
-		&:hover > .menu-link:after {
+		&:hover > a:after {
 			content: fa-content($fa-var-angle-up);
 		}
 	}
-	// Fleche Sous menu, second niveau
-	.menu-item-depth-1.menu-item-has-children {
-		> .menu-link:after {
+	// Fleche Sous menu, second niveaux
+	.menu > .menu-item > .sub-menu > .menu-item.menu-item-has-children {
+		> a:after {
 			content: fa-content($fa-var-angle-right);
 			position: absolute;
 			right: 1em;
@@ -121,87 +126,9 @@
 		}
 	}
 	// Pas de fleches après les autres niveaux
-	.menu-item-depth-2.menu-item-has-children {
-		> .menu-link::after {
+	.menu > .menu-item > .sub-menu > .menu-item .menu-item.menu-item-has-children {
+		> a::after {
 			display: none;
 		}
-	}
-}
-
-/* Toggle Menu */
-.site-navigation {
-	.menu-toggle {
-		display: block;
-	}
-	@media ( min-width: $media__medium ) {
-		.menu-toggle {
-			display: none;
-		}
-		#main-navigation {
-			display: block;
-		}
-	}
-}
-/* Toggle Link */
-.site-navigation {
-	.menu-toggle {
-		@include font-size(0.8);
-    font-weight: 600;
-		padding: 2.4em 1.4em;
-    height: 100%;
-		text-transform: uppercase;
-		color: rgba(0,0,0,0.7);
-		@include transition();
-
-		&:hover {
-			cursor: pointer;
-			color: rgba(0,0,0,0.9);
-		}
-		.svg-inline--fa {
-			color: $color__primary;
-			@media ( max-width: $media__small ) {
-				@include font-size(1.2);
-			}
-		}
-		.fa {
-			padding-right: 0.6em;
-			color: $color__primary;
-			@media ( max-width: $media__small ) {
-				padding-right: 0;
-				@include font-size(1.2);
-				color: rgba(0,0,0,0.8);
-			}
-		}
-		span {
-			@media ( max-width: $media__small ) {
-				display: none;
-			}
-		}
-	}
-}
-
-#masthead.-sticky .site-navigation .menu-toggle {
-	padding-top: 1.2em;
-	padding-bottom: 1.2em;
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
 	}
 }

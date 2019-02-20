@@ -2,11 +2,12 @@
 /**
  * The template for displaying main shop page
  *
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
  */
 
 get_header(); ?>
@@ -37,7 +38,7 @@ get_header(); ?>
 								<?php endif; ?>
 								<div class="wps-entry-caption">
 									<h1 class="wps-entry-title"><?php echo $wp_query->queried_object->name; ?></h1>
-									<p class="wps-entry-description"><?php echo do_shortcode( wp_trim_words( $wp_query->queried_object->description, 30, ' [...]' ) ); ?></p>
+									<p class="wps-entry-description"><?php echo do_shortcode( wp_trim_words( $wp_query->queried_object->description, 30, ' (...)' ) ); ?></p>
 								</div>
 							</header><!-- .entry-header --> <?php
 

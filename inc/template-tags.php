@@ -13,7 +13,13 @@ if ( ! function_exists( 'beflex_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function beflex_posted_on() {
+	function beflex_posted_on( $value = array() ) {
+		if ( ! empty( $value ) && is_array($value) ) :
+			$param = $value;
+		else :
+			$param = array( 'time', 'author' );
+		endif;
+
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -38,8 +44,12 @@ if ( ! function_exists( 'beflex_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
+		if ( in_array( 'time', $param ) ) :
+			echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		endif;
+		if ( in_array( 'author', $param ) ) :
+			echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		endif;
 	}
 endif;
 

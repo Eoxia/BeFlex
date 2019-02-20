@@ -2,11 +2,12 @@
 /**
  * Template part for displaying posts
  *
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
  */
 
 ?>
@@ -47,16 +48,10 @@
 
 		<div class="entry-content">
 			<?php
-			if ( is_acf() ) :
-				$trim_size = ( get_field( 'is_post_trim', 'options' ) ) ? get_field( 'post_trim_size', 'options' ) : '100';
-			else :
-				$trim_size = '100';
-			endif;
-
 			if ( is_single() ) :
 				the_content( esc_html( 'Read more', 'beflex' ) );
 			else :
-				echo esc_html( wp_trim_words( get_the_content(), $trim_size, ' (...)' ) );
+				echo esc_html( wp_trim_words( get_the_content(), 30, ' (...)' ) );
 			endif;
 
 			wp_link_pages( array(
