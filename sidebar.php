@@ -10,7 +10,15 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-$sidebar_name = get_field( 'page_sidebar_name' );
+if ( ! ( is_acf() && is_beflex_pro() ) ) :
+	return;
+endif;
+
+if ( ! get_field( 'beflex_display_page_sidebar' ) ) :
+	return;
+endif;
+
+$sidebar_name = get_field( 'beflex_sidebar_to_display' );
 if ( ! is_active_sidebar( $sidebar_name ) ) :
 	return;
 endif;

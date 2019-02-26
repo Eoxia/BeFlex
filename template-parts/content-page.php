@@ -10,8 +10,8 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
 
-if ( is_acf() ) :
-	$display_title = ( get_field( 'display_page_title' ) ) ? true : false;
+if ( is_acf() && is_beflex_pro() ) :
+	$display_title = ( get_field( 'beflex_display_page_title' ) ) ? true : false;
 else :
 	$display_title = true;
 endif;

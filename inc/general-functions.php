@@ -47,6 +47,20 @@ if ( ! function_exists( 'is_yoast' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'is_beflex_pro' ) ) :
+	/**
+	 * Returns true if YOAST plugin is active in the theme
+	 *
+	 * @return boolean
+	 */
+	function is_beflex_pro() {
+		if ( class_exists( '\beflex_pro\Core_Action' ) ) :
+			return true;
+		endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'is_beflex_AFT' ) ) :
 	/**
 	 * Returns true if AFT module of Beflex Pro exists

@@ -28,8 +28,6 @@ get_header(); ?>
 	</main><!-- #primary -->
 
 	<?php
-	if ( is_acf() && get_field( 'display_page_sidebar' ) ) :
-		get_sidebar();
-	endif;
 
+get_sidebar();
 get_footer();
