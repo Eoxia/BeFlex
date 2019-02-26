@@ -239,9 +239,9 @@ add_filter( 'tiny_mce_before_init', 'beflex_add_custom_formats' );
  * Display in the Head user colors
  */
 function beflex_custom_styles_enqueue() {
-	get_template_part( 'inc/custom-styles', 'color' );
+	get_template_part( 'inc/option-color' );
 }
-// add_action( 'wp_head','beflex_custom_styles_enqueue' );
+add_action( 'wp_head','beflex_custom_styles_enqueue' );
 
 /**
  * Custom template tags for this theme.

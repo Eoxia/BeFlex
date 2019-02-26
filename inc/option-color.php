@@ -11,10 +11,11 @@
 
 $primary = get_field( 'couleur_de_dominante', 'options' );
 
-$font_family = beflex_get_font_family();
-$font_weight = beflex_get_font_weight();
-$font_style = beflex_get_font_style();
-$font_transform = beflex_get_font_transform();
+if ( is_beflex_pro() ) :
+	$font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
+	$font_weight    = \beflex_pro\Settings_Helper::g()->get_font_weight();
+	$font_transform = \beflex_pro\Settings_Helper::g()->get_font_transform();
+endif;
 ?>
 
 <style>
