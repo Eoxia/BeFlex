@@ -168,8 +168,9 @@ add_action( 'widgets_init', 'beflex_widgets_init' );
  */
 function beflex_scripts() {
 	// Enqueue Style.
-	/** @NOTE : Ne pas inclure si le plugin payant est activé car il importera la version pro */
-	wp_enqueue_style( 'beflex-font-awesome', get_template_directory_uri() . '/css/fontawesome/fontawesome-all.min.css' );
+	if ( ! is_beflex_AFT() ) :
+		wp_enqueue_style( 'beflex-font-awesome', get_template_directory_uri() . '/css/fontawesome/fontawesome-all.min.css' );
+	endif;
 	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/css/style.min.css' );
 	wp_enqueue_style( 'beflex-custom-style', get_stylesheet_uri() );
 
