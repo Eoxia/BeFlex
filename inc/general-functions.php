@@ -74,6 +74,19 @@ if ( ! function_exists( 'is_beflex_AFT' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'is_beflex_social' ) ) :
+	/**
+	 * Returns true if AFT module of Beflex Pro exists
+	 *
+	 * @return boolean
+	 */
+	function is_beflex_social() {
+		if ( class_exists( '\beflex_pro\is_beflex_AFT' ) ) :
+			return true;
+		endif;
+	}
+endif;
+
 if ( ! function_exists( 'beflex_notification' ) ) :
 	/**
 	 * Print an alert for the user

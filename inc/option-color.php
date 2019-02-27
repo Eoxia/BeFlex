@@ -11,7 +11,7 @@
 
 $primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );
 
-if ( is_beflex_pro() ) :
+if ( is_beflex_social() ) :
 	$font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
 	$font_weight    = \beflex_pro\Settings_Helper::g()->get_font_weight();
 	$font_transform = \beflex_pro\Settings_Helper::g()->get_font_transform();
@@ -88,7 +88,7 @@ endif;
 		#main-navigation .menu > .menu-item.current-menu-ancestor > a {
 			color: <?php echo esc_html( $primary ); ?>;
 		}
-		
+
 		.site-navigation .menu-toggle .fa {
 			color: <?php echo esc_html( $primary ); ?>;
 		}
