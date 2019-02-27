@@ -236,6 +236,11 @@ function beflex_add_custom_formats( $init_array ) {
 add_filter( 'tiny_mce_before_init', 'beflex_add_custom_formats' );
 
 /**
+* WordPress cutomizer settings
+*/
+require get_template_directory() . '/inc/customizer.php';
+
+/**
  * Display in the Head user colors
  */
 function beflex_custom_styles_enqueue() {

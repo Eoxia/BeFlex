@@ -9,7 +9,7 @@
  * @package beflex
  */
 
-$primary = get_field( 'couleur_de_dominante', 'options' );
+$primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );
 
 if ( is_beflex_pro() ) :
 	$font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
@@ -36,15 +36,15 @@ endif;
 	}
 
 	<?php if ( ! empty( $primary ) ) : ?>
-		.button.primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"] {
+		.button.button-primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"] {
 			background: <?php echo esc_html( $primary ); ?>;
 			border-color: <?php echo esc_html( $primary ); ?>;
 		}
-		.button.bordered.primary {
+		.button.bordered.button-primary {
 			border-color: <?php echo esc_html( $primary ); ?>;
 			color: <?php echo esc_html( $primary ); ?>;
 		}
-		.button.bordered.primary:hover {
+		.button.bordered.button-primary:hover {
 			box-shadow: inset 0 -2.6em <?php echo esc_html( $primary ); ?>;
 		}
 		#comments .comment-list .comment-reply-link {
@@ -81,18 +81,14 @@ endif;
 		#main-navigation .eoxia-mega-menu-active.menu-item-depth-0 .eoxia-mega-menu {
 			border-top: 4px solid <?php echo esc_html( $primary ); ?>;
 		}
-		#main-navigation .menu-item-depth-0.current_page_item > a,
-		#main-navigation .menu-item-depth-0.current-menu-item > a,
-		#main-navigation .menu-item-depth-0.current_page_ancestor > a,
-		#main-navigation .menu-item-depth-0.current-menu-ancestor > a {
+
+		#main-navigation .menu > .menu-item.current_page_item > a,
+		#main-navigation .menu > .menu-item.current-menu-item > a,
+		#main-navigation .menu > .menu-item.current_page_ancestor > a,
+		#main-navigation .menu > .menu-item.current-menu-ancestor > a {
 			color: <?php echo esc_html( $primary ); ?>;
 		}
-		#main-navigation .simple-navigation > li.current_page_item > a,
-		#main-navigation .simple-navigation > li.current-menu-item > a,
-		#main-navigation .simple-navigation > li.current_page_ancestor > a,
-		#main-navigation .simple-navigation > li.current-menu-ancestor > a {
-			color: <?php echo esc_html( $primary ); ?>;
-		}
+		
 		.site-navigation .menu-toggle .fa {
 			color: <?php echo esc_html( $primary ); ?>;
 		}
@@ -108,12 +104,6 @@ endif;
 		}
 		.flexible-gallery .gallery .content:after {
 			background: <?php echo esc_html( $primary ); ?>;
-		}
-
-		@media ( max-width: 770px ) {
-			#masthead .site-tool {
-				background: <?php echo esc_html( $primary ); ?>;
-			}
 		}
 	<?php endif; ?>
 
