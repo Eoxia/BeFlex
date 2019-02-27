@@ -47,7 +47,7 @@
 					<?php
 					$user = wp_get_current_user();
 					if ( has_nav_menu( 'menu-1' ) ) :
-						if ( class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
+						if ( is_beflex_mega_menu() ) :
 							wp_nav_menu( array(
 								'theme_location' => 'menu-1',
 								'menu_id'        => 'primary-menu',
