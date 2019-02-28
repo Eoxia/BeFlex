@@ -115,9 +115,12 @@ if ( ! function_exists( 'beflex_notification' ) ) :
 		endif;
 
 		printf( wp_kses(
-			__( '<div class="notification %1$s">%2$s%3$s</div>', 'beflex' ),
+			__( '<div class="notification %1$s"> <i class="notification-icon fas fa-exclamation-triangle"></i> %2$s%3$s</div>', 'beflex' ),
 			array(
 				'div' => array(
+					'class' => array(),
+				),
+				'i' => array(
 					'class' => array(),
 				),
 			)

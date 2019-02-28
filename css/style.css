@@ -234,7 +234,6 @@ th {
  */
 .fa,
 .fas,
-.notification::before,
 #main-navigation .menu-item.menu-item-has-children > a:after,
 .far,
 .fal,
@@ -821,19 +820,14 @@ body.sticky-nav #content {
 .notification {
   position: relative;
   font-size: 1em;
-  padding: 1em 1em 1em 2.5rem;
+  padding: 1em;
   overflow: hidden;
   border-radius: 3px;
   border: solid #eee 1px;
 }
 
-.notification::before {
-  position: absolute;
-  top: 50%;
-  left: .75em;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  font-size: 1rem;
+.notification .notification-icon {
+  margin: 0 0.6em 0 0;
 }
 
 .notification p {
@@ -861,7 +855,7 @@ body.sticky-nav #content {
   color: #2e75bf;
 }
 
-.notification.info::before {
+.notification.info .notification-icon::before {
   content: "\f05a";
 }
 
@@ -870,6 +864,10 @@ body.sticky-nav #content {
   border: dashed #ddd 1px;
   border-radius: 1em;
   color: #ccc;
+}
+
+.notification.empty .notification-icon::before {
+  content: '';
 }
 
 .notification.error {
@@ -881,7 +879,7 @@ body.sticky-nav #content {
   color: #e74c3c;
 }
 
-.notification.error::before {
+.notification.error .notification-icon::before {
   content: "\f057";
 }
 
@@ -894,7 +892,7 @@ body.sticky-nav #content {
   color: #74c246;
 }
 
-.notification.success::before {
+.notification.success .notification-icon::before {
   content: "\f058";
 }
 
@@ -907,7 +905,7 @@ body.sticky-nav #content {
   color: #fcb231;
 }
 
-.notification.warning::before {
+.notification.warning .notification-icon::before {
   content: "\f071";
 }
 
@@ -915,7 +913,7 @@ body.sticky-nav #content {
   .notification {
     padding: 1em;
   }
-  .notification::before {
+  .notification .notification-icon::before {
     display: none;
   }
 }
@@ -2357,6 +2355,8 @@ textarea {
 }
 
 #main-navigation .menu > .menu-item.menu-item-has-children > a:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
   content: "\f107";
   margin-left: .5em;
   margin-bottom: .25em;
@@ -2368,6 +2368,8 @@ textarea {
 }
 
 #main-navigation .menu > .menu-item > .sub-menu > .menu-item.menu-item-has-children > a:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
   content: "\f105";
   position: absolute;
   right: 1em;

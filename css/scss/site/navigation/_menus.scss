@@ -105,6 +105,8 @@
 	// Fleche Sous menu, premier niveau
 	.menu > .menu-item.menu-item-has-children {
 		> a:after {
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 600;
 			content: fa-content($fa-var-angle-down);
 			margin-left: .5em;
 			margin-bottom: .25em;
@@ -117,6 +119,8 @@
 	// Fleche Sous menu, second niveaux
 	.menu > .menu-item > .sub-menu > .menu-item.menu-item-has-children {
 		> a:after {
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 600;
 			content: fa-content($fa-var-angle-right);
 			position: absolute;
 			right: 1em;
