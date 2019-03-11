@@ -11,7 +11,7 @@
 
 $primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );
 
-if ( is_beflex_social() ) :
+if ( is_beflex_settings() ) :
 	$font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
 	$font_weight    = \beflex_pro\Settings_Helper::g()->get_font_weight();
 	$font_transform = \beflex_pro\Settings_Helper::g()->get_font_transform();
@@ -20,7 +20,7 @@ endif;
 
 <style>
 
-	h1, h2, h3, h4, h5, h6, .owl-carousel .diaporama-item-padder .diaporama-title, .widget-title {
+	h1, h2, h3, h4, h5, h6, .beflex-diaporama .diaporama-title, .widget-title {
 		<?php if ( ! empty( $font_family ) ) : ?>
 			font-family: '<?php echo esc_html( $font_family ); ?>';
 		<?php endif; ?>
@@ -78,7 +78,7 @@ endif;
 		::selection {
 			background: <?php echo esc_html( $primary ); ?>;
 		}
-		#main-navigation .eoxia-mega-menu-active.menu-item-depth-0 .eoxia-mega-menu {
+		#main-navigation .beflex-mega-menu .beflex-mega-menu-container {
 			border-top: 4px solid <?php echo esc_html( $primary ); ?>;
 		}
 
