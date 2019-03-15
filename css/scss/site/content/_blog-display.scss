@@ -2,6 +2,7 @@
 	.post {
 		@include flexbox();
 		flex-wrap: nowrap;
+		margin: 1em 0;
 
 		@media ( max-width: $media__medium ) {
 			flex-wrap: wrap;

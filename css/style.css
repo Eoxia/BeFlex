@@ -1986,6 +1986,7 @@ a:hover, a:active {
   flex: 0 1 auto;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  margin: 1em 0;
 }
 
 @media (max-width: 770px) {
