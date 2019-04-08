@@ -20,7 +20,7 @@ endif;
 
 <style>
 
-	h1, h2, h3, h4, h5, h6, .beflex-diaporama .diaporama-title, .widget-title {
+	h1, h2, h3, h4, h5, h6, .beflex-diaporama .diaporama-title, .widget-title, .editor-post-title__block .editor-post-title__input {
 		<?php if ( ! empty( $font_family ) ) : ?>
 			font-family: '<?php echo esc_html( $font_family ); ?>';
 		<?php endif; ?>

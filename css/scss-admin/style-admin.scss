@@ -1,0 +1,38 @@
+/*!
+Theme Name: BeFlex
+Theme URI: http://www.eoxia.com
+Author: the Eoxia team
+Description: BeFlex est un thème entièrement modulable. Positionnez vos slider, images, mises en avant d'articles, contenus ou vous le souhaitez. La seule limite est votre imagination.
+License:  AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+License URI: http://www.eoxia.com
+Since: 3.0.0
+Text Domain: beflex
+*/
+
+@import "../scss/variables/variables";
+@import "../scss/mixins/mixins";
+
+.acf-block-preview {
+	/*--------------------------------------------------------------
+	# Normalize
+	--------------------------------------------------------------*/
+	@import "../scss/normalize";
+
+	/*--------------------------------------------------------------
+	# Typography
+	--------------------------------------------------------------*/
+	@import "../scss/fontawesome/fontawesome";
+	@import "../scss/font/font";
+	@import "heading";
+
+	/*--------------------------------------------------------------
+	# Modules
+	--------------------------------------------------------------*/
+	@import "../scss/modules/modules";
+	@import "buttons";
+
+	/*--------------------------------------------------------------
+	# Theme
+	--------------------------------------------------------------*/
+	@import "../scss/site/site";
+}

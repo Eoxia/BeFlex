@@ -166,7 +166,7 @@ add_action( 'widgets_init', 'beflex_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function beflex_scripts() {
+function beflex_frontend_scripts() {
 	// Enqueue Style.
 	if ( ! is_beflex_AFT() ) :
 		wp_enqueue_style( 'beflex-font-awesome', get_template_directory_uri() . '/css/fontawesome/fontawesome-all.min.css' );
@@ -183,7 +183,15 @@ function beflex_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'beflex_scripts' );
+add_action( 'wp_enqueue_scripts', 'beflex_frontend_scripts' );
+
+/**
+ * Enqueue scripts and styles in admin.
+ */
+function beflex_admin_scripts() {
+	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/css/style-admin.min.css' );
+}
+add_action( 'admin_enqueue_scripts', 'beflex_admin_scripts' );
 
 /**
  * Affiche le bloc du plugin Yoast SEO tout en bas des pages
@@ -247,6 +255,11 @@ function beflex_custom_styles_enqueue() {
 	get_template_part( 'inc/option-color' );
 }
 add_action( 'wp_head','beflex_custom_styles_enqueue' );
+
+function beflex_custom_styles_enqueue_admin() {
+	get_template_part( 'inc/gutenberg-editor' );
+}
+add_action( 'admin_head','beflex_custom_styles_enqueue_admin' );
 
 /**
  * Custom template tags for this theme.
