@@ -9,101 +9,101 @@
  * @package beflex
  */
 
-$primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );
+$beflex_primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );
 
 if ( is_beflex_settings() ) :
-	$font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
-	$font_weight    = \beflex_pro\Settings_Helper::g()->get_font_weight();
-	$font_transform = \beflex_pro\Settings_Helper::g()->get_font_transform();
+	$beflex_font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
+	$beflex_font_weight    = \beflex_pro\Settings_Helper::g()->get_font_weight();
+	$beflex_font_transform = \beflex_pro\Settings_Helper::g()->get_font_transform();
 endif;
 ?>
 
 <style>
 
 	h1, h2, h3, h4, h5, h6, .beflex-diaporama .diaporama-title, .widget-title, .editor-post-title__block .editor-post-title__input {
-		<?php if ( ! empty( $font_family ) ) : ?>
-			font-family: '<?php echo esc_html( $font_family ); ?>';
+		<?php if ( ! empty( $beflex_font_family ) ) : ?>
+			font-family: '<?php echo esc_html( $beflex_font_family ); ?>';
 		<?php endif; ?>
-		<?php if ( ! empty( $font_weight ) ) : ?>
-			font-weight: <?php echo esc_html( $font_weight ); ?>;
+		<?php if ( ! empty( $beflex_font_weight ) ) : ?>
+			font-weight: <?php echo esc_html( $beflex_font_weight ); ?>;
 		<?php endif; ?>
 		<?php if ( ! empty( $font_style ) ) : ?>
 			font-style: <?php echo esc_html( $font_style ); ?>;
 		<?php endif; ?>
-		<?php if ( ! empty( $font_transform ) ) : ?>
-			text-transform: <?php echo esc_html( $font_transform ); ?>;
+		<?php if ( ! empty( $beflex_font_transform ) ) : ?>
+			text-transform: <?php echo esc_html( $beflex_font_transform ); ?>;
 		<?php endif; ?>
 	}
 
-	<?php if ( ! empty( $primary ) ) : ?>
+	<?php if ( ! empty( $beflex_primary ) ) : ?>
 		.button.button-primary:not(.bordered), button, input[type="button"], input[type="reset"], input[type="submit"] {
-			background: <?php echo esc_html( $primary ); ?>;
-			border-color: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
+			border-color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		.button.bordered.button-primary {
-			border-color: <?php echo esc_html( $primary ); ?>;
-			color: <?php echo esc_html( $primary ); ?>;
+			border-color: <?php echo esc_html( $beflex_primary ); ?>;
+			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		.button.bordered.button-primary:hover {
-			box-shadow: inset 0 -2.6em <?php echo esc_html( $primary ); ?>;
+			box-shadow: inset 0 -2.6em <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#comments .comment-list .comment-reply-link {
-			border-color: <?php echo esc_html( $primary ); ?>;
-			color: <?php echo esc_html( $primary ); ?>;
+			border-color: <?php echo esc_html( $beflex_primary ); ?>;
+			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#comments .comment-list .comment-reply-link:hover {
-			box-shadow: inset 0 -2.6em <?php echo esc_html( $primary ); ?>;
+			box-shadow: inset 0 -2.6em <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#comments .comment-list .comment-metadata .comment-edit-link {
-			color: <?php echo esc_html( $primary ); ?>;
+			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		blockquote, q {
-			border-left: 4px solid <?php echo esc_html( $primary ); ?>;
+			border-left: 4px solid <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#search-area .search-overlay {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		a, a:visited {
-			color: <?php echo esc_html( $primary ); ?>;
+			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		a:hover, a:focus, a:active {
-			color: <?php echo esc_html( beflex_change_color( $primary, -30 ) ); ?>;
+			color: <?php echo esc_html( beflex_change_color( $beflex_primary, -30 ) ); ?>;
 		}
 		.post-navigation .nav-links .fa {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		::-moz-selection {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		::selection {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#main-navigation .beflex-mega-menu .beflex-mega-menu-container {
-			border-top: 4px solid <?php echo esc_html( $primary ); ?>;
+			border-top: 4px solid <?php echo esc_html( $beflex_primary ); ?>;
 		}
 
 		#main-navigation .menu > .menu-item.current_page_item > a,
 		#main-navigation .menu > .menu-item.current-menu-item > a,
 		#main-navigation .menu > .menu-item.current_page_ancestor > a,
 		#main-navigation .menu > .menu-item.current-menu-ancestor > a {
-			color: <?php echo esc_html( $primary ); ?>;
+			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 
 		.site-navigation .menu-toggle .fa {
-			color: <?php echo esc_html( $primary ); ?>;
+			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		.owl-carousel .owl-dots .owl-dot.active span {
-			border: 2px solid <?php echo esc_html( $primary ); ?>;
-			box-shadow: 0px 0px 0px 2px <?php echo esc_html( $primary ); ?>;
+			border: 2px solid <?php echo esc_html( $beflex_primary ); ?>;
+			box-shadow: 0px 0px 0px 2px <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#burger-menu .navigation-overlay {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		#masthead .site-tool > a.wps-action-mini-cart-opener .wps-numeration-cart {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 		.flexible-gallery .gallery .content:after {
-			background: <?php echo esc_html( $primary ); ?>;
+			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
 	<?php endif; ?>
 

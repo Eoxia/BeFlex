@@ -29,11 +29,11 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 
-			$categories = wp_get_post_categories( get_the_ID() );
-			if ( 'post' === get_post_type() && ! empty( $categories ) ) : ?>
+			$beflex_categories = wp_get_post_categories( get_the_ID() );
+			if ( 'post' === get_post_type() && ! empty( $beflex_categories ) ) : ?>
 				<div class="post-categories">
-					<?php foreach ( $categories as $cat ) : ?>
-						<a class="post-categorie" href="<?php echo esc_url( get_category_link( $cat ) ); ?>"><?php echo esc_html( get_cat_name( $cat ) ); ?></a>
+					<?php foreach ( $beflex_categories as $beflex_cat ) : ?>
+						<a class="post-categorie" href="<?php echo esc_url( get_category_link( $beflex_cat ) ); ?>"><?php echo esc_html( get_cat_name( $beflex_cat ) ); ?></a>
 					<?php endforeach; ?>
 				</div> <?php
 			endif;

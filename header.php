@@ -35,9 +35,9 @@
 				<div class="site-branding-container">
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
-					<?php $description = get_bloginfo( 'description', 'display' ); ?>
-					<?php if ( $description ) : ?>
-						<p class="site-description"><?php echo esc_html( $description ); ?></p>
+					<?php $beflex_description = get_bloginfo( 'description', 'display' ); ?>
+					<?php if ( $beflex_description ) : ?>
+						<p class="site-description"><?php echo esc_html( $beflex_description ); ?></p>
 					<?php endif; ?>
 				</div>
 			</div><!-- .site-branding -->
@@ -45,7 +45,7 @@
 			<div class="site-navigation">
 				<nav id="main-navigation" role="navigation">
 					<?php
-					$user = wp_get_current_user();
+					$beflex_user = wp_get_current_user();
 					if ( has_nav_menu( 'menu-1' ) ) :
 						if ( is_beflex_mega_menu() ) :
 							wp_nav_menu( array(
@@ -59,7 +59,7 @@
 								'menu_id'        => 'primary-menu',
 							) );
 						endif;
-					elseif ( beflex_allowed( $user->roles, 'editor,administrator' ) ) :
+					elseif ( beflex_allowed( $beflex_user->roles, 'editor,administrator' ) ) :
 						echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
 					endif;
 					?>
@@ -93,10 +93,10 @@
 
 	<?php
 	if ( is_acf() ) :
-		$is_sidebar = ( get_field( 'beflex_display_page_sidebar', $post->ID ) ) ? 'active-sidebar' : '';
+		$beflex_is_sidebar = ( get_field( 'beflex_display_page_sidebar', $post->ID ) ) ? 'active-sidebar' : '';
 	else :
-		$is_sidebar = '';
+		$beflex_is_sidebar = '';
 	endif;
 	?>
 
-	<div id="content" class="site-content site-width <?php echo esc_html( $is_sidebar ); ?>">
+	<div id="content" class="site-content site-width <?php echo esc_html( $beflex_is_sidebar ); ?>">

@@ -29,11 +29,11 @@ if ( post_password_required() ) {
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-			$comment_count = get_comments_number();
+			$beflex_comment_count = get_comments_number();
 			printf( // WPCS: XSS OK.
 				/* translators: 1: comment count number, 2: title. */
-				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'beflex' ) ),
-				number_format_i18n( $comment_count ),
+				esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $beflex_comment_count, 'comments title', 'beflex' ) ),
+				number_format_i18n( $beflex_comment_count ),
 				'<span>' . get_the_title() . '</span>'
 			);
 			?>

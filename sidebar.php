@@ -18,12 +18,12 @@ if ( ! get_field( 'beflex_display_page_sidebar' ) ) :
 	return;
 endif;
 
-$sidebar_name = get_field( 'beflex_sidebar_to_display' );
-if ( ! is_active_sidebar( $sidebar_name ) ) :
+$beflex_sidebar_name = get_field( 'beflex_sidebar_to_display' );
+if ( ! is_active_sidebar( $beflex_sidebar_name ) ) :
 	return;
 endif;
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( $sidebar_name ); ?>
+	<?php dynamic_sidebar( $beflex_sidebar_name ); ?>
 </aside><!-- #secondary -->

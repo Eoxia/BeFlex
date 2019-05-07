@@ -11,13 +11,13 @@
  */
 
 if ( is_acf() && is_beflex_pro() ) :
-	$display_title = ( get_field( 'beflex_display_page_title' ) ) ? true : false;
+	$beflex_display_title = ( get_field( 'beflex_display_page_title' ) ) ? true : false;
 else :
-	$display_title = true;
+	$beflex_display_title = true;
 endif;
 ?>
 
-<?php if ( $display_title ) : ?>
+<?php if ( $beflex_display_title ) : ?>
 	<header class="primary-header site-width">
 		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header><!-- .primary-header -->
