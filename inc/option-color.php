@@ -92,9 +92,9 @@ endif;
 		.site-navigation .menu-toggle .fa {
 			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
-		.owl-carousel .owl-dots .owl-dot.active span {
-			border: 2px solid <?php echo esc_html( $beflex_primary ); ?>;
-			box-shadow: 0px 0px 0px 2px <?php echo esc_html( $beflex_primary ); ?>;
+		.beflex-diaporama .owl-dots .owl-dot.active span {
+			border: 2px solid <?php echo esc_html( $beflex_primary ); ?> !important;
+			box-shadow: 0px 0px 0px 2px <?php echo esc_html( $beflex_primary ); ?> !important;
 		}
 		#burger-menu .navigation-overlay {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
