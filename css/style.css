@@ -2413,6 +2413,15 @@ ul.wp-block-gallery .blocks-gallery-item:hover::after {
   opacity: 0.4;
 }
 
+/** Alignements */
+.wp-block-media-text.alignfull .wp-block-media-text__media {
+  overflow: hidden;
+}
+
+.wp-block-media-text.alignfull .wp-block-media-text__media img {
+  width: 100% !important;
+}
+
 /*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
