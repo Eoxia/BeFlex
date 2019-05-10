@@ -176,6 +176,7 @@ function beflex_frontend_scripts() {
 
 	// Enqueue Scripts.
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'beflex-simple-lightbox', get_template_directory_uri() . '/js/inc/simple-lightbox.min.js', array(), '', true );
 	wp_enqueue_script( 'beflex-skip-link-focus-fix', get_template_directory_uri() . '/js/inc/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'beflex-main-js', get_template_directory_uri() . '/js/main.min.js', array(), '', true );
 

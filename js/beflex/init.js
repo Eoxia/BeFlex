@@ -6,5 +6,6 @@ jQuery( document ).ready(function() {
 
 	beflexNavigationInit();
 	beflexSearchInit();
+	beflexFlexibleGalleryInit();
 
 });

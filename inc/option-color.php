@@ -105,6 +105,9 @@ endif;
 		.flexible-gallery .gallery .content:after {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
+		ul.wp-block-gallery .blocks-gallery-item::after {
+			background: <?php echo esc_html( $beflex_primary ); ?>;
+		}
 	<?php endif; ?>
 
 </style>
