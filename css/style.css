@@ -2361,7 +2361,7 @@ ul.wp-block-gallery {
   margin-left: 0;
 }
 
-ul.wp-block-gallery .blocks-gallery-item::before {
+ul.wp-block-gallery .blocks-gallery-item a::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -2387,7 +2387,7 @@ ul.wp-block-gallery .blocks-gallery-item::before {
   pointer-events: none;
 }
 
-ul.wp-block-gallery .blocks-gallery-item::after {
+ul.wp-block-gallery .blocks-gallery-item a::after {
   display: block;
   content: '';
   position: absolute;
@@ -2403,13 +2403,13 @@ ul.wp-block-gallery .blocks-gallery-item::after {
   pointer-events: none;
 }
 
-ul.wp-block-gallery .blocks-gallery-item:hover::before {
+ul.wp-block-gallery .blocks-gallery-item a:hover::before {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-ul.wp-block-gallery .blocks-gallery-item:hover::after {
+ul.wp-block-gallery .blocks-gallery-item a:hover::after {
   opacity: 0.4;
 }
 
@@ -2549,11 +2549,12 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
+select,
 textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 3px;
+  padding: 0.6em;
 }
 
 input[type="text"]:focus,
@@ -2571,6 +2572,7 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
+select:focus,
 textarea:focus {
   color: #111;
 }
