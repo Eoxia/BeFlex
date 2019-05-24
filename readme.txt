@@ -1,27 +1,29 @@
-=== BeFlex ===
+=== Beflex ===
 Contributors: Eoxia
-Donate link:
-Tags:
-Requires at least: 4.4.0
-Tested up to: 5.1.1
+Requires at least: 5.0
+Tested up to: 5.2
+Requires PHP: 5.6
 Stable tag: 3.0.0
-License: GPLv3
-License URI: License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: AGPLv3
+License URI: https://spdx.org/licenses/AGPL-3.0-or-later.html
 
-Short description
+Easy to use theme designed to work with Gutenberg.
 
-== Description ==s
-
-Big description
+== Description ==
+With Beflex, build your website in a simple and intuitive way. You can do what you want because, like Gutenberg, Beflex is modularly thought.
+Beflex is also easy to use for web developers.
 
 == Installation ==
+Manual installation:
 
-Install guide
+1. Upload the `beflex` folder to the `/wp-content/themes/` directory
 
-== Frequently Asked Questions ==
+Activiation and Use
 
-No questions asked yet.
-
-== Screenshots ==
+1. Activate the Theme through the 'Themes' menu in WordPress
+2. See Appearance -> Beflex Settings to change theme specific options
 
 == Changelog ==
+
+= 3.0 =
+* New version to work with Gutenberg.
