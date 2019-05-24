@@ -85,6 +85,11 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		 */
 		add_editor_style( 'css/custom-editor-style.css' );
 
+		/**
+		 * Define content width
+		 */
+		if ( ! isset( $content_width ) ) $content_width = 900;
+
 	}
 endif;
 add_action( 'after_setup_theme', 'beflex_setup' );
