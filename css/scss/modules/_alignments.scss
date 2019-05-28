@@ -37,8 +37,11 @@
 
 #content:not(.active-sidebar) #primary {
 	.alignwide {
-		margin-left  : -80px;
-		margin-right : -80px;
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
 	}
 	.alignfull {
 		margin-left  : calc( -100vw / 2 + 100% / 2 );
