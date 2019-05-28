@@ -2425,6 +2425,14 @@ ul.wp-block-gallery .blocks-gallery-item a:hover::after {
   width: 100% !important;
 }
 
+.wp-block-media-text .wp-block-media-text__content {
+  padding: 0 0 0 8%;
+}
+
+.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+  padding: 0 8% 0 0 !important;
+}
+
 /*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
