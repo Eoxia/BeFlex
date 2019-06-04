@@ -82,12 +82,6 @@
 			?>
 		</div><!-- .burger-container -->
 	</div><!-- #burger-menu -->
-
-	<?php
-	if ( is_wpshop() ) :
-		echo do_shortcode( '[wps_mini_cart type="fixed"]' );
-	endif;
-	?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
