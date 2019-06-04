@@ -9,19 +9,11 @@
  * @since     3.0.0
  * @link https://codex.wordpress.org/Template_Hierarchy
  */
-
-if ( is_acf() && is_beflex_pro() ) :
-	$beflex_display_title = ( get_field( 'beflex_display_page_title' ) ) ? true : false;
-else :
-	$beflex_display_title = true;
-endif;
 ?>
 
-<?php if ( $beflex_display_title ) : ?>
-	<header class="primary-header site-width">
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-	</header><!-- .primary-header -->
-<?php endif; ?>
+<header class="primary-header site-width">
+	<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+</header><!-- .primary-header -->
 
 <div class="primary-content">
 	<?php
