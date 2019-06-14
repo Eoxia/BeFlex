@@ -267,30 +267,6 @@ function beflex_custom_styles_enqueue_admin() {
 }
 add_action( 'admin_head','beflex_custom_styles_enqueue_admin' );
 
-/**
- * Display page title according to ACF parameter
- *
- * @param  [type] $title [description]
- * @param  [type] $id    [description]
- * @return [type]        [description]
- */
-function beflex_display_page_title( $title, $id ) {
-	$beflex_display_title = true;
-
-	if ( is_acf() && is_beflex_pro() ) :
-		$display_title_field = get_field_object( 'beflex_display_page_title' );
-		if ( ! empty( $display_title_field ) ) :
-			$beflex_display_title = ( get_field( 'beflex_display_page_title' ) ) ? true : false;
-		endif;
-	endif;
-
-	if ( $beflex_display_title ) :
-		return $title;
-	else :
-		return '';
-	endif;
-}
-add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
 
 /**
  * Custom template tags for this theme.

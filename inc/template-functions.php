@@ -72,3 +72,53 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
 		echo str_replace( 'page/1/','', paginate_links( $pagination ) ); // WPCS: XSS ok.
 	}
 }
+
+/**
+ * Display page title according to ACF parameter
+ *
+ * @param  [type] $title [description]
+ * @param  [type] $id    [description]
+ * @return [type]        [description]
+ */
+function beflex_display_page_title( $title, $id ) {
+	$beflex_display_title = true;
+
+	if ( ! is_admin() && is_acf() && is_beflex_pro() ) :
+		$display_title_field = get_field_object( 'beflex_display_page_title', $id );
+		if ( ! empty( $display_title_field ) ) :
+			$beflex_display_title = ( get_field( 'beflex_display_page_title', $id ) ) ? true : false;
+		endif;
+	endif;
+
+	if ( $beflex_display_title ) :
+		return $title;
+	else :
+		return '';
+	endif;
+}
+add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
+
+/**
+ * Remove filter the_title before nav menu starts
+ *
+ * @param  [type] $nav_menu [description]
+ * @param  [type] $args     [description]
+ * @return [type]           [description]
+ */
+function beflex_remove_title_filter_nav_menu( $nav_menu, $args ) {
+	remove_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
+	return $nav_menu;
+}
+add_filter( 'pre_wp_nav_menu', 'beflex_remove_title_filter_nav_menu', 10, 2 );
+
+/**
+ * Remove filter the_title after nav menu ends
+ *
+ * @param [type] $items [description]
+ * @param [type] $args  [description]
+ */
+function beflex_add_title_filter_non_menu( $items, $args ) {
+	add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'beflex_add_title_filter_non_menu', 10, 2 );
