@@ -94,7 +94,7 @@
 	</div><!-- #search-field -->
 
 	<?php
-	if ( is_acf() ) :
+	if ( is_acf() && ! empty( $post ) ) :
 		$beflex_is_sidebar = ( get_field( 'beflex_display_page_sidebar', $post->ID ) ) ? 'active-sidebar' : '';
 	else :
 		$beflex_is_sidebar = '';
