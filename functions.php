@@ -172,6 +172,8 @@ add_action( 'widgets_init', 'beflex_widgets_init' );
  * Enqueue scripts and styles.
  */
 function beflex_frontend_scripts() {
+	// Google Font.
+	wp_enqueue_style( 'beflex-font-open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap', false );
 	// Enqueue Style.
 	if ( ! is_beflex_AFT() ) :
 		wp_enqueue_style( 'beflex-font-awesome', get_template_directory_uri() . '/css/fontawesome/fontawesome-all.min.css' );
