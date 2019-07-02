@@ -8,6 +8,8 @@
  * @package beflex
  */
 
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
 if ( ! function_exists( 'is_wpshop' ) ) :
 	/**
 	 * Returns true if wpshop plugin is active in the theme
@@ -28,20 +30,7 @@ if ( ! function_exists( 'is_acf' ) ) :
 	 * @return boolean
 	 */
 	function is_acf() {
-		if ( class_exists( 'acf' ) ) :
-			return true;
-		endif;
-	}
-endif;
-
-if ( ! function_exists( 'is_yoast' ) ) :
-	/**
-	 * Returns true if YOAST plugin is active in the theme
-	 *
-	 * @return boolean
-	 */
-	function is_yoast() {
-		if ( function_exists( 'yoast_breadcrumb' ) ) :
+		if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) && class_exists( 'acf' ) ) :
 			return true;
 		endif;
 	}
@@ -54,7 +43,7 @@ if ( ! function_exists( 'is_beflex_pro' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_pro() {
-		if ( class_exists( '\beflex_pro\Core_Action' ) ) :
+		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) ) :
 			return true;
 		endif;
 	}
@@ -68,7 +57,7 @@ if ( ! function_exists( 'is_beflex_AFT' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_AFT() {
-		if ( class_exists( '\beflex_pro\AFT_Action' ) ) :
+		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\AFT_Action' ) ) :
 			return true;
 		endif;
 	}
@@ -81,7 +70,7 @@ if ( ! function_exists( 'is_beflex_mega_menu' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_mega_menu() {
-		if ( class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
+		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
 			return true;
 		endif;
 	}
@@ -94,7 +83,7 @@ if ( ! function_exists( 'is_beflex_settings' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_settings() {
-		if ( class_exists( '\beflex_pro\Settings_Action' ) ) :
+		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\Settings_Action' ) ) :
 			return true;
 		endif;
 	}
