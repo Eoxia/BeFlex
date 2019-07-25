@@ -35,7 +35,9 @@
 					<?php foreach ( $beflex_categories as $beflex_cat ) : ?>
 						<a class="post-categorie" href="<?php echo esc_url( get_category_link( $beflex_cat ) ); ?>"><?php echo esc_html( get_cat_name( $beflex_cat ) ); ?></a>
 					<?php endforeach; ?>
-				</div> <?php
+				</div>
+				<div class="post-tags"><?php the_tags( '<i class="fas fa-tags"></i> ', ', ', '' ); ?></div>
+				<?php
 			endif;
 
 			if ( 'post' === get_post_type() ) : ?>

@@ -45,7 +45,7 @@ if ( ! function_exists( 'beflex_posted_on' ) ) :
 		);
 
 		if ( in_array( 'time', $param ) ) :
-			echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+			echo '<i class="fas fa-calendar-alt"></i> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 		endif;
 		if ( in_array( 'author', $param ) ) :
 			echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
