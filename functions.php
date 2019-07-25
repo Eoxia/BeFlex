@@ -213,6 +213,28 @@ function beflex_display_yoast_bottom() {
 add_filter( 'wpseo_metabox_prio', 'beflex_display_yoast_bottom' );
 
 /**
+ * Filter the except length to 30 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function beflex_excerpt_more( $more ) {
+	return ' (...)';
+}
+add_filter( 'excerpt_more', 'beflex_excerpt_more' );
+
+/**
  * [beflex_init_tiny_buttons description]
  *
  * @param  Array $buttons liste des boutons.

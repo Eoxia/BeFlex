@@ -51,15 +51,16 @@
 		<div class="entry-content">
 			<?php
 			if ( is_single() ) :
-				the_content( esc_html( 'Read more', 'beflex' ) );
-			else :
-				echo esc_html( wp_trim_words( get_the_content(), 30, ' (...)' ) );
-			endif;
+				the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
-				'after'  => '</div>',
-			) );
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
+					'after'  => '</div>',
+				) );
+			else :
+				the_excerpt(); ?>
+				<a href="<?php the_permalink(); ?>" class="button button-primary"><?php esc_html_e( 'Lire la suite', 'beflex' ); ?></a> <?php
+			endif;
 			?>
 		</div><!-- .entry-content -->
 
