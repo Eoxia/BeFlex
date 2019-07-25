@@ -17,7 +17,7 @@ if ( ! function_exists( 'is_wpshop' ) ) :
 	 * @return boolean
 	 */
 	function is_wpshop() {
-		if ( class_exists( 'wpshop_products' ) ) :
+		if ( is_plugin_active( 'wpshop/wpshop.php' ) ) :
 			return true;
 		endif;
 	}

@@ -71,10 +71,17 @@
 
 			<div class="site-tool">
 				<a href="#" class="js-search"><i class="fas fa-search"></i></a>
-				<?php if ( is_wpshop() ) : ?>
-					<a href="<?php echo get_permalink( wpshop_tools::get_page_id( get_option( 'wpshop_myaccount_page_id' ) ) ); /* WPCS: xss ok. */ ?>" class="wps-my-account"><i class="wps-icon-user"></i></a>
-					<a href="#" class="wps-action-mini-cart-opener wps-my-cart"><i class="wps-icon-basket"></i><?php echo do_shortcode( '[wps-numeration-cart]' ); ?></a>
-				<?php endif; ?>
+				<?php
+				if ( is_wpshop() ) :
+					$pages_ids = get_option( 'wps_page_ids', \wpshop\Pages::g()->default_options );
+					if ( is_array( $pages_ids ) && ! empty( $pages_ids['my_account_id'] ) ) : ?>
+						<a href="<?php echo get_permalink( $pages_ids['my_account_id'] ); ?>"><i class="fas fa-fw fa-user-alt"></i></a> <?php
+					endif;
+					if ( is_array( $pages_ids ) && ! empty( $pages_ids['cart_id'] ) ) : ?>
+						<a href="<?php echo get_permalink( $pages_ids['cart_id'] ); ?>"><i class="fas fa-fw fa-shopping-cart"></i></a> <?php
+					endif;
+				endif;
+				?>
 			</div><!-- .site-tool -->
 
 		</div><!-- .site-width -->

@@ -1845,6 +1845,7 @@ body [class*="wps-bton-first"] i, body [class*="wps-bton-second"] i {
   flex: 0 1 auto;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  margin: auto 0;
 }
 
 #masthead .site-tool > a {
