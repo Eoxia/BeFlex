@@ -218,10 +218,10 @@ add_filter( 'wpseo_metabox_prio', 'beflex_display_yoast_bottom' );
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
-function wpdocs_custom_excerpt_length( $length ) {
+function beflex_custom_excerpt_length( $length ) {
     return 30;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'beflex_custom_excerpt_length', 999 );
 
 /**
  * Filter the "read more" excerpt string link to the post.
