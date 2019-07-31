@@ -1,12 +1,13 @@
 <?php
 /**
- * Gutenberg customization
+ * Gutenber customisation
  *
- * @author Eoxia <contact@eoxia.com>
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @since 1.0.0
- * @version 2.0.0-phoenix
- * @package beflex
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 $beflex_primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );

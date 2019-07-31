@@ -1,11 +1,13 @@
 <?php
 /**
- * Functions used by theme
+ * General functions
  *
- * @author Eoxia <contact@eoxia.com>
- * @since 1.0.0
- * @version 2.0.0-phoenix
- * @package beflex
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
