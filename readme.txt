@@ -25,5 +25,9 @@ Activiation and Use
 
 == Changelog ==
 
+= 3.0.1 =
+* Fix assets license
+* Add unminifed extern scripts
+
 = 3.0 =
 * New version to work with Gutenberg.
