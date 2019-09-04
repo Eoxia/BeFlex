@@ -353,7 +353,7 @@ body.hidden-scroll {
   background: #fff;
   opacity: 0.7;
   display: none;
-  z-index: 1050;
+  z-index: 1035;
 }
 
 .sl-wrapper {
@@ -377,7 +377,7 @@ body.hidden-scroll {
   position: fixed;
   right: 30px;
   top: 30px;
-  z-index: 1060;
+  z-index: 10060;
   margin-top: -14px;
   margin-right: -14px;
   height: 44px;
@@ -385,7 +385,7 @@ body.hidden-scroll {
   line-height: 44px;
   font-family: Arial, Baskerville, monospace;
   color: #000;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .sl-wrapper .sl-close:focus {
@@ -416,7 +416,7 @@ body.hidden-scroll {
   line-height: 44px;
   text-align: center;
   display: block;
-  z-index: 1060;
+  z-index: 10060;
   font-family: Arial, Baskerville, monospace;
   color: #000;
 }
@@ -470,15 +470,13 @@ body.hidden-scroll {
   z-index: 10000;
 }
 
-.sl-wrapper .sl-image:hover .sl-caption {
-  opacity: 1 !important;
-}
-
 .sl-wrapper .sl-image img {
   margin: 0;
   padding: 0;
   display: block;
   border: 0 none;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 35.5em) {
@@ -515,13 +513,11 @@ body.hidden-scroll {
   padding: 10px;
   color: #fff;
   background: rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
 }
 
 .sl-wrapper .sl-image .sl-caption.pos-top {
@@ -564,6 +560,13 @@ body.hidden-scroll {
   width: 50px;
   height: 50px;
   overflow: scroll;
+}
+
+.sl-transition {
+  transition: -webkit-transform ease 200ms;
+  -webkit-transition: -webkit-transform ease 200ms;
+  transition: transform ease 200ms;
+  transition: transform ease 200ms, -webkit-transform ease 200ms;
 }
 
 @-webkit-keyframes pulsate {
