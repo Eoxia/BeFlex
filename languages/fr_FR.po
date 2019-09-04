@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Beflex v3\n"
-"POT-Creation-Date: 2019-03-11 15:26+0100\n"
-"PO-Revision-Date: 2019-03-11 15:27+0100\n"
+"POT-Creation-Date: 2019-09-04 15:02+0200\n"
+"PO-Revision-Date: 2019-09-04 15:02+0200\n"
 "Last-Translator: \n"
 "Language-Team: Eoxia\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -58,7 +58,7 @@ msgstr "Nouveaux commentaires"
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: footer.php:80 header.php:63
+#: footer.php:80 header.php:66
 msgid "Please set your navigation as \"Main navigation\" to make it appear"
 msgstr ""
 "Veuillez définir un menu en \"Navigation principale\" pour qu'il apparaisse "
@@ -68,76 +68,76 @@ msgstr ""
 msgid "Main Navigation"
 msgstr "Navigation principale"
 
-#: functions.php:99
+#: functions.php:104
 msgid "Sidebar Blog"
 msgstr "Blog"
 
-#: functions.php:101
+#: functions.php:106
 msgid "Display on blog / post / archive pages."
 msgstr "S'affiche sur les pages Blog / Article / Archives."
 
-#: functions.php:109
+#: functions.php:114
 msgid "Shop"
 msgstr "Boutique"
 
-#: functions.php:111
+#: functions.php:116
 msgid "Display on shop pages"
 msgstr "S'affiche sur les pages de la boutique"
 
-#: functions.php:119
+#: functions.php:124
 msgid "Boxfoot 1"
 msgstr "Boxfoot 1"
 
-#: functions.php:121
+#: functions.php:126
 msgid "1 Boxfoot. Boxfoot display before Footer"
 msgstr "1ère zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:128
+#: functions.php:133
 msgid "Boxfoot 2"
 msgstr "Boxfoot 2"
 
-#: functions.php:130
+#: functions.php:135
 msgid "2 Boxfoot. Boxfoot display before Footer"
 msgstr "2ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:137
+#: functions.php:142
 msgid "Boxfoot 3"
 msgstr "Boxfoot 3"
 
-#: functions.php:139
+#: functions.php:144
 msgid "3 Boxfoot. Boxfoot display before Footer"
 msgstr "3ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:146
+#: functions.php:151
 msgid "Boxfoot 4"
 msgstr "Boxfoot 4"
 
-#: functions.php:148
+#: functions.php:153
 msgid "4 Boxfoot. Boxfoot display before Footer"
 msgstr "4ème zone du boxfoot. Le boxfoot s'affiche au dessus du footer"
 
-#: functions.php:155
+#: functions.php:160
 msgid "Footer"
 msgstr "Footer"
 
-#: functions.php:157
+#: functions.php:162
 msgid "Display on right in Footer"
 msgstr "S'affiche à droite du footer"
 
-#: header.php:25
+#: header.php:28
 msgid "Skip to content"
 msgstr "Passer au contenu"
 
-#: header.php:67
+#: header.php:70
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:86
+#: header.php:96
 msgctxt "placeholder"
 msgid "Enter a Keyword"
 msgstr "Entrer un mot clé"
 
-#: header.php:88
+#: header.php:98
 msgctxt "label"
 msgid "Search for:"
 msgstr "Recherche pour:"
@@ -146,51 +146,53 @@ msgstr "Recherche pour:"
 msgid "Primary color"
 msgstr "Couleur principale"
 
-#: inc/general-functions.php:118
+#: inc/general-functions.php:109
 #, php-format
 msgid ""
 "<div class=\"notification %1$s\"> <i class=\"notification-icon fas fa-"
 "exclamation-triangle\"></i> %2$s%3$s</div>"
 msgstr ""
+"<div class=\"notification %1$s\"> <i class=\"notification-icon fas fa-"
+"exclamation-triangle\"></i> %2$s%3$s</div>"
 
-#: inc/template-tags.php:37
+#: inc/template-tags.php:38
 #, php-format
 msgctxt "post date"
 msgid "The %s"
 msgstr "Le %s"
 
-#: inc/template-tags.php:43
+#: inc/template-tags.php:44
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "par %s"
 
-#: inc/template-tags.php:64
+#: inc/template-tags.php:65
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:67
+#: inc/template-tags.php:68
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Posté dans %1$s"
 
-#: inc/template-tags.php:71
+#: inc/template-tags.php:72
 msgctxt "list item separator"
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:74
+#: inc/template-tags.php:75
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Tagué %1$s"
 
-#: inc/template-tags.php:84
+#: inc/template-tags.php:85
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Poster un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
 
-#: inc/template-tags.php:101 inc/template-tags.php:125
-#: template-parts/content-page.php:44
+#: inc/template-tags.php:102 inc/template-tags.php:126
+#: template-parts/content-page.php:36
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
@@ -199,14 +201,6 @@ msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Recherche pour: %s"
-
-#: taxonomy-wpshop_product_category.php:58
-msgid "Category's sub-category list"
-msgstr "Liste des sous-catégories de la catégorie"
-
-#: taxonomy-wpshop_product_category.php:86
-msgid "There is nothing to output here"
-msgstr "Il n'y a rien a afficher ici"
 
 #: template-parts/content-none.php:17
 msgid "Nothing Found"
@@ -235,9 +229,19 @@ msgstr ""
 "Il semblerait que nous ne trouvons pas ce que vous cherchez. Peut-être une "
 "recherche pourrait aider."
 
-#: template-parts/content-page.php:31 template-parts/content.php:58
+#: template-parts/content-page.php:23 template-parts/content.php:57
 msgid "Pages:"
 msgstr "Pages:"
+
+#: template-parts/content.php:62
+msgid "Lire la suite"
+msgstr ""
+
+#~ msgid "Category's sub-category list"
+#~ msgstr "Liste des sous-catégories de la catégorie"
+
+#~ msgid "There is nothing to output here"
+#~ msgstr "Il n'y a rien a afficher ici"
 
 #~ msgid "<div class=\"notification %1$s\">%2$s%3$s</div>"
 #~ msgstr "<div class=\"notification %1$s\">%2$s%3$s</div>"
