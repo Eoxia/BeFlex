@@ -3,11 +3,14 @@
 Theme Name: BeFlex
 Theme URI: http://www.eoxia.com
 Author: the Eoxia team
-Description: BeFlex est un thème entièrement modulable. Positionnez vos slider, images, mises en avant d'articles, contenus ou vous le souhaitez. La seule limite est votre imagination.
+Description: BeFlex is a free flexible theme made to work with Gutenberg. Position your slider, images, highlights of articles, content where you want. Imagination is the only limit.
 License:  AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
 License URI: http://www.eoxia.com
 Since: 3.0.0
 Text Domain: beflex
+
+BeFlex is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 .acf-block-preview {
   /*--------------------------------------------------------------
@@ -48,15 +51,12 @@ Text Domain: beflex
 ## Notification
 --------------------------------------------------------------*/
   /*--------------------------------------------------------------
-## Grid layout FlexBox
---------------------------------------------------------------*/
-  /** Définition des tailles */
-  /*--------------------------------------------------------------
 ## Grid layout Grid
 --------------------------------------------------------------*/
+  /** Définition des tailles */
+  /** Définition des hauteur des enfants */
   /** Mages */
   /** Gouttières */
-  /** Définition des hauteur des enfants */
   /** Media queries */
   /*--------------------------------------------------------------
 ## WpShop
@@ -362,6 +362,7 @@ Text Domain: beflex
   font-family: 'Open sans', sans-serif;
   font-weight: 900;
   text-transform: none;
+  word-wrap: break-word;
 }
 
 .acf-block-preview h1 {
@@ -819,8 +820,11 @@ Text Domain: beflex
 }
 
 .acf-block-preview #content:not(.active-sidebar) #primary .alignwide {
-  margin-left: -80px;
-  margin-right: -80px;
+  width: 100%;
+}
+
+.acf-block-preview #content:not(.active-sidebar) #primary .alignwide img {
+  width: 100%;
 }
 
 .acf-block-preview #content:not(.active-sidebar) #primary .alignfull {
@@ -991,64 +995,6 @@ Text Domain: beflex
   }
   .acf-block-preview .notification .notification-icon::before {
     display: none;
-  }
-}
-
-.acf-block-preview .gridwrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  margin-left: -0.5em;
-  margin-right: -0.5em;
-}
-
-.acf-block-preview .gridwrapper > * {
-  padding: 0.5em;
-}
-
-.acf-block-preview .gridwrapper.w1 > * {
-  width: 100%;
-}
-
-.acf-block-preview .gridwrapper.w2 > * {
-  width: 50%;
-}
-
-.acf-block-preview .gridwrapper.w3 > * {
-  width: 33.33333%;
-}
-
-.acf-block-preview .gridwrapper.w4 > * {
-  width: 25%;
-}
-
-.acf-block-preview .gridwrapper.w5 > * {
-  width: 20%;
-}
-
-.acf-block-preview .gridwrapper.w6 > * {
-  width: 16.66667%;
-}
-
-@media (max-width: 770px) {
-  .acf-block-preview .gridwrapper.w1 > * {
-    width: 100%;
-  }
-  .acf-block-preview .gridwrapper.w2 > *, .acf-block-preview .gridwrapper.w3 > *, .acf-block-preview .gridwrapper.w4 > *, .acf-block-preview .gridwrapper.w5 > *, .acf-block-preview .gridwrapper.w6 > * {
-    width: 50%;
-  }
-}
-
-@media (max-width: 480px) {
-  .acf-block-preview .gridwrapper.w1 > *, .acf-block-preview .gridwrapper.w2 > *, .acf-block-preview .gridwrapper.w3 > *, .acf-block-preview .gridwrapper.w4 > *, .acf-block-preview .gridwrapper.w5 > *, .acf-block-preview .gridwrapper.w6 > * {
-    width: 100%;
   }
 }
 
@@ -1266,62 +1212,6 @@ Text Domain: beflex
   }
 }
 
-.acf-block-preview .gridlayout.grid-margin-0 {
-  margin: 0em 0;
-}
-
-.acf-block-preview .gridlayout.grid-margin-1 {
-  margin: 1em 0;
-}
-
-.acf-block-preview .gridlayout.grid-margin-2 {
-  margin: 2em 0;
-}
-
-.acf-block-preview .gridlayout.grid-margin-3 {
-  margin: 3em 0;
-}
-
-.acf-block-preview .gridlayout.grid-margin-4 {
-  margin: 4em 0;
-}
-
-.acf-block-preview .gridlayout.grid-margin-5 {
-  margin: 5em 0;
-}
-
-.acf-block-preview .gridlayout.grid-margin-6 {
-  margin: 6em 0;
-}
-
-.acf-block-preview .gridlayout.grid-gap-0 {
-  grid-gap: 0em 0em;
-}
-
-.acf-block-preview .gridlayout.grid-gap-1 {
-  grid-gap: 1em 1em;
-}
-
-.acf-block-preview .gridlayout.grid-gap-2 {
-  grid-gap: 2em 2em;
-}
-
-.acf-block-preview .gridlayout.grid-gap-3 {
-  grid-gap: 3em 3em;
-}
-
-.acf-block-preview .gridlayout.grid-gap-4 {
-  grid-gap: 4em 4em;
-}
-
-.acf-block-preview .gridlayout.grid-gap-5 {
-  grid-gap: 5em 5em;
-}
-
-.acf-block-preview .gridlayout.grid-gap-6 {
-  grid-gap: 6em 6em;
-}
-
 .acf-block-preview .gridlayout > .gridh-1 {
   grid-row: auto/span 1;
 }
@@ -1382,14 +1272,112 @@ Text Domain: beflex
   }
 }
 
+.acf-block-preview .gridlayout.grid-margin-0 {
+  margin: 0em 0;
+}
+
+.acf-block-preview .gridlayout.grid-margin-1 {
+  margin: 1em 0;
+}
+
+.acf-block-preview .gridlayout.grid-margin-2 {
+  margin: 2em 0;
+}
+
+.acf-block-preview .gridlayout.grid-margin-3 {
+  margin: 3em 0;
+}
+
+.acf-block-preview .gridlayout.grid-margin-4 {
+  margin: 4em 0;
+}
+
+.acf-block-preview .gridlayout.grid-margin-5 {
+  margin: 5em 0;
+}
+
+.acf-block-preview .gridlayout.grid-margin-6 {
+  margin: 6em 0;
+}
+
+.acf-block-preview .gridlayout.grid-gap-0 {
+  grid-gap: 0em 0em;
+}
+
+.acf-block-preview .gridlayout.grid-gap-1 {
+  grid-gap: 1em 1em;
+}
+
+.acf-block-preview .gridlayout.grid-gap-2 {
+  grid-gap: 2em 2em;
+}
+
+.acf-block-preview .gridlayout.grid-gap-3 {
+  grid-gap: 3em 3em;
+}
+
+.acf-block-preview .gridlayout.grid-gap-4 {
+  grid-gap: 4em 4em;
+}
+
+.acf-block-preview .gridlayout.grid-gap-5 {
+  grid-gap: 5em 5em;
+}
+
+.acf-block-preview .gridlayout.grid-gap-6 {
+  grid-gap: 6em 6em;
+}
+
+@media (max-width: 480px) {
+  .acf-block-preview .gridlayout.grid-2 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
 @media (max-width: 770px) {
-  .acf-block-preview .gridlayout {
+  .acf-block-preview .gridlayout.grid-3 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
-  .acf-block-preview .gridlayout {
+  .acf-block-preview .gridlayout.grid-3 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview .gridlayout.grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .acf-block-preview .gridlayout.grid-4 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview .gridlayout.grid-5 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .acf-block-preview .gridlayout.grid-5 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media (max-width: 770px) {
+  .acf-block-preview .gridlayout.grid-6 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .acf-block-preview .gridlayout.grid-6 {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
@@ -1643,6 +1631,7 @@ Text Domain: beflex
   flex: 0 1 auto;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  margin: auto 0;
 }
 
 .acf-block-preview #masthead .site-tool > a {
@@ -2212,6 +2201,34 @@ Text Domain: beflex
 
 .acf-block-preview .wp-block-media-text.alignfull .wp-block-media-text__media img {
   width: 100% !important;
+}
+
+.acf-block-preview .wp-block-media-text .wp-block-media-text__content {
+  padding: 0 0 0 8%;
+}
+
+.acf-block-preview .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+  padding: 0 8% 0 0 !important;
+}
+
+.acf-block-preview .wp-block-cover-image .wp-block-subhead,
+.acf-block-preview .wp-block-cover-image h1,
+.acf-block-preview .wp-block-cover-image h2,
+.acf-block-preview .wp-block-cover-image h3,
+.acf-block-preview .wp-block-cover-image h4,
+.acf-block-preview .wp-block-cover-image h5,
+.acf-block-preview .wp-block-cover-image h6,
+.acf-block-preview .wp-block-cover-image p,
+.acf-block-preview .wp-block-cover .wp-block-subhead,
+.acf-block-preview .wp-block-cover h1,
+.acf-block-preview .wp-block-cover h2,
+.acf-block-preview .wp-block-cover h3,
+.acf-block-preview .wp-block-cover h4,
+.acf-block-preview .wp-block-cover h5,
+.acf-block-preview .wp-block-cover h6,
+.acf-block-preview .wp-block-cover p {
+  max-width: none;
+  padding: 0;
 }
 
 .acf-block-preview .site-content {
