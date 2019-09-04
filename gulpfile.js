@@ -7,6 +7,7 @@ var sass         = require('gulp-sass');
 var rename       = require('gulp-rename');
 var uglify       = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
+var lec          = require('gulp-line-ending-corrector');
 
 var paths = {
 	scss: [ 'css/scss/**/*.scss', 'css/' ],
@@ -22,9 +23,11 @@ gulp.task( 'build_scss', function() {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}) )
+		.pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
 		.pipe( gulp.dest( paths.scss[1] ) )
 		.pipe( sass({outputStyle: 'compressed'}).on( 'error', sass.logError ) )
 		.pipe( rename( './style.min.css' ) )
+		.pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
 		.pipe( gulp.dest( paths.scss[1] ) );
 });
 
@@ -36,9 +39,11 @@ gulp.task( 'build_scss_back', function() {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}) )
+		.pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
 		.pipe( gulp.dest( paths.scss_back[1] ) )
 		.pipe( sass({outputStyle: 'compressed'}).on( 'error', sass.logError ) )
 		.pipe( rename( './style-admin.min.css' ) )
+		.pipe(lec({verbose:true, eolc: 'CRLF', encoding:'utf8'}))
 		.pipe( gulp.dest( paths.scss_back[1] ) );
 });
 
