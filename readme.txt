@@ -25,6 +25,10 @@ Activiation and Use
 
 == Changelog ==
 
+= 3.0.2 =
+* Add support Widget gallery
+* Improve CSS Block Blockquote
+
 = 3.0.1 =
 * Fix assets license
 * Add unminifed extern scripts
