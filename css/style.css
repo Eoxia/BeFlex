@@ -2087,17 +2087,6 @@ body {
   /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote, q {
-  quotes: "" "";
-  padding: 0 0 0 2em;
-  border-left: 4px solid #0e6eff;
-  font-style: italic;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-}
-
 hr {
   background-color: #ccc;
   border: 0;
@@ -2329,6 +2318,22 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Gutenberg Blocks
 --------------------------------------------------------------*/
+.wp-block-pullquote.is-style-default {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 4px;
+}
+
+.wp-block-quote.is-style-default {
+  border-left: 4px solid #0e6eff;
+  margin: 0;
+  padding-left: 1em;
+}
+
+.wp-block-quote.is-style-default cite {
+  font-size: 12px;
+}
+
 .wp-block-button .wp-block-button__link {
   padding: 10px 20px;
   line-height: 1.4;

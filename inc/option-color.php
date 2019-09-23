@@ -58,9 +58,6 @@ endif;
 		#comments .comment-list .comment-metadata .comment-edit-link {
 			color: <?php echo esc_html( $beflex_primary ); ?>;
 		}
-		blockquote, q {
-			border-left: 4px solid <?php echo esc_html( $beflex_primary ); ?>;
-		}
 		#search-area .search-overlay {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
 		}
@@ -108,6 +105,9 @@ endif;
 		}
 		ul.wp-block-gallery .blocks-gallery-item::after {
 			background: <?php echo esc_html( $beflex_primary ); ?>;
+		}
+		.wp-block-quote.is-style-default {
+			border-left: 4px solid <?php echo esc_html( $beflex_primary ); ?>;
 		}
 	<?php endif; ?>
 

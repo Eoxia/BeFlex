@@ -21,17 +21,17 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote, q {
-	quotes: "" "";
-	padding: 0 0 0 2em;
-	border-left: 4px solid $color__primary;
-	font-style: italic;
-
-	&:before,
-	&:after {
-		content: "";
-	}
-}
+// blockquote, q {
+// 	quotes: "" "";
+// 	padding: 0 0 0 2em;
+// 	border-left: 4px solid $color__primary;
+// 	font-style: italic;
+//
+// 	&:before,
+// 	&:after {
+// 		content: "";
+// 	}
+// }
 
 hr {
 	background-color: #ccc;
