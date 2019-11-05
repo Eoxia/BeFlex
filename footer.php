@@ -23,24 +23,32 @@
 			<div id="boxfoot" class="site-width">
 				<div class="gridlayout grid-4">
 					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-1' ) ) :
+						<?php
+						if ( is_active_sidebar( 'boxfoot-1' ) ) :
 							dynamic_sidebar( 'boxfoot-1' );
-						endif; ?>
+						endif;
+						?>
 					</aside>
 					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-2' ) ) :
+						<?php
+						if ( is_active_sidebar( 'boxfoot-2' ) ) :
 							dynamic_sidebar( 'boxfoot-2' );
-						endif; ?>
+						endif
+						?>
 					</aside>
 					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-3' ) ) :
+						<?php
+						if ( is_active_sidebar( 'boxfoot-3' ) ) :
 							dynamic_sidebar( 'boxfoot-3' );
-						endif; ?>
+						endif;
+						?>
 					</aside>
 					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'boxfoot-4' ) ) :
+						<?php
+						if ( is_active_sidebar( 'boxfoot-4' ) ) :
 							dynamic_sidebar( 'boxfoot-4' );
-						endif; ?>
+						endif;
+						?>
 					</aside>
 				</div><!-- .gridwrapper -->
 			</div><!-- .site-width -->
@@ -55,9 +63,11 @@
 				</div><!-- .site-info -->
 				<div class="sidebar">
 					<aside class="sidebar">
-						<?php if ( is_active_sidebar( 'footer-1' ) ) :
+						<?php
+						if ( is_active_sidebar( 'footer-1' ) ) :
 							dynamic_sidebar( 'footer-1' );
-						endif; ?>
+						endif;
+						?>
 					</aside>
 				</div>
 			</div><!-- .gridwrapper -->
@@ -72,12 +82,14 @@
 			<?php
 			$beflex_user = wp_get_current_user();
 			if ( has_nav_menu( 'menu-1' ) ) :
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
 			elseif ( beflex_allowed( $beflex_user->roles, 'editor,administrator' ) ) :
-				echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
+				echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) );
 			endif;
 			?>
 		</div><!-- .burger-container -->

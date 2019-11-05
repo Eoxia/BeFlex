@@ -30,7 +30,8 @@
 			endif;
 
 			$beflex_categories = wp_get_post_categories( get_the_ID() );
-			if ( 'post' === get_post_type() && ! empty( $beflex_categories ) ) : ?>
+			if ( 'post' === get_post_type() && ! empty( $beflex_categories ) ) :
+				?>
 				<div class="post-categories">
 					<?php foreach ( $beflex_categories as $beflex_cat ) : ?>
 						<a class="post-categorie" href="<?php echo esc_url( get_category_link( $beflex_cat ) ); ?>"><?php echo esc_html( get_cat_name( $beflex_cat ) ); ?></a>
@@ -40,12 +41,14 @@
 				<?php
 			endif;
 
-			if ( 'post' === get_post_type() ) : ?>
+			if ( 'post' === get_post_type() ) :
+				?>
 				<div class="entry-meta">
 					<?php beflex_posted_on(); ?>
 				</div><!-- .entry-meta -->
-			<?php
-			endif; ?>
+				<?php
+			endif;
+			?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
@@ -53,13 +56,17 @@
 			if ( is_single() ) :
 				the_content();
 
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
-					'after'  => '</div>',
-				) );
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
+						'after'  => '</div>',
+					)
+				);
 			else :
-				the_excerpt(); ?>
-				<a href="<?php the_permalink(); ?>" class="button button-primary"><?php esc_html_e( 'Lire la suite', 'beflex' ); ?></a> <?php
+				the_excerpt();
+				?>
+				<a href="<?php the_permalink(); ?>" class="button button-primary"><?php esc_html_e( 'Lire la suite', 'beflex' ); ?></a>
+				<?php
 			endif;
 			?>
 		</div><!-- .entry-content -->

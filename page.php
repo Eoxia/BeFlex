@@ -14,7 +14,8 @@ get_header(); ?>
 
 	<main id="primary" class="content-area" role="main">
 		<?php
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
 
@@ -27,7 +28,6 @@ get_header(); ?>
 		?>
 	</main><!-- #primary -->
 
-	<?php
-
+<?php
 get_sidebar();
 get_footer();

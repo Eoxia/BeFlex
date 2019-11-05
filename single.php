@@ -15,14 +15,17 @@ get_header(); ?>
 	<main id="primary" class="content-area" role="main">
 
 		<?php
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
 
+			the_post();
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation( array(
-				'prev_text' => '<i class="fas fa-angle-left fa-fw"></i> %title',
-				'next_text' => '%title <i class="fas fa-angle-right fa-fw"></i>',
-			));
+			the_post_navigation(
+				array(
+					'prev_text' => '<i class="fas fa-angle-left fa-fw"></i> %title',
+					'next_text' => '%title <i class="fas fa-angle-right fa-fw"></i>',
+				)
+			);
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

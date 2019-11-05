@@ -52,28 +52,33 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		add_post_type_support( 'page', 'excerpt' );
 
 		/*
-		 * Add Wide alignment for Gutenber
+		 * Add Wide alignment for Gutenberg
 		 */
 		add_theme_support( 'align-wide' );
 
 		/*
 		 * This theme uses wp_nav_menu() in one location.
 		 */
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Main Navigation', 'beflex' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Main Navigation', 'beflex' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		/*
 		 * Add theme support for selective refresh for widgets.
@@ -88,8 +93,9 @@ if ( ! function_exists( 'beflex_setup' ) ) :
 		/**
 		 * Define content width
 		 */
-		if ( ! isset( $content_width ) ) $content_width = 900;
-
+		if ( ! isset( $content_width ) ) :
+			$content_width = 900;
+		endif;
 	}
 endif;
 add_action( 'after_setup_theme', 'beflex_setup' );
@@ -100,71 +106,85 @@ add_action( 'after_setup_theme', 'beflex_setup' );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function beflex_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar Blog', 'beflex' ),
-		'id'            => 'sidebar-blog',
-		'description'   => esc_html__( 'Display on blog / post / archive pages.', 'beflex' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
-	if ( is_wpshop() ) :
-		register_sidebar( array(
-			'name'          => esc_html__( 'Shop', 'beflex' ),
-			'id'            => 'boutique',
-			'description'   => esc_html__( 'Display on shop pages', 'beflex' ),
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar Blog', 'beflex' ),
+			'id'            => 'sidebar-blog',
+			'description'   => esc_html__( 'Display on blog / post / archive pages.', 'beflex' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<div class="widget-title">',
 			'after_title'   => '</div>',
-		) );
+		)
+	);
+	if ( is_wpshop() ) :
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Shop', 'beflex' ),
+				'id'            => 'boutique',
+				'description'   => esc_html__( 'Display on shop pages', 'beflex' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<div class="widget-title">',
+				'after_title'   => '</div>',
+			)
+		);
 	endif;
-	register_sidebar( array(
-		'name'          => esc_html__( 'Boxfoot 1', 'beflex' ),
-		'id'            => 'boxfoot-1',
-		'description'   => esc_html__( '1 Boxfoot. Boxfoot display before Footer', 'beflex' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Boxfoot 2', 'beflex' ),
-		'id'            => 'boxfoot-2',
-		'description'   => esc_html__( '2 Boxfoot. Boxfoot display before Footer', 'beflex' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Boxfoot 3', 'beflex' ),
-		'id'            => 'boxfoot-3',
-		'description'   => esc_html__( '3 Boxfoot. Boxfoot display before Footer', 'beflex' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Boxfoot 4', 'beflex' ),
-		'id'            => 'boxfoot-4',
-		'description'   => esc_html__( '4 Boxfoot. Boxfoot display before Footer', 'beflex' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer', 'beflex' ),
-		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Display on right in Footer', 'beflex' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Boxfoot 1', 'beflex' ),
+			'id'            => 'boxfoot-1',
+			'description'   => esc_html__( '1 Boxfoot. Boxfoot display before Footer', 'beflex' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<div class="widget-title">',
+			'after_title'   => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Boxfoot 2', 'beflex' ),
+			'id'            => 'boxfoot-2',
+			'description'   => esc_html__( '2 Boxfoot. Boxfoot display before Footer', 'beflex' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<div class="widget-title">',
+			'after_title'   => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Boxfoot 3', 'beflex' ),
+			'id'            => 'boxfoot-3',
+			'description'   => esc_html__( '3 Boxfoot. Boxfoot display before Footer', 'beflex' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<div class="widget-title">',
+			'after_title'   => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Boxfoot 4', 'beflex' ),
+			'id'            => 'boxfoot-4',
+			'description'   => esc_html__( '4 Boxfoot. Boxfoot display before Footer', 'beflex' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<div class="widget-title">',
+			'after_title'   => '</div>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'beflex' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Display on right in Footer', 'beflex' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<div class="widget-title">',
+			'after_title'   => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'beflex_widgets_init' );
 
@@ -175,7 +195,7 @@ function beflex_frontend_scripts() {
 	// Google Font.
 	wp_enqueue_style( 'beflex-font-open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap', false );
 	// Enqueue Style.
-	if ( ! is_beflex_AFT() ) :
+	if ( ! is_beflex_aft() ) :
 		wp_enqueue_style( 'beflex-font-awesome', get_template_directory_uri() . '/css/fontawesome/fontawesome-all.min.css' );
 	endif;
 	wp_enqueue_style( 'beflex-style', get_template_directory_uri() . '/css/style.min.css' );
@@ -205,7 +225,7 @@ add_action( 'admin_enqueue_scripts', 'beflex_admin_scripts' );
  * Affiche le bloc du plugin Yoast SEO tout en bas des pages
  *
  * @method beflex_display_yoast_bottom
- * @return priority
+ * @return string
  */
 function beflex_display_yoast_bottom() {
 	return 'low';
@@ -219,7 +239,7 @@ add_filter( 'wpseo_metabox_prio', 'beflex_display_yoast_bottom' );
  * @return int (Maybe) modified excerpt length.
  */
 function beflex_custom_excerpt_length( $length ) {
-    return 30;
+	return 30;
 }
 add_filter( 'excerpt_length', 'beflex_custom_excerpt_length', 999 );
 
@@ -284,12 +304,15 @@ require get_template_directory() . '/inc/customizer.php';
 function beflex_custom_styles_enqueue() {
 	get_template_part( 'inc/option-color' );
 }
-add_action( 'wp_head','beflex_custom_styles_enqueue' );
+add_action( 'wp_head', 'beflex_custom_styles_enqueue' );
 
+/**
+ * Enqueue custom Theme Gutenberg style
+ */
 function beflex_custom_styles_enqueue_admin() {
 	get_template_part( 'inc/gutenberg-editor' );
 }
-add_action( 'admin_head','beflex_custom_styles_enqueue_admin' );
+add_action( 'admin_head', 'beflex_custom_styles_enqueue_admin' );
 
 
 /**

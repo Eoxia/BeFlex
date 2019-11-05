@@ -52,14 +52,14 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
 		$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 
 		$pagination = array(
-			'base' => add_query_arg('page','%#%'),
-			'format' => '',
-			'total' => $wp_query->max_num_pages,
-			'current' => $current,
-			'show_all' => false,
-			'end_size'     => 1,
-			'mid_size'     => 2,
-			'type' => 'list',
+			'base'      => add_query_arg( 'page', '%#%' ),
+			'format'    => '',
+			'total'     => $wp_query->max_num_pages,
+			'current'   => $current,
+			'show_all'  => false,
+			'end_size'  => 1,
+			'mid_size'  => 2,
+			'type'      => 'list',
 			'next_text' => '»',
 			'prev_text' => '«',
 		);
@@ -69,19 +69,20 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
 		endif;
 
 		if ( ! empty( $wp_query->query_vars['s'] ) ) :
-			$pagination['add_args'] = array( 's' => str_replace( ' ' , '+', get_query_var( 's' ) ) );
+			$pagination['add_args'] = array( 's' => str_replace( ' ', '+', get_query_var( 's' ) ) );
 		endif;
 
-		echo str_replace( 'page/1/','', paginate_links( $pagination ) ); // WPCS: XSS ok.
+		echo str_replace( 'page/1/', '', paginate_links( $pagination ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
 /**
  * Display page title according to ACF parameter
  *
- * @param  [type] $title [description]
- * @param  [type] $id    [description]
- * @return [type]        [description]
+ * @param string $title Title of the page to return.
+ * @param int    $id ID of the page.
+ *
+ * @return string
  */
 function beflex_display_page_title( $title, $id ) {
 	$beflex_display_title = true;
@@ -104,12 +105,13 @@ add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
 /**
  * Remove filter the_title before nav menu starts
  *
- * @param  [type] $nav_menu [description]
- * @param  [type] $args     [description]
- * @return [type]           [description]
+ * @param array $nav_menu Nav menu.
+ * @param array $args args.
+ *
+ * @return mixed
  */
 function beflex_remove_title_filter_nav_menu( $nav_menu, $args ) {
-	remove_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
+	remove_filter( 'the_title', 'beflex_display_page_title', 10 );
 	return $nav_menu;
 }
 add_filter( 'pre_wp_nav_menu', 'beflex_remove_title_filter_nav_menu', 10, 2 );
@@ -117,8 +119,10 @@ add_filter( 'pre_wp_nav_menu', 'beflex_remove_title_filter_nav_menu', 10, 2 );
 /**
  * Remove filter the_title after nav menu ends
  *
- * @param [type] $items [description]
- * @param [type] $args  [description]
+ * @param array $items Items of menu.
+ * @param array $args Arguments of menu.
+ *
+ * @return mixed
  */
 function beflex_add_title_filter_non_menu( $items, $args ) {
 	add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );

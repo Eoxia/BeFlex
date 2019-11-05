@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 if ( ! function_exists( 'is_wpshop' ) ) :
 	/**
@@ -22,6 +22,7 @@ if ( ! function_exists( 'is_wpshop' ) ) :
 		if ( is_plugin_active( 'wpshop/wpshop.php' ) ) :
 			return true;
 		endif;
+		return false;
 	}
 endif;
 
@@ -48,17 +49,18 @@ if ( ! function_exists( 'is_beflex_pro' ) ) :
 		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) ) :
 			return true;
 		endif;
+		return false;
 	}
 endif;
 
 
-if ( ! function_exists( 'is_beflex_AFT' ) ) :
+if ( ! function_exists( 'is_beflex_aft' ) ) :
 	/**
 	 * Returns true if AFT module of Beflex Pro exists
 	 *
 	 * @return boolean
 	 */
-	function is_beflex_AFT() {
+	function is_beflex_aft() {
 		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\AFT_Action' ) ) :
 			return true;
 		endif;
@@ -105,17 +107,23 @@ if ( ! function_exists( 'beflex_notification' ) ) :
 			$link = '<a class="full" href="' . esc_html( $link ) . '"></a>';
 		endif;
 
-		printf( wp_kses(
-			__( '<div class="notification %1$s"> <i class="notification-icon fas fa-exclamation-triangle"></i> %2$s%3$s</div>', 'beflex' ),
-			array(
-				'div' => array(
-					'class' => array(),
-				),
-				'i' => array(
-					'class' => array(),
-				),
-			)
-		), esc_html( $alert ), esc_html( $string ), $link );
+		printf(
+			wp_kses(
+				/* translators: 1: CSS Class, 2: Comment, 3: Redirect link */
+				__( '<div class="notification %1$s"> <i class="notification-icon fas fa-exclamation-triangle"></i> %2$s%3$s</div>', 'beflex' ),
+				array(
+					'div' => array(
+						'class' => array(),
+					),
+					'i'   => array(
+						'class' => array(),
+					),
+				)
+			),
+			esc_html( $alert ),
+			esc_html( $string ),
+			$link, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		);
 	}
 endif;
 
@@ -147,7 +155,7 @@ if ( ! function_exists( 'beflex_darken_color' ) ) :
 	 */
 	function beflex_change_color( $couleur, $changement_ton ) {
 		$couleur = substr( $couleur, 1, 6 );
-		$cl = explode( 'x', wordwrap( $couleur, 2, 'x', 3 ) );
+		$cl      = explode( 'x', wordwrap( $couleur, 2, 'x', 3 ) );
 		$couleur = '';
 		for ( $i = 0; $i <= 2; $i++ ) {
 			$cl[ $i ] = hexdec( $cl[ $i ] );

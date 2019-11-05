@@ -51,19 +51,23 @@
 					$beflex_user = wp_get_current_user();
 					if ( has_nav_menu( 'menu-1' ) ) :
 						if ( is_beflex_mega_menu() ) :
-							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-								'walker'  => new \beflex_pro\Beflex_Mega_Menu(),
-							) );
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'walker'         => new \beflex_pro\Beflex_Mega_Menu(),
+								)
+							);
 						else :
-							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-							) );
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								)
+							);
 						endif;
 					elseif ( beflex_allowed( $beflex_user->roles, 'editor,administrator' ) ) :
-						echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) ); // WPCS: XSS ok.
+						echo beflex_notification( __( 'Please set your navigation as "Main navigation" to make it appear', 'beflex' ), 'warning', admin_url( 'nav-menus.php' ) );
 					endif;
 					?>
 				</nav><!-- #main-navigation -->
@@ -75,11 +79,15 @@
 				<?php
 				if ( is_wpshop() ) :
 					$pages_ids = get_option( 'wps_page_ids', \wpshop\Pages::g()->default_options );
-					if ( is_array( $pages_ids ) && ! empty( $pages_ids['my_account_id'] ) ) : ?>
-						<a href="<?php echo get_permalink( $pages_ids['my_account_id'] ); ?>"><i class="fas fa-fw fa-user-alt"></i></a> <?php
+					if ( is_array( $pages_ids ) && ! empty( $pages_ids['my_account_id'] ) ) :
+						?>
+						<a href="<?php echo esc_url( get_permalink( $pages_ids['my_account_id'] ) ); ?>"><i class="fas fa-fw fa-user-alt"></i></a>
+						<?php
 					endif;
-					if ( is_array( $pages_ids ) && ! empty( $pages_ids['cart_id'] ) ) : ?>
-						<a href="<?php echo get_permalink( $pages_ids['cart_id'] ); ?>"><i class="fas fa-fw fa-shopping-cart"></i></a> <?php
+					if ( is_array( $pages_ids ) && ! empty( $pages_ids['cart_id'] ) ) :
+						?>
+						<a href="<?php echo esc_url( get_permalink( $pages_ids['cart_id'] ) ); ?>"><i class="fas fa-fw fa-shopping-cart"></i></a>
+						<?php
 					endif;
 				endif;
 				?>
@@ -93,9 +101,9 @@
 			<label>
 				<span class="search-icon"><i class="fas fa-search"></i></span>
 				<input type="search" class="search-field"
-						placeholder="<?php echo esc_attr_x( 'Enter a Keyword', 'placeholder', 'beflex' ) ?>"
-						value="<?php echo get_search_query() ?>" name="s"
-						title="<?php echo esc_attr_x( 'Search for:', 'label', 'beflex' ) ?>" />
+						placeholder="<?php echo esc_attr_x( 'Enter a Keyword', 'placeholder', 'beflex' ); ?>"
+						value="<?php echo get_search_query(); ?>" name="s"
+						title="<?php echo esc_attr_x( 'Search for:', 'label', 'beflex' ); ?>" />
 			</label>
 		</form>
 		<div class="search-overlay"></div>
