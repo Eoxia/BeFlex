@@ -122,7 +122,7 @@ if ( ! function_exists( 'beflex_notification' ) ) :
 			),
 			esc_html( $alert ),
 			esc_html( $string ),
-			$link, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$link // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		);
 	}
 endif;
