@@ -25,6 +25,9 @@ Activiation and Use
 
 == Changelog ==
 
+= 3.1.0 =
+* Compatibility with new version of Beflex Pro
+
 = 3.0.2 =
 * Add support Widget gallery
 * Improve CSS Block Blockquote

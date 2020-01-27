@@ -13,9 +13,9 @@
 $beflex_primary = get_theme_mod( 'beflex_primary_color', '#0e6eff' );
 
 if ( is_beflex_settings() ) :
-	$beflex_font_family    = \beflex_pro\Settings_Helper::g()->get_font_family();
-	$beflex_font_weight    = \beflex_pro\Settings_Helper::g()->get_font_weight();
-	$beflex_font_transform = \beflex_pro\Settings_Helper::g()->get_font_transform();
+	$beflex_font_family    = \beflex_pro\Settings_Helper::getInstance()->get_font_family();
+	$beflex_font_weight    = \beflex_pro\Settings_Helper::getInstance()->get_font_weight();
+	$beflex_font_transform = \beflex_pro\Settings_Helper::getInstance()->get_font_transform();
 endif;
 ?>
 
