@@ -46,7 +46,7 @@ if ( ! function_exists( 'is_beflex_pro' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_pro() {
-		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) ) :
+		if ( class_exists( '\beflex_pro\Beflex_Pro_Init' ) ) :
 			return true;
 		endif;
 		return false;
@@ -61,7 +61,7 @@ if ( ! function_exists( 'is_beflex_aft' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_aft() {
-		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\AFT_Action' ) ) :
+		if ( class_exists( '\beflex_pro\ACF_Font_Awesome_Init' ) ) :
 			return true;
 		endif;
 	}
@@ -74,7 +74,7 @@ if ( ! function_exists( 'is_beflex_mega_menu' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_mega_menu() {
-		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\Beflex_Mega_Menu' ) ) :
+		if ( class_exists( '\beflex_pro\Mega_Menu_Init' ) ) :
 			return true;
 		endif;
 	}
@@ -87,7 +87,7 @@ if ( ! function_exists( 'is_beflex_settings' ) ) :
 	 * @return boolean
 	 */
 	function is_beflex_settings() {
-		if ( is_plugin_active( 'beflex-pro/beflex-pro.php' ) && class_exists( '\beflex_pro\Settings_Action' ) ) :
+		if ( class_exists( '\beflex_pro\Settings_Init' ) ) :
 			return true;
 		endif;
 	}
