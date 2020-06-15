@@ -14,7 +14,7 @@
 
 <section class="no-results not-found">
 	<header class="primary-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'beflex' ); ?></h1>
+		<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'beflex' ); ?></h2>
 	</header><!-- .primary-header -->
 
 	<div class="primary-content">

@@ -2214,6 +2214,27 @@ a:hover, a:active {
   max-width: 260px;
 }
 
+.blog .primary-header, .author .primary-header, .archive .primary-header, .category .primary-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em 0;
+}
+
+.blog .primary-header .header-thumbnail, .author .primary-header .header-thumbnail, .archive .primary-header .header-thumbnail, .category .primary-header .header-thumbnail {
+  border-radius: 50%;
+  margin: auto 0;
+  margin-right: 2em;
+}
+
+.blog .primary-header .primary-header-content, .author .primary-header .primary-header-content, .archive .primary-header .primary-header-content, .category .primary-header .primary-header-content {
+  margin: auto 0;
+}
+
+.blog .primary-header .primary-header-content *, .author .primary-header .primary-header-content *, .archive .primary-header .primary-header-content *, .category .primary-header .primary-header-content * {
+  margin: 0;
+}
+
 .blog .post, .author .post, .archive .post, .category .post {
   display: -webkit-box;
   display: -ms-flexbox;
