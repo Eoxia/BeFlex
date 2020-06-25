@@ -21,7 +21,7 @@ endif;
 
 <style>
 
-	h1, h2, h3, h4, h5, h6, .beflex-diaporama .diaporama-title, .widget-title, .editor-post-title__block .editor-post-title__input {
+	h1, h2, h3, h4, h5, h6, .beflex-diaporama .diaporama-title, .widget-title, .editor-post-title__block .editor-post-title__input, .beflex-call-to-action div.call-to-title, .beflex-call-to-action div.block-title {
 		<?php if ( ! empty( $beflex_font_family ) ) : ?>
 			font-family: '<?php echo esc_html( $beflex_font_family ); ?>';
 		<?php endif; ?>
