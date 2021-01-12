@@ -1,3 +1,23 @@
+.site-width {
+	width: 100%;
+	padding-left: 12%;
+	padding-right: 12%;
+
+	@media ( max-width: $media__medium ) {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+	@media ( max-width: $media__small ) {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+/** Garde seulement la marge du site-width global */
+#content.site-width .site-width {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -15,17 +35,39 @@
 	@include center-block;
 }
 
-.site-width {
-	max-width: $size__site-width;
-	width: 100%;
-	margin: auto;
-	padding-left: 1em;
-	padding-right: 1em;
+#content:not(.active-sidebar) #primary {
+	.alignwide {
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+	.alignfull {
+		margin-left  : calc( -100vw / 2 + 100% / 2 );
+		margin-right : calc( -100vw / 2 + 100% / 2 );
+		max-width    : 100vw;
+		width        : 100vw;
+	}
+	.alignfull img {
+		width: 100vw;
+	}
 }
-/** Garde seulement la marge du site-width global */
-#content.site-width .site-width {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
+
+body.single,
+body.category,
+body.archive,
+body.single-wpshop_product,
+body.search {
+	#content #primary .alignfull {
+		margin-left  : 0;
+		margin-right : 0;
+		max-width    : 100%;
+		width        : 100%;
+	}
+	.alignfull img {
+		width: 100%;
+	}
 }
 
 /** Ajoute une marge en haut de la page si la navigation est en absolute */

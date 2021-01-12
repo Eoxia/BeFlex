@@ -2,38 +2,18 @@
 Theme Name: BeFlex
 Theme URI: http://www.eoxia.com
 Author: the Eoxia team
-Description: BeFlex est un thème entièrement modulable. Positionnez vos slider, images, mises en avant d'articles, contenus ou vous le souhaitez. La seule limite est votre imagination.
-License: regular
+Description: BeFlex is a free flexible theme made to work with Gutenberg. Position your slider, images, highlights of articles, content where you want. Imagination is the only limit.
+Requires at least: WordPress 5.0
+Version: 3.0.2
+License:  AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
 License URI: http://www.eoxia.com
-Version: 1.3.0
-Text Domain: sbeflex
+Since: 3.0.0
+Text Domain: beflex
+
+BeFlex is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Buttons
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Header
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
-# WpShop
---------------------------------------------------------------*/
 @import "variables/variables";
 @import "mixins/mixins";
 
@@ -49,86 +29,12 @@ Text Domain: sbeflex
 @import "font/font";
 
 /*--------------------------------------------------------------
-# Elements
+# Modules
 --------------------------------------------------------------*/
-@import "site/elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "site/forms/forms";
-
-/*--------------------------------------------------------------
-# Buttons
---------------------------------------------------------------*/
-@import "modules/buttons";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "site/navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/widget/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Notification
---------------------------------------------------------------*/
-@import "modules/notification";
-
-/*--------------------------------------------------------------
-# Grid layout FlexBox
---------------------------------------------------------------*/
-@import "modules/gridwrapper";
-
-/*--------------------------------------------------------------
-# Grid layout Grid
---------------------------------------------------------------*/
-@import "modules/gridlayout";
-
-/*--------------------------------------------------------------
-# Simple Lightbox
---------------------------------------------------------------*/
-@import "modules/simplelightbox";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "site/media/media";
+@import "inc/inc";
+@import "modules/modules";
 
 /*--------------------------------------------------------------
 # Theme
 --------------------------------------------------------------*/
-@import "site/theme/light";
-
-/*--------------------------------------------------------------
-# WpShop
---------------------------------------------------------------*/
-@import "modules/wpshop";
+@import "site/site";

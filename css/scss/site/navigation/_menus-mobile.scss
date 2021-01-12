@@ -33,7 +33,7 @@
 		left: 0;
 		top: 0;
 		overflow-y: auto;
-		
+
 	}
 	.close-burger {
 		position: absolute;
@@ -96,13 +96,5 @@
 		margin-left: 1em;
 		padding-left: 1em;
 		border-left: 1px dotted rgba(255,255,255,0.8);
-	}
-}
-
-@media ( max-width: $media__medium ) {
-	.active-burger #burger-menu {
-		opacity: 1;
-		pointer-events: all;
-		transform: scale(1);
 	}
 }

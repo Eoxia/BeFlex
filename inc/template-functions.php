@@ -2,9 +2,12 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 /**
@@ -49,14 +52,14 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
 		$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 
 		$pagination = array(
-			'base' => @add_query_arg('page','%#%'),
-			'format' => '',
-			'total' => $wp_query->max_num_pages,
-			'current' => $current,
-			'show_all' => false,
-			'end_size'     => 1,
-			'mid_size'     => 2,
-			'type' => 'list',
+			'base'      => add_query_arg( 'page', '%#%' ),
+			'format'    => '',
+			'total'     => $wp_query->max_num_pages,
+			'current'   => $current,
+			'show_all'  => false,
+			'end_size'  => 1,
+			'mid_size'  => 2,
+			'type'      => 'list',
 			'next_text' => '»',
 			'prev_text' => '«',
 		);
@@ -66,59 +69,63 @@ if ( ! function_exists( 'beflex_pagination' ) ) {
 		endif;
 
 		if ( ! empty( $wp_query->query_vars['s'] ) ) :
-			$pagination['add_args'] = array( 's' => str_replace( ' ' , '+', get_query_var( 's' ) ) );
+			$pagination['add_args'] = array( 's' => str_replace( ' ', '+', get_query_var( 's' ) ) );
 		endif;
 
-		echo str_replace( 'page/1/','', paginate_links( $pagination ) ); // WPCS: XSS ok.
+		echo str_replace( 'page/1/', '', paginate_links( $pagination ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
-if ( ! function_exists( 'beflex_section_class' ) ) {
-	/**
-	 * Return global section classes
-	 *
-	 * @param  int $id Id of section.
-	 * @return string
-	 */
-	function beflex_section_class( $id ) {
-		$section_background = get_sub_field( 'background', $id );
-		$section_class      = '';
+/**
+ * Display page title according to ACF parameter
+ *
+ * @param string $title Title of the page to return.
+ * @param int    $id ID of the page.
+ *
+ * @return string
+ */
+function beflex_display_page_title( $title, $id ) {
+	$beflex_display_title = true;
 
-		if ( $section_background ) :
-			$section_image_opacity = get_sub_field( 'opacite_de_limage_section', $id );
-			$section_class        .= ( $section_image_opacity ) ? '-opacity-' . get_sub_field( 'opacite_de_limage_section', $id ) : '';
+	if ( ! is_admin() && is_acf() && is_beflex_pro() ) :
+		$display_title_field = get_field_object( 'beflex_display_page_title', $id );
+		if ( ! empty( $display_title_field ) ) :
+			$beflex_display_title = ( get_field( 'beflex_display_page_title', $id ) ) ? true : false;
 		endif;
-		$section_class .= get_sub_field( 'alignement', $id ) ? ' -align-' . get_sub_field( 'alignement', $id ) : ' -align-left';
-		$section_class .= get_sub_field( 'espacement_section', $id ) ? ' -padding-' . get_sub_field( 'espacement_section', $id ) : ' -padding-1';
+	endif;
 
-		return $section_class;
-	}
+	if ( $beflex_display_title ) :
+		return $title;
+	else :
+		return '';
+	endif;
 }
+add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
 
-if ( ! function_exists( 'beflex_section_style' ) ) {
-	/**
-	 * Return global section classes
-	 *
-	 * @param  int $id Id of section.
-	 * @return string
-	 */
-	function beflex_section_style( $id ) {
-		$section_background = get_sub_field( 'background', $id );
-		$section_style      = '';
-
-		if ( $section_background ) :
-			$section_background_color = get_sub_field( 'couleur_de_fond_de_la_section', $id );
-			$section_text_color       = get_sub_field( 'couleur_du_texte_de_la_section', $id );
-			$section_background_image = get_sub_field( 'image_de_fond_de_la_section', $id );
-
-			if ( $section_background_image ) :
-				$section_style .= ( $section_background_image ) ? 'background: url(' . $section_background_image['url'] . ') 50% 50%; background-size: cover; ' : '';
-			else :
-				$section_style .= ( $section_background_color ) ? 'background: ' . $section_background_color . '; ' : '';
-			endif;
-			$section_style .= ( $section_text_color ) ? 'color: ' . $section_text_color . ';' : '';
-		endif;
-
-		return $section_style;
-	}
+/**
+ * Remove filter the_title before nav menu starts
+ *
+ * @param array $nav_menu Nav menu.
+ * @param array $args args.
+ *
+ * @return mixed
+ */
+function beflex_remove_title_filter_nav_menu( $nav_menu, $args ) {
+	remove_filter( 'the_title', 'beflex_display_page_title', 10 );
+	return $nav_menu;
 }
+add_filter( 'pre_wp_nav_menu', 'beflex_remove_title_filter_nav_menu', 10, 2 );
+
+/**
+ * Remove filter the_title after nav menu ends
+ *
+ * @param array $items Items of menu.
+ * @param array $args Arguments of menu.
+ *
+ * @return mixed
+ */
+function beflex_add_title_filter_non_menu( $items, $args ) {
+	add_filter( 'the_title', 'beflex_display_page_title', 10, 2 );
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'beflex_add_title_filter_non_menu', 10, 2 );

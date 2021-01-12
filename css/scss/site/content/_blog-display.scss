@@ -1,7 +1,26 @@
 .blog, .author, .archive, .category {
+  .primary-header {
+    display: flex;
+    margin: 2em 0;
+
+    .header-thumbnail {
+      border-radius: 50%;
+      margin: auto 0;
+      margin-right: 2em;
+    }
+    .primary-header-content {
+      margin: auto 0;
+
+      * {
+        margin: 0;
+      }
+    }
+  }
+
 	.post {
 		@include flexbox();
 		flex-wrap: nowrap;
+		margin: 1em 0;
 
 		@media ( max-width: $media__medium ) {
 			flex-wrap: wrap;

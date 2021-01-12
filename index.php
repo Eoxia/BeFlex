@@ -7,11 +7,12 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
  *
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
  */
 
 get_header(); ?>
@@ -21,16 +22,17 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			if ( is_home() && ! is_front_page() ) :
+				?>
 				<header class="primary-header">
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-
-			<?php
+				<?php
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -47,7 +49,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 	</main><!-- #primary -->
 

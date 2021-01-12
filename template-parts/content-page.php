@@ -2,54 +2,29 @@
 /**
  * Template part for displaying page content in page.php
  *
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
  */
-
-if ( is_acf() ) :
-	$display_title = ( get_field( 'display_page_title' ) ) ? true : false;
-else :
-	$display_title = true;
-endif;
 ?>
 
-<?php if ( $display_title ) : ?>
-	<header class="primary-header site-width">
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-	</header><!-- .primary-header -->
-<?php endif; ?>
+<header class="primary-header site-width">
+	<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+</header><!-- .primary-header -->
 
 <div class="primary-content">
 	<?php
-	if ( is_acf() ) :
-		$row = 0;
-		if ( have_rows( 'page_content' ) ) :
-			while ( have_rows( 'page_content' ) ) : the_row(); ?>
+	the_content();
 
-				<div class="flexible-item flexible-item-<?php echo esc_html( $row ); ?>"> <?php
-					get_template_part( 'template-parts/flexible/' . get_row_layout() );
-					$row++; ?>
-				</div> <?php
-
-			endwhile;
-		endif;
-	endif;
-
-	// Affiche le contenu standard de l'éditeur de WordPress s'il existe.
-	$basic_content = get_the_content();
-	if ( ! empty( $basic_content ) ) : ?>
-		<div class="site-width">
-			<?php the_content(); ?>
-		</div> <?php
-	endif;
-
-	wp_link_pages( array(
-		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
-		'after'  => '</div>',
-	) );
+	wp_link_pages(
+		array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beflex' ),
+			'after'  => '</div>',
+		)
+	);
 	?>
 </div><!-- .primary-content -->
 

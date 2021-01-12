@@ -2,11 +2,12 @@
 /**
  * The template for displaying 404 pages (not found)
  *
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
  */
 
 get_header(); ?>

@@ -1,10 +1,15 @@
 /*
 Theme Name: BeFlex
-Theme URI: http://www.eoxia.com
 Author: the Eoxia team
-Description: BeFlex est un thème entièrement modulable. Positionnez vos slider, images, mises en avant d'articles, contenus ou vous le souhaitez. La seule limite est votre imagination.
-License: regular
-License URI: http://www.eoxia.com
-Version: 2.4.2
+Author URI: https://www.eoxia.com
+Description: BeFlex is a free flexible theme made to work with Gutenberg. Position your slider, images, highlights of articles, content where you want. Imagination is the only limit.
+Requires at least: WordPress 5.0
+Version: 3.2.0
+License: AGPLv3
+License URI: https://spdx.org/licenses/AGPL-3.0-or-later.html
 Text Domain: beflex
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, wide-blocks, e-commerce, entertainment, portfolio
+
+BeFlex is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
 */

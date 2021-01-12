@@ -2,25 +2,27 @@
 /**
  * Template part for displaying a message that posts cannot be found
  *
+ * @author    Eoxia <contact@eoxia.com>
+ * @copyright (c) 2006-2019 Eoxia <contact@eoxia.com>
+ * @license   AGPLv3 <https://spdx.org/licenses/AGPL-3.0-or-later.html>
+ * @package   beflex
+ * @since     3.0.0
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package beflex
- * @since 1.0.0
- * @version 2.0.0-phoenix
  */
 
 ?>
 
 <section class="no-results not-found">
 	<header class="primary-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'beflex' ); ?></h1>
+		<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'beflex' ); ?></h2>
 	</header><!-- .primary-header -->
 
 	<div class="primary-content">
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-
-			<p><?php
+		if ( is_home() && current_user_can( 'publish_posts' ) ) :
+			?>
+			<p>
+				<?php
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
@@ -33,7 +35,8 @@
 					),
 					esc_url( admin_url( 'post-new.php' ) )
 				);
-			?></p>
+				?>
+			</p>
 
 		<?php elseif ( is_search() ) : ?>
 
@@ -41,12 +44,13 @@
 			<?php
 				get_search_form();
 
-		else : ?>
-
+		else :
+			?>
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'beflex' ); ?></p>
 			<?php
-				get_search_form();
+			get_search_form();
 
-		endif; ?>
+		endif;
+		?>
 	</div><!-- .primary-content -->
 </section><!-- .no-results -->

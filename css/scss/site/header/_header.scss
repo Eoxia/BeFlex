@@ -1,5 +1,7 @@
 #masthead {
 	position: relative;
+	background: #fff;
+	border-bottom: solid #f7f7f7 1px;
 
 	> .site-width {
 		@include flexbox();
@@ -12,26 +14,12 @@
 		width: 100%;
 	}
 	@media ( max-width: $media__medium ) {
-		> .site-width {
-			flex-wrap: wrap;
-			padding: 0;
-		}
 		.site-branding {
 			width: 50%;
-			padding-left: 1rem;
-		}
-		.site-branding {
-			order: 2;
 		}
 		.site-navigation {
-			order: 3;
 			margin-left: auto;
 			width: auto;
-			padding-right: 1rem;
-		}
-		.site-tool {
-			width: 100%;
-			order: 1;
 		}
 	}
 	@media ( max-width: $media__medium ) {
@@ -52,26 +40,32 @@
 #masthead .site-branding {
 	margin: auto 0;
 	line-height: 1;
+	display: flex;
+	flex-grow: 1;
+
+	.custom-logo-link {
+		padding-right: 1em;
+		@include transition();
+
+		img {
+			width: auto;
+			max-height: 80px;
+			@include transition();
+		}
+	}
+	.site-branding-container {
+		margin: auto 0;
+	}
 
 	.site-title, .site-description {
 		margin: 0;
 	}
 	.site-title a {
 		color: $color__text-main;
-		@include font-size( 1.4 );
-	}
-	.site-title img {
-		max-width: 280px;
-		max-height: 50px;
-		display: block;
-
-		@media ( max-width: $media__small ) {
-			max-width: 180px;
-			max-height: none;
-		}
+		font-size: 20px;
 	}
 	.site-description {
-		@include font-size( 0.86 );
+		font-size: 12px;
 	}
 }
 
@@ -79,6 +73,9 @@
 #masthead .site-navigation {
 	@include flexbox();
 	flex-wrap: nowrap;
+	margin-top: auto;
+	margin-bottom: auto;
+
 	#main-navigation {
 		margin-left: auto;
 	}
@@ -89,6 +86,7 @@
 	padding: 0 0 0 0.6em;
 	@include flexbox();
 	flex-wrap: nowrap;
+	margin: auto 0;
 
 	> a {
 		line-height: 1;
@@ -96,6 +94,7 @@
 		padding: 2.3em 0.6em;
 		display: inline-block;
 		color: $color__text-main;
+		font-size: 14px;
 
 		&:hover {
 			color: lighten($color__text-main, 30);
@@ -120,15 +119,6 @@
 				border-radius: 50%;
 			}
 		}
-		@media ( max-width: $media__medium ) {
-			padding: 0.6em 0.6em !important;
-			color: #fff;
-		}
-	}
-	@media( max-width: $media__medium ) {
-		display: block;
-		background: $color__primary;
-		text-align: right;
 	}
 }
 
@@ -141,9 +131,13 @@
 	&.-scroll {
 		top: 0;
 		box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.1);
-		#main-navigation .menu-item-depth-0 > .menu-link, .site-tool > *, #main-navigation .simple-navigation > li > a {
+		#main-navigation .menu > .menu-item > a, .site-tool > * {
 			padding-top: 1.2em;
 			padding-bottom: 1.2em;
+		}
+
+		.site-branding .custom-logo-link img {
+			max-height: 48px;
 		}
 	}
 }

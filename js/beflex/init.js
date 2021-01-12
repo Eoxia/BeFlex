@@ -4,8 +4,8 @@
  */
 jQuery( document ).ready(function() {
 
-	beflexFlexibleGalleryInit();
 	beflexNavigationInit();
 	beflexSearchInit();
+	beflexFlexibleGalleryInit();
 
 });
