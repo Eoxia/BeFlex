@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
@@ -42,7 +44,9 @@
 }
 
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  //@return $value / ($value * 0 + 1);
+  $valueDiv: $value * 0 + 1;
+  @return math.div( $value, $valueDiv );
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -61,5 +65,41 @@
         font-size: $max-font-size;
       }
     }
+  }
+}
+
+@mixin site-width-size() {
+  padding-left: 12%;
+  padding-right: 12%;
+
+  @media ( max-width: $media__medium ) {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  @media ( max-width: $media__small ) {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@mixin site-width-size-left() {
+  padding-left: 12%;
+
+  @media ( max-width: $media__medium ) {
+    padding-left: 8%;
+  }
+  @media ( max-width: $media__small ) {
+    padding-left: 4%;
+  }
+}
+
+@mixin site-width-size-right() {
+  padding-right: 12%;
+
+  @media ( max-width: $media__medium ) {
+    padding-right: 8%;
+  }
+  @media ( max-width: $media__small ) {
+    padding-right: 4%;
   }
 }

@@ -25,9 +25,7 @@
 		border-bottom: 1px solid rgba(0,0,0,0.1);
 	}
 	.comment-reply-link {
-		@extend .button;
-		@extend .button.bordered;
-		@extend .button.bordered.button-primary;
+		@extend .button, .bordered, .button-primary;
 		position: absolute;
 		top: 0;
 		right: 0;
