@@ -993,19 +993,19 @@ input.button-size-large.button-uppercase[type=submit] span, #comments .comment-l
 --------------------------------------------------------------*/
 .site-width {
   width: 100%;
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: calc(12 * 1%);
+  padding-right: calc(12 * 1%);
 }
 @media (max-width: 770px) {
   .site-width {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: calc(8 * 1%);
+    padding-right: calc(8 * 1%);
   }
 }
 @media (max-width: 480px) {
   .site-width {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: calc(4 * 1%);
+    padding-right: calc(4 * 1%);
   }
 }
 
@@ -2304,31 +2304,31 @@ a:hover, a:active {
   width: 100% !important;
 }
 .wp-block-media-text .wp-block-media-text__content {
-  padding-right: 12%;
+  padding-right: calc(12 * 1vw);
   padding-left: 2em;
 }
 @media (max-width: 770px) {
   .wp-block-media-text .wp-block-media-text__content {
-    padding-right: 8%;
+    padding-right: calc(8 * 1vw);
   }
 }
 @media (max-width: 480px) {
   .wp-block-media-text .wp-block-media-text__content {
-    padding-right: 4%;
+    padding-right: calc(4 * 1vw);
   }
 }
 .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
-  padding-left: 12%;
+  padding-left: calc(12 * 1vw);
   padding-right: 2em;
 }
 @media (max-width: 770px) {
   .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
-    padding-left: 8%;
+    padding-left: calc(8 * 1vw);
   }
 }
 @media (max-width: 480px) {
   .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
-    padding-left: 4%;
+    padding-left: calc(4 * 1vw);
   }
 }
 
@@ -2356,19 +2356,19 @@ a:hover, a:active {
   padding: 1.2em 2em;
 }
 .wp-block-group.alignfull .wp-block-group__inner-container {
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: calc(12 * 1%);
+  padding-right: calc(12 * 1%);
 }
 @media (max-width: 770px) {
   .wp-block-group.alignfull .wp-block-group__inner-container {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: calc(8 * 1%);
+    padding-right: calc(8 * 1%);
   }
 }
 @media (max-width: 480px) {
   .wp-block-group.alignfull .wp-block-group__inner-container {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: calc(4 * 1%);
+    padding-right: calc(4 * 1%);
   }
 }
 

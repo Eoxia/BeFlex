@@ -68,38 +68,63 @@
   }
 }
 
-@mixin site-width-size() {
-  padding-left: 12%;
-  padding-right: 12%;
+// Use 1%, or 1mw, or 1....
+@mixin site-width-size($unit: null) {
+  @if ( $unit == null ) {
+    $unit: 1%;
+  }
+  @else {
+    $unit: 1+#{$unit};
+  }
+
+  padding-left: calc(12 * #{$unit});
+  padding-right: calc(12 * #{$unit});
+
 
   @media ( max-width: $media__medium ) {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: calc(8 * #{$unit});
+    padding-right: calc(8 * #{$unit});
   }
   @media ( max-width: $media__small ) {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: calc(4 * #{$unit});
+    padding-right: calc(4 * #{$unit});
   }
 }
 
-@mixin site-width-size-left() {
-  padding-left: 12%;
+@mixin site-width-size-left($unit: null) {
+  @if ( $unit == null ) {
+    $unit: 1%;
+  }
+  @else {
+    $unit: 1+#{$unit};
+  }
+
+  padding-left: calc(12 * #{$unit});
+
 
   @media ( max-width: $media__medium ) {
-    padding-left: 8%;
+    padding-left: calc(8 * #{$unit});
   }
   @media ( max-width: $media__small ) {
-    padding-left: 4%;
+    padding-left: calc(4 * #{$unit});
   }
 }
 
-@mixin site-width-size-right() {
-  padding-right: 12%;
+@mixin site-width-size-right($unit: null) {
+  @if ( $unit == null ) {
+    $unit: 1%;
+  }
+  @else {
+    $unit: 1+#{$unit};
+  }
+
+  padding-right: calc(12 * #{$unit});
+
 
   @media ( max-width: $media__medium ) {
-    padding-right: 8%;
+    padding-right: calc(8 * #{$unit});
   }
   @media ( max-width: $media__small ) {
-    padding-right: 4%;
+    padding-right: calc(4 * #{$unit});
   }
 }
