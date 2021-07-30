@@ -2358,6 +2358,23 @@ a:hover, a:active {
   padding: 0;
 }
 
+.wp-block-cover.alignfull .wp-block-cover__inner-container {
+  padding-left: calc(12 * 1%);
+  padding-right: calc(12 * 1%);
+}
+@media (max-width: 770px) {
+  .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    padding-left: calc(8 * 1%);
+    padding-right: calc(8 * 1%);
+  }
+}
+@media (max-width: 480px) {
+  .wp-block-cover.alignfull .wp-block-cover__inner-container {
+    padding-left: calc(4 * 1%);
+    padding-right: calc(4 * 1%);
+  }
+}
+
 .wp-block-group.has-background .wp-block-group__inner-container {
   padding: 1.2em 2em;
 }
