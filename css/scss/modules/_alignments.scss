@@ -1,16 +1,6 @@
 .site-width {
 	width: 100%;
-	padding-left: 12%;
-	padding-right: 12%;
-
-	@media ( max-width: $media__medium ) {
-		padding-left: 8%;
-		padding-right: 8%;
-	}
-	@media ( max-width: $media__small ) {
-		padding-left: 4%;
-		padding-right: 4%;
-	}
+  @include site-width-size;
 }
 /** Garde seulement la marge du site-width global */
 #content.site-width .site-width {
@@ -50,7 +40,7 @@
 		width        : 100vw;
 	}
 	.alignfull img {
-		width: 100vw;
+		width: 100%;
 	}
 }
 

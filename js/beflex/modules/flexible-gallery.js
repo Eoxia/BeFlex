@@ -16,14 +16,18 @@ function beflexFlexibleGalleryInit() {
 	/** Block Gallery */
 	jQuery('.wp-block-gallery').each(function() {
 		var content = jQuery(this).find('.blocks-gallery-item a');
-		lightbox[i] = content.simpleLightbox( args );
-		i++;
+		if ( content.length > 0 ) {
+      lightbox[i] = content.simpleLightbox( args );
+      i++;
+    }
 	});
 
 	/** Widget Gallery */
 	jQuery( '.widget_media_gallery .gallery' ).each(function() {
 		var content = jQuery(this).find('.gallery-item a');
-		lightbox[i] = content.simpleLightbox( args );
-		i++;
+		if ( content.length > 0 ) {
+      lightbox[i] = content.simpleLightbox( args );
+      i++;
+    }
 	});
 }

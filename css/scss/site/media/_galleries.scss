@@ -1,9 +1,11 @@
+@use "sass:math";
+
 .gallery {
 	margin-bottom: 1.5em;
 	// Loops to enumerate the classes for gallery columns.
 	@for $i from 2 through 9 {
 		&.gallery-columns-#{$i} .gallery-item {
-			width: ( 100% / $i );
+			width: math.div( 100%, $i );
 		}
 	}
 }

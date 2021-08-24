@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
@@ -42,7 +44,9 @@
 }
 
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  //@return $value / ($value * 0 + 1);
+  $valueDiv: $value * 0 + 1;
+  @return math.div( $value, $valueDiv );
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -61,5 +65,66 @@
         font-size: $max-font-size;
       }
     }
+  }
+}
+
+// Use 1%, or 1mw, or 1....
+@mixin site-width-size($unit: null) {
+  @if ( $unit == null ) {
+    $unit: 1%;
+  }
+  @else {
+    $unit: 1+#{$unit};
+  }
+
+  padding-left: calc(12 * #{$unit});
+  padding-right: calc(12 * #{$unit});
+
+
+  @media ( max-width: $media__medium ) {
+    padding-left: calc(8 * #{$unit});
+    padding-right: calc(8 * #{$unit});
+  }
+  @media ( max-width: $media__small ) {
+    padding-left: calc(4 * #{$unit});
+    padding-right: calc(4 * #{$unit});
+  }
+}
+
+@mixin site-width-size-left($unit: null) {
+  @if ( $unit == null ) {
+    $unit: 1%;
+  }
+  @else {
+    $unit: 1+#{$unit};
+  }
+
+  padding-left: calc(12 * #{$unit});
+
+
+  @media ( max-width: $media__medium ) {
+    padding-left: calc(8 * #{$unit});
+  }
+  @media ( max-width: $media__small ) {
+    padding-left: calc(4 * #{$unit});
+  }
+}
+
+@mixin site-width-size-right($unit: null) {
+  @if ( $unit == null ) {
+    $unit: 1%;
+  }
+  @else {
+    $unit: 1+#{$unit};
+  }
+
+  padding-right: calc(12 * #{$unit});
+
+
+  @media ( max-width: $media__medium ) {
+    padding-right: calc(8 * #{$unit});
+  }
+  @media ( max-width: $media__small ) {
+    padding-right: calc(4 * #{$unit});
   }
 }

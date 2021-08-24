@@ -1,5 +1,9 @@
-ul.wp-block-gallery {
+.wp-block-gallery {
 	margin-left: 0;
+
+  .blocks-gallery-grid {
+    margin-left: 0;
+  }
 
 	.blocks-gallery-item a {
 		&::before {

@@ -2,19 +2,31 @@
 .wp-block-media-text {
 	&.alignfull {
 		.wp-block-media-text__media {
-			overflow: hidden
+			overflow: hidden;
+      img {
+        width: 100% !important;
+      }
 		}
-		.wp-block-media-text__media img {
-			width: 100% !important;
-		}
+
+    .wp-block-media-text__content {
+      @include site-width-size-right(vw);
+      padding-left: 2em;
+    }
+
+    &.has-media-on-the-right {
+      .wp-block-media-text__content {
+        @include site-width-size-left(vw);
+        padding-right: 2em;
+      }
+    }
 	}
 
 	.wp-block-media-text__content {
-		padding: 0 0 0 8%;
+    padding: 0 0 0 2em;
 	}
 	&.has-media-on-the-right {
 		.wp-block-media-text__content {
-			padding: 0 8% 0 0 !important;
+      padding: 0 2em 0 0;
 		}
 	}
 }
