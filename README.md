@@ -1,11 +1,12 @@
-# BeFlex
-- **Author:** the Eoxia team
-- **Author URI:** https://www.eoxia.com
-- **Description:** BeFlex is a free flexible theme made to work with Gutenberg. Position your slider, images, highlights of articles, content where you want. Imagination is the only limit.
-- **License:** AGPLv3
-- **License URI:** https://spdx.org/licenses/AGPL-3.0-or-later.html
-- **Text Domain:** beflex
-- **Tags:** one-column, two-columns, right-sidebar, custom-colors, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, wide-blocks, e-commerce, entertainment, portfolio
+# Beflex - WordPress Theme
 
-BeFlex is based on Underscores https://underscores.me/, (C) 2012-2018 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Beflex is an block based WordPress theme (currently in developpment).
+All the sections are editable from WordPress Dashboard > Site Editor
+
+## Instructions to Get Started
+
+1. Clone this repository or upload a zip of the theme into your site’s themes directory.
+2. Install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin.
+3. Enable the "Full Site Editing" experiment in the `Gutenberg` > `Experiments panel`.
+4. Activate the new theme from within `Appearance` > `Themes`.
+5. Enable navigation screen from within `Gutenberg` > `Experiments` > `Enable navigation screen`.
