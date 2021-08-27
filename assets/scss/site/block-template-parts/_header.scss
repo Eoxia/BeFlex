@@ -1,0 +1,31 @@
+header.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+
+  .wp-block-columns {
+    margin-bottom: 0;
+  }
+  .wp-block-social-links {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .wp-block-spacer {
+    transition: height 0.2s ease-out;
+  }
+}
+
+header.site-header.-sticky {
+  box-shadow: 0 0 16px 0 rgb(0, 0, 0, 0.1);
+
+  .wp-block-spacer {
+    height: 6px !important;
+  }
+}
+
+body.admin-bar header.site-header {
+  top: 32px;
+}

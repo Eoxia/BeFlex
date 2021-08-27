@@ -10,7 +10,7 @@ License URI: https://spdx.org/licenses/AGPL-3.0-or-later.html
 Easy to use theme designed to work with Gutenberg.
 
 == Description ==
-With Beflex, build your website in a simple and intuitive way. You can do what you want because, like Gutenberg, Beflex is modularly thought.
+Beflex is an block based WordPress theme (currently in developpment).
 Beflex is also easy to use for web developers.
 
 == Installation ==
@@ -25,16 +25,6 @@ Activiation and Use
 
 == Changelog ==
 
-= 3.1.0 =
-* Compatibility with new version of Beflex Pro
-
-= 3.0.2 =
-* Add support Widget gallery
-* Improve CSS Block Blockquote
-
-= 3.0.1 =
-* Fix assets license
-* Add unminifed extern scripts
-
-= 3.0 =
-* New version to work with Gutenberg.
+= 4.0.0-beta =
+* Compatibility with Gutenberg v11.3.0
+* Theme redesign to work with WP Full site editing
