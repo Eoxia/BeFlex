@@ -1,10 +1,10 @@
 header.site-header {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
   z-index: 999;
+  background: #fff;
 
   .wp-block-columns {
     margin-bottom: 0;
@@ -16,6 +16,11 @@ header.site-header {
   .wp-block-spacer {
     transition: height 0.2s ease-out;
   }
+}
+
+/** Fixed position only in frontend */
+body.frontend header.site-header {
+  position: fixed;
 }
 
 header.site-header.-sticky {

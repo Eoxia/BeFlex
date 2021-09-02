@@ -50,6 +50,20 @@ function beflextheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'beflextheme_scripts' );
 
+/**
+ * Add class to body
+ *
+ * @param  Array $classes Body classes.
+ * @return Array $classes Body classes.
+ */
+function beflex_add_custom_classes_to_body( $classes ) {
+	if ( ! is_admin() ) {
+		$classes[] = 'frontend';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'beflex_add_custom_classes_to_body' );
+
 
 // Block patterns.
 require_once 'inc/block-patterns.php';
