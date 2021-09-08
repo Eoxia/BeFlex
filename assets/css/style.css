@@ -171,6 +171,17 @@ Text Domain: beflex
   text-align: center;
 }
 
+/*--------------------------------------------------------------
+# Gutenberg Blocks Attributes
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Hide on mobile
+--------------------------------------------------------------*/
+@media (max-width: 599px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
 header.site-header {
   position: static;
   top: 0;

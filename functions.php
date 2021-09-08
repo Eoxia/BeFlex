@@ -51,6 +51,14 @@ function beflextheme_scripts() {
 add_action( 'wp_enqueue_scripts', 'beflextheme_scripts' );
 
 /**
+ * Enqueue script for Gutenberg Editor
+ */
+function beflextheme_editor_scripts() {
+	wp_enqueue_script('beflex-gutenberg-hide-on-mobile', get_template_directory_uri() . '/assets/js/gutenberg-build/block-hide-on-mobile.js', ['wp-edit-post']);
+}
+add_action( 'enqueue_block_editor_assets', 'beflextheme_editor_scripts' );
+
+/**
  * Add class to body
  *
  * @param  Array $classes Body classes.
