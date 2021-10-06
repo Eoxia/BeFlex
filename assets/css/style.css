@@ -110,24 +110,6 @@ Text Domain: beflex
 /*--------------------------------------------------------------
 ## Query Pagination
 --------------------------------------------------------------*/
-.wp-block-query-pagination {
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-@media (max-width: 599px) {
-  .wp-block-query-pagination {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-.wp-block-query-pagination .wp-block-query-pagination-numbers,
-.wp-block-query-pagination .wp-block-query-pagination-previous,
-.wp-block-query-pagination .wp-block-query-pagination-next {
-  white-space: nowrap;
-}
-.wp-block-query-pagination .wp-block-query-pagination-numbers {
-  width: 100%;
-}
 .wp-block-query-pagination .wp-block-query-pagination-previous,
 .wp-block-query-pagination .wp-block-query-pagination-next,
 .wp-block-query-pagination .page-numbers {
@@ -149,6 +131,9 @@ Text Domain: beflex
 .wp-block-query-pagination .wp-block-query-pagination-previous:hover,
 .wp-block-query-pagination .wp-block-query-pagination-next:hover {
   opacity: 0.8;
+}
+.wp-block-query-pagination .wp-block-query-pagination-previous {
+  margin-left: auto;
 }
 .wp-block-query-pagination .page-numbers {
   -webkit-transition: background 0.2s ease-out;
@@ -265,4 +250,19 @@ ul, ol {
 
 figure {
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Site container
+--------------------------------------------------------------*/
+@media (max-width: 599px) {
+  /** Gutenberg 11.6.0 : fix no gap in mobile */
+  .wp-site-blocks > [class*=wp-container] {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .wp-site-blocks > [class*=wp-container] .alignfull {
+    margin-left: calc( -100vw / 2 + 100% / 2 ) !important;
+    width: 100vw !important;
+  }
 }

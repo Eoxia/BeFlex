@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+# Site container
+--------------------------------------------------------------*/
+
+@media ( max-width: $media__mobile ) {
+  /** Gutenberg 11.6.0 : fix no gap in mobile */
+  .wp-site-blocks > [class*="wp-container"] {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+
+    .alignfull {
+      margin-left: calc( -100vw / 2 + 100% / 2 ) !important;
+      width: 100vw !important;
+    }
+  }
+}
