@@ -255,14 +255,12 @@ figure {
 /*--------------------------------------------------------------
 # Site container
 --------------------------------------------------------------*/
-@media (max-width: 599px) {
-  /** Gutenberg 11.6.0 : fix no gap in mobile */
-  .wp-site-blocks > [class*=wp-container] {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-  }
-  .wp-site-blocks > [class*=wp-container] .alignfull {
-    margin-left: calc( -100vw / 2 + 100% / 2 ) !important;
-    width: 100vw !important;
-  }
+/** WordPress 5.9.0-Beta3 : Fix site padding */
+.wp-site-blocks > [class*=wp-container]:not(.wp-block-template-part) {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.wp-site-blocks > [class*=wp-container]:not(.wp-block-template-part) .alignfull {
+  margin-left: calc(-50vw + 50%) !important;
+  width: 100vw !important;
 }

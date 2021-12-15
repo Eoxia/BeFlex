@@ -7,9 +7,10 @@ jQuery( document ).ready(function() {
  */
 function beflexSiteHeaderInit() {
   var navigation = jQuery( 'header.site-header' );
+
   if ( navigation ) {
 
-    jQuery( '.wp-site-blocks' ).css( 'padding-top', navigation.height() );
+    jQuery( '.wp-site-blocks' ).css( 'padding-top', navigation.outerHeight() );
 
     if ( beflexNavSticky() ) {
       jQuery( navigation ).addClass( '-sticky' );
