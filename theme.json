@@ -287,10 +287,22 @@
   "templateParts": [
     {
       "name": "header",
+      "title": "Entête (défaut)",
+      "area": "header"
+    },
+    {
+      "name": "header-centered",
+      "title": "Entête centré",
+      "area": "header"
+    },
+    {
+      "name": "header-photo",
+      "title": "Entête large avec photo",
       "area": "header"
     },
     {
       "name": "footer",
+      "title": "Pied de page (défaut)",
       "area": "footer"
     }
   ]
