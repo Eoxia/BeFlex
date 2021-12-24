@@ -167,13 +167,8 @@ Text Domain: beflex
     display: none;
   }
 }
-header.site-header {
-  position: static;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: #fff;
+header.site-header.has-background {
+  padding: 0;
 }
 header.site-header .wp-block-columns {
   margin-bottom: 0;
@@ -187,20 +182,28 @@ header.site-header .wp-block-spacer {
   transition: height 0.2s ease-out;
 }
 
+.header-sticky {
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 /** Fixed position only in frontend */
-body.frontend header.site-header {
+body.frontend .header-sticky {
   position: fixed;
 }
 
-header.site-header.-sticky {
+.header-sticky.-sticky {
   -webkit-box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
-header.site-header.-sticky .wp-block-spacer {
+.header-sticky.-sticky .wp-block-spacer {
   height: 6px !important;
 }
 
-body.admin-bar header.site-header {
+body.admin-bar .header-sticky {
   top: 32px;
 }
 

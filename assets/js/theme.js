@@ -6,7 +6,7 @@ jQuery( document ).ready(function() {
  * Fix site header to the top of screen
  */
 function beflexSiteHeaderInit() {
-  var navigation = jQuery( 'header.site-header' );
+  var navigation = jQuery( '.header-sticky' );
 
   if ( navigation ) {
 
@@ -34,7 +34,7 @@ function beflexSiteHeaderInit() {
  * @return {Boolean}
  */
 function beflexNavSticky() {
-  if ( jQuery( window ).scrollTop() >= jQuery( 'header.site-header' ).height() ) {
+  if ( jQuery( window ).scrollTop() >= jQuery( '.header-sticky' ).height() ) {
     return true;
   }
   else {
