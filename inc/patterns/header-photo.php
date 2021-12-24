@@ -37,9 +37,7 @@ return array(
 					<hr class="wp-block-separator has-text-color has-background has-white-background-color has-white-color is-style-default"/>
 					<!-- /wp:separator -->
 
-					<!-- wp:paragraph {"align":"center","textColor":"white"} -->
-					<p class="has-text-align-center has-text-color has-white-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					<!-- /wp:paragraph --></div>
+					</div>
 					<!-- /wp:group -->
 
 					<!-- wp:spacer {"height":40} -->
