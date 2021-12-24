@@ -9,8 +9,9 @@
 function beflex_register_block_patterns() {
 	$block_pattern_categories = array(
 		'design' => array( 'label' => __( 'Design', 'beflex' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'beflex' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'beflex' ) ),
+		'header' => array( 'label' => __( 'Headers', 'beflex' ) ),
+		'footer' => array( 'label' => __( 'Footers', 'beflex' ) ),
+		'query'  => array( 'label' => __( 'Requête', 'beflex' ) ),
 	);
 
 	/**
@@ -40,6 +41,8 @@ function beflex_register_block_patterns() {
 		'design-columns-media',
 		'design-media-content-background',
 		'header-photo',
+		'query-standard',
+		'query-background',
 	);
 
 	/**
