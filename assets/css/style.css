@@ -194,7 +194,7 @@ header.site-header .wp-block-spacer {
   transition: height 0.2s ease-out;
 }
 
-.header-sticky {
+body .wp-site-blocks .header-sticky {
   position: static;
   top: 0;
   left: 0;
@@ -315,7 +315,7 @@ body > .is-root-container,
 .wp-site-blocks .alignfull,
 .wp-site-blocks > .wp-block-group.has-background,
 .wp-site-blocks > .wp-block-cover,
-.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background:not(.header-sticky),
 .wp-site-blocks > .wp-block-template-part > .wp-block-cover,
 body > .is-root-container > .wp-block-group.has-background,
 body > .is-root-container > .wp-block-cover,
