@@ -38,6 +38,33 @@ Text Domain: beflex
 }
 
 /*--------------------------------------------------------------
+## Media Text
+--------------------------------------------------------------*/
+.wp-block-media-text .wp-block-media-text__content {
+  padding: 0;
+}
+@media (min-width: 599px) {
+  .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+    padding: 0 var(--wp--custom--spacing--outer) 0 0;
+  }
+  .wp-block-media-text:not(.has-media-on-the-right) .wp-block-media-text__content {
+    padding: 0 0 0 var(--wp--custom--spacing--outer);
+  }
+  .wp-block-media-text.alignfull.has-media-on-the-right .wp-block-media-text__media {
+    margin-right: calc(-1 * var(--wp--custom--spacing--outer));
+  }
+  .wp-block-media-text.alignfull.has-media-on-the-right .wp-block-media-text__content {
+    padding-left: calc((100vw - 1100px) / 2 - var(--wp--custom--spacing--outer));
+  }
+  .wp-block-media-text.alignfull:not(.has-media-on-the-right) .wp-block-media-text__media {
+    margin-left: calc(-1 * var(--wp--custom--spacing--outer));
+  }
+  .wp-block-media-text.alignfull:not(.has-media-on-the-right) .wp-block-media-text__content {
+    padding-right: calc((100vw - 1100px) / 2 - var(--wp--custom--spacing--outer));
+  }
+}
+
+/*--------------------------------------------------------------
 ## Site Title
 --------------------------------------------------------------*/
 .wp-block-site-title {
@@ -345,6 +372,7 @@ body > .is-root-container,
 .edit-post-visual-editor__post-title-wrapper,
 .wp-block-group.alignfull,
 .wp-block-cover.alignfull,
+.wp-block-media-text.alignfull,
 .is-root-container .wp-block[data-align=full] > .wp-block-group,
 .is-root-container .wp-block[data-align=full] > .wp-block-cover {
   padding-left: var(--wp--custom--spacing--outer);
