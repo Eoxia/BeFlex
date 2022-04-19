@@ -1,4 +1,9 @@
 header.site-header {
+  // Erase margin of first container.
+  + * {
+    margin-top: 0;
+  }
+
   &.has-background {
     padding: 0;
   }
