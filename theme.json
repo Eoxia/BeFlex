@@ -6,19 +6,19 @@
 			"link": true,
 			"palette": [
 				{
-					"slug": "galaxy",
+					"slug": "primary",
 					"color": "#7579E7",
-					"name": "Galaxy"
+					"name": "Primary"
 				},
 				{
-					"slug": "lila",
+					"slug": "secondary",
 					"color": "#9AB3F5",
-					"name": "Lila"
+					"name": "Secondary"
 				},
 				{
-					"slug": "ocean",
+					"slug": "tertiary",
 					"color": "#A3D8F4",
-					"name": "Ocean"
+					"name": "Tertiary"
 				},
 				{
 					"slug": "caribbean",
@@ -199,7 +199,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--galaxy)"
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
 		},
@@ -249,7 +249,7 @@
 					"fontSize": "var(--wp--preset--font-size--normal)"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--galaxy)"
+					"background": "var(--wp--preset--color--primary)"
 				},
 				"border": {
 					"radius": "4px"

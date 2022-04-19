@@ -93,7 +93,7 @@ Text Domain: beflex
 --------------------------------------------------------------*/
 .wp-block-post-excerpt.wp-button .wp-block-post-excerpt__more-link {
   display: inline-block;
-  background-color: var(--wp--preset--color--galaxy);
+  background-color: var(--wp--preset--color--primary);
   color: var(--wp--preset--color--white);
   font-size: var(--wp--preset--font-size--normal);
   border-radius: 4px;
@@ -154,7 +154,7 @@ Text Domain: beflex
 }
 .wp-block-query-pagination .page-numbers.current {
   font-weight: 400;
-  background: var(--wp--preset--color--lila);
+  background: var(--wp--preset--color--secondary);
   color: #fff;
 }
 .wp-block-query-pagination .page-numbers:not(.current) {
@@ -382,7 +382,7 @@ Used for development
   box-shadow: none;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  background-color: var(--wp--preset--color--galaxy);
+  background-color: var(--wp--preset--color--primary);
   color: #fff;
   border: 0;
 }
@@ -391,11 +391,11 @@ Used for development
   cursor: pointer;
 }
 .bf-button.bf-button__color-primary, form input.bf-button__color-primary[type=submit] {
-  background-color: var(--wp--preset--color--galaxy);
+  background-color: var(--wp--preset--color--primary);
   color: #fff;
 }
 .bf-button.bf-button__color-secondary, form input.bf-button__color-secondary[type=submit] {
-  background-color: var(--wp--preset--color--lila);
+  background-color: var(--wp--preset--color--secondary);
   color: #fff;
 }
 .bf-button.bf-button__color-light, form input.bf-button__color-light[type=submit] {
@@ -410,16 +410,16 @@ Used for development
   background: none;
   border: 2px solid;
   padding: calc(0.6em - 2px) calc(1em - 2px);
-  border-color: var(--wp--preset--color--galaxy);
-  color: var(--wp--preset--color--galaxy);
+  border-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--primary);
 }
 .bf-button.bf-button__style-outline.bf-button__color-primary, form input.bf-button__style-outline.bf-button__color-primary[type=submit] {
-  border-color: var(--wp--preset--color--galaxy);
-  color: var(--wp--preset--color--galaxy);
+  border-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--primary);
 }
 .bf-button.bf-button__style-outline.bf-button__color-secondary, form input.bf-button__style-outline.bf-button__color-secondary[type=submit] {
-  border-color: var(--wp--preset--color--lila);
-  color: var(--wp--preset--color--lila);
+  border-color: var(--wp--preset--color--secondary);
+  color: var(--wp--preset--color--secondary);
 }
 .bf-button.bf-button__style-outline.bf-button__color-light, form input.bf-button__style-outline.bf-button__color-light[type=submit] {
   border-color: #fff;
