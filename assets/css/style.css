@@ -336,3 +336,66 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
   margin-right: auto !important;
   width: inherit;
 }
+
+/*--------------------------------------------------------------
+# CSS Modules
+Used for development
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Beflex Button
+--------------------------------------------------------------*/
+.bf-button {
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0.6em 1em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-color: var(--wp--preset--color--galaxy);
+  color: #fff;
+}
+.bf-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.bf-button.bf-button__color-primary {
+  background-color: var(--wp--preset--color--galaxy);
+  color: #fff;
+}
+.bf-button.bf-button__color-secondary {
+  background-color: var(--wp--preset--color--lila);
+  color: #fff;
+}
+.bf-button.bf-button__color-light {
+  background-color: #fff;
+  color: var(--wp--preset--color--anthracite);
+}
+.bf-button.bf-button__color-dark {
+  background-color: var(--wp--preset--color--anthracite);
+  color: #fff;
+}
+.bf-button.bf-button__style-outline {
+  background: none;
+  border: 2px solid;
+  padding: calc(0.6em - 2px) calc(1em - 2px);
+  border-color: var(--wp--preset--color--galaxy);
+  color: var(--wp--preset--color--galaxy);
+}
+.bf-button.bf-button__style-outline.bf-button__color-primary {
+  border-color: var(--wp--preset--color--galaxy);
+  color: var(--wp--preset--color--galaxy);
+}
+.bf-button.bf-button__style-outline.bf-button__color-secondary {
+  border-color: var(--wp--preset--color--lila);
+  color: var(--wp--preset--color--lila);
+}
+.bf-button.bf-button__style-outline.bf-button__color-light {
+  border-color: #fff;
+  color: #fff;
+}
+.bf-button.bf-button__style-outline.bf-button__color-dark {
+  border-color: var(--wp--preset--color--anthracite);
+  color: var(--wp--preset--color--anthracite);
+}
