@@ -285,6 +285,36 @@ figure {
   margin: 0;
 }
 
+form input[type=text],
+form input[type=email],
+form input[type=url],
+form input[type=password],
+form input[type=search],
+form input[type=number],
+form input[type=tel],
+form input[type=range],
+form input[type=date],
+form input[type=month],
+form input[type=week],
+form input[type=time],
+form input[type=datetime],
+form input[type=datetime-local],
+form input[type=color],
+form select,
+form textarea {
+  width: 100%;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 1em;
+}
+form label {
+  font-weight: 600;
+}
+form req {
+  color: red;
+}
+
 /*--------------------------------------------------------------
 # Site container
 --------------------------------------------------------------*/
@@ -344,7 +374,7 @@ Used for development
 /*--------------------------------------------------------------
 ## Beflex Button
 --------------------------------------------------------------*/
-.bf-button {
+.bf-button, form input[type=submit] {
   display: inline-block;
   border-radius: 4px;
   font-size: 16px;
@@ -355,47 +385,48 @@ Used for development
   transition: all 0.2s ease-out;
   background-color: var(--wp--preset--color--galaxy);
   color: #fff;
+  border: 0;
 }
-.bf-button:hover {
+.bf-button:hover, form input[type=submit]:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-.bf-button.bf-button__color-primary {
+.bf-button.bf-button__color-primary, form input.bf-button__color-primary[type=submit] {
   background-color: var(--wp--preset--color--galaxy);
   color: #fff;
 }
-.bf-button.bf-button__color-secondary {
+.bf-button.bf-button__color-secondary, form input.bf-button__color-secondary[type=submit] {
   background-color: var(--wp--preset--color--lila);
   color: #fff;
 }
-.bf-button.bf-button__color-light {
+.bf-button.bf-button__color-light, form input.bf-button__color-light[type=submit] {
   background-color: #fff;
   color: var(--wp--preset--color--anthracite);
 }
-.bf-button.bf-button__color-dark {
+.bf-button.bf-button__color-dark, form input.bf-button__color-dark[type=submit] {
   background-color: var(--wp--preset--color--anthracite);
   color: #fff;
 }
-.bf-button.bf-button__style-outline {
+.bf-button.bf-button__style-outline, form input.bf-button__style-outline[type=submit] {
   background: none;
   border: 2px solid;
   padding: calc(0.6em - 2px) calc(1em - 2px);
   border-color: var(--wp--preset--color--galaxy);
   color: var(--wp--preset--color--galaxy);
 }
-.bf-button.bf-button__style-outline.bf-button__color-primary {
+.bf-button.bf-button__style-outline.bf-button__color-primary, form input.bf-button__style-outline.bf-button__color-primary[type=submit] {
   border-color: var(--wp--preset--color--galaxy);
   color: var(--wp--preset--color--galaxy);
 }
-.bf-button.bf-button__style-outline.bf-button__color-secondary {
+.bf-button.bf-button__style-outline.bf-button__color-secondary, form input.bf-button__style-outline.bf-button__color-secondary[type=submit] {
   border-color: var(--wp--preset--color--lila);
   color: var(--wp--preset--color--lila);
 }
-.bf-button.bf-button__style-outline.bf-button__color-light {
+.bf-button.bf-button__style-outline.bf-button__color-light, form input.bf-button__style-outline.bf-button__color-light[type=submit] {
   border-color: #fff;
   color: #fff;
 }
-.bf-button.bf-button__style-outline.bf-button__color-dark {
+.bf-button.bf-button__style-outline.bf-button__color-dark, form input.bf-button__style-outline.bf-button__color-dark[type=submit] {
   border-color: var(--wp--preset--color--anthracite);
   color: var(--wp--preset--color--anthracite);
 }
