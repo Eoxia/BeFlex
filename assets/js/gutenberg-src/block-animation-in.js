@@ -1,7 +1,20 @@
+// Declare
+const bfCheckNamespace = ( name ) => {
+  const namespace = [ { name: 'core/' }, { name: 'beflex/' } ];
+  for ( let i = 0; namespace.length > i; i++) {
+    if ( name.startsWith( namespace[i].name ) ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 const bfAnimationInAttributes = ( settings, name ) => {
-  if ( ! name.startsWith( 'core/' ) || ! name.startsWith( 'beflex/' ) ) {
+
+  if ( ! bfCheckNamespace(name) ) {
     return settings;
   }
+
   return Object.assign( {}, settings, {
     attributes: Object.assign( {}, settings.attributes, {
       animationIn: { type: 'boolean' },
@@ -27,7 +40,7 @@ const bfAnimationInControls = createHigherOrderComponent( ( BlockEdit ) => {
     const { attributes, setAttributes, isSelected } = props;
     const { animationIn, animationInType } = attributes;
 
-    if ( ! props.name.startsWith( 'core/' ) || ! props.name.startsWith( 'beflex/' ) ) {
+    if ( ! bfCheckNamespace(props.name) ) {
       return (
         <BlockEdit { ...props } />
       );
@@ -83,7 +96,7 @@ wp.hooks.addFilter(
 
 const bfAnimationInProp = createHigherOrderComponent( ( BlockListBlock ) => {
   return ( props ) => {
-    if ( ! props.name.startsWith( 'core/' ) || ! props.name.startsWith( 'beflex/' ) ) {
+    if ( ! bfCheckNamespace(props.name) ) {
       return (
         <BlockListBlock { ...props } />
       );

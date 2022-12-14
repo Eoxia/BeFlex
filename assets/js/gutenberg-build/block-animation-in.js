@@ -196,8 +196,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// Declare
+const bfCheckNamespace = name => {
+  const namespace = [{
+    name: 'core/'
+  }, {
+    name: 'beflex/'
+  }];
+
+  for (let i = 0; namespace.length > i; i++) {
+    if (name.startsWith(namespace[i].name)) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
 const bfAnimationInAttributes = (settings, name) => {
-  if (!name.startsWith('core/') || !name.startsWith('beflex/')) {
+  if (!bfCheckNamespace(name)) {
     return settings;
   }
 
@@ -241,7 +258,7 @@ const bfAnimationInControls = createHigherOrderComponent(BlockEdit => {
       animationInType
     } = attributes;
 
-    if (!props.name.startsWith('core/') || !props.name.startsWith('beflex/')) {
+    if (!bfCheckNamespace(props.name)) {
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockEdit, props);
     }
 
@@ -284,7 +301,7 @@ const bfAnimationInControls = createHigherOrderComponent(BlockEdit => {
 wp.hooks.addFilter('editor.BlockEdit', 'beflex/animation-in-controls', bfAnimationInControls);
 const bfAnimationInProp = createHigherOrderComponent(BlockListBlock => {
   return props => {
-    if (!props.name.startsWith('core/') || !props.name.startsWith('beflex/')) {
+    if (!bfCheckNamespace(props.name)) {
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockListBlock, props);
     }
 
