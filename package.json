@@ -14,7 +14,7 @@
   ],
   "license": "GPLv3",
   "devDependencies": {
-    "@wordpress/scripts": "18.0.0",
+    "@wordpress/scripts": "25.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-concat": "latest",
