@@ -1,9 +1,14 @@
 /*--------------------------------------------------------------
-## Hide on mobile
+## Hide on
 --------------------------------------------------------------*/
 
 @media ( max-width: $media__mobile ) {
   .hide-on-mobile {
+    display: none !important;
+  }
+}
+@media ( min-width: $media__mobile ) {
+  .hide-on-desktop {
     display: none !important;
   }
 }

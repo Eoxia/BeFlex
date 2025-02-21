@@ -55,7 +55,7 @@ add_action( 'wp_enqueue_scripts', 'beflextheme_scripts' );
  */
 function beflextheme_editor_scripts() {
 	wp_enqueue_script('beflex-child-gutenberg-animation-in', get_template_directory_uri() . '/assets/js/gutenberg-build/block-animation-in.js', ['wp-edit-post']);
-	wp_enqueue_script('beflex-gutenberg-hide-on-mobile', get_template_directory_uri() . '/assets/js/gutenberg-build/block-hide-on-mobile.js', ['wp-edit-post']);
+	wp_enqueue_script('beflex-gutenberg-hide-on', get_template_directory_uri() . '/assets/js/gutenberg-build/block-hide-on.js', ['wp-edit-post']);
 }
 add_action( 'enqueue_block_editor_assets', 'beflextheme_editor_scripts' );
 
