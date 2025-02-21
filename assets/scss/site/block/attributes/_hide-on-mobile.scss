@@ -4,6 +4,6 @@
 
 @media ( max-width: $media__mobile ) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }

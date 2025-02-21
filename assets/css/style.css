@@ -243,7 +243,7 @@ body.frontend .bf-block-animatein.bf-block-animatein--type-scaleout:not(.bf-bloc
 --------------------------------------------------------------*/
 @media (max-width: 599px) {
   .hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 header.site-header + * {
