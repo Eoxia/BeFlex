@@ -5,7 +5,7 @@ module.exports = {
   ...defaultConfig,
   entry: {
     'block-animation-in': './assets/js/gutenberg-src/block-animation-in.js',
-    'block-hide-on-mobile': './assets/js/gutenberg-src/block-hide-on-mobile.js'
+    'block-hide-on': './assets/js/gutenberg-src/block-hide-on.js'
   },
   output: {
     path: path.join(__dirname, './assets/js/gutenberg-build'),

@@ -1,11 +1,35 @@
-/******/ (function() { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  return _extends = Object.assign ? Object.assign.bind() : function (n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, _extends.apply(null, arguments);
+}
+
+
+/***/ }),
 
 /***/ "./node_modules/classnames/index.js":
 /*!******************************************!*\
   !*** ./node_modules/classnames/index.js ***!
   \******************************************/
-/***/ (function(module, exports) {
+/***/ ((module, exports) => {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	Copyright (c) 2018 Jed Watson.
@@ -18,41 +42,58 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	'use strict';
 
 	var hasOwn = {}.hasOwnProperty;
-	var nativeCodeString = '[native code]';
 
-	function classNames() {
-		var classes = [];
+	function classNames () {
+		var classes = '';
 
 		for (var i = 0; i < arguments.length; i++) {
 			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg)) {
-				if (arg.length) {
-					var inner = classNames.apply(null, arg);
-					if (inner) {
-						classes.push(inner);
-					}
-				}
-			} else if (argType === 'object') {
-				if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
-					classes.push(arg.toString());
-					continue;
-				}
-
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
+			if (arg) {
+				classes = appendClass(classes, parseValue(arg));
 			}
 		}
 
-		return classes.join(' ');
+		return classes;
+	}
+
+	function parseValue (arg) {
+		if (typeof arg === 'string' || typeof arg === 'number') {
+			return arg;
+		}
+
+		if (typeof arg !== 'object') {
+			return '';
+		}
+
+		if (Array.isArray(arg)) {
+			return classNames.apply(null, arg);
+		}
+
+		if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+			return arg.toString();
+		}
+
+		var classes = '';
+
+		for (var key in arg) {
+			if (hasOwn.call(arg, key) && arg[key]) {
+				classes = appendClass(classes, key);
+			}
+		}
+
+		return classes;
+	}
+
+	function appendClass (value, newClass) {
+		if (!newClass) {
+			return value;
+		}
+	
+		if (value) {
+			return value + ' ' + newClass;
+		}
+	
+		return value + newClass;
 	}
 
 	if ( true && module.exports) {
@@ -74,41 +115,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
   \*********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["element"];
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _extends; }
-/* harmony export */ });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
 
 /***/ })
 
@@ -140,60 +150,59 @@ function _extends() {
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-!function() {
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+(() => {
 "use strict";
-/*!*********************************************************!*\
-  !*** ./assets/js/gutenberg-src/block-hide-on-mobile.js ***!
-  \*********************************************************/
+/*!**************************************************!*\
+  !*** ./assets/js/gutenberg-src/block-hide-on.js ***!
+  \**************************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 // Declare
@@ -203,35 +212,33 @@ const bfCheckNamespace = name => {
   }, {
     name: 'beflex/'
   }];
-
   for (let i = 0; namespace.length > i; i++) {
     if (name.startsWith(namespace[i].name)) {
       return true;
     }
   }
-
   return false;
 };
-
-const bfHideOnMobileAttributes = (settings, name) => {
+const bfHideOnAttributes = (settings, name) => {
   if (!bfCheckNamespace(name)) {
     return settings;
   }
-
   return Object.assign({}, settings, {
     attributes: Object.assign({}, settings.attributes, {
       hideOnMobile: {
+        type: 'boolean'
+      },
+      hideOnDesktop: {
         type: 'boolean'
       }
     })
   });
 };
-
-wp.hooks.addFilter('blocks.registerBlockType', 'beflex/hide-on-mobile-attributes', bfHideOnMobileAttributes);
+wp.hooks.addFilter('blocks.registerBlockType', 'beflex/hide-on-attributes', bfHideOnAttributes);
 const {
   createHigherOrderComponent
 } = wp.compose;
-const bfHideOnMobileControls = createHigherOrderComponent(BlockEdit => {
+const bfHideOnControls = createHigherOrderComponent(BlockEdit => {
   return props => {
     const {
       Fragment,
@@ -251,51 +258,81 @@ const bfHideOnMobileControls = createHigherOrderComponent(BlockEdit => {
       isSelected
     } = props;
     const {
-      hideOnMobile
+      hideOnMobile,
+      hideOnDesktop
     } = attributes;
-
     if (!bfCheckNamespace(props.name)) {
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockEdit, props);
     }
-
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockEdit, props), isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(InspectorAdvancedControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(ToggleControl, {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockEdit, props), isSelected && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(InspectorAdvancedControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("strong", {
+      style: {
+        display: "block",
+        marginBottom: "6px"
+      }
+    }, wp.i18n.__("Hide on", 'beflex')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(ToggleControl, {
       label: wp.i18n.__('Hide on mobile', 'beflex'),
-      checked: !!hideOnMobile,
-      onChange: () => setAttributes({
-        hideOnMobile: !hideOnMobile
-      })
-    })));
+      checked: hideOnMobile === true,
+      onChange: value => setAttributes({
+        hideOnMobile: value
+      }),
+      className: "full-width-control-wrapper"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(ToggleControl, {
+      label: wp.i18n.__('Hide on desktop', 'beflex'),
+      checked: hideOnDesktop === true,
+      onChange: value => setAttributes({
+        hideOnDesktop: value
+      }),
+      className: "full-width-control-wrapper"
+    }))));
   };
-}, 'bfHideOnMobileControls');
-wp.hooks.addFilter('editor.BlockEdit', 'beflex/hide-on-mobile-controls', bfHideOnMobileControls);
-const bfHideOnMobileProp = createHigherOrderComponent(BlockListBlock => {
+}, 'bfHideOnControls');
+wp.hooks.addFilter('editor.BlockEdit', 'beflex/hide-on-controls', bfHideOnControls);
+const bfHideOnProp = createHigherOrderComponent(BlockListBlock => {
   return props => {
+    console.log(props);
     if (!bfCheckNamespace(props.name)) {
       return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockListBlock, props);
     }
-
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(BlockListBlock, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       className: 'hide-on-mobile'
     }));
   };
-}, 'bfHideOnMobileProp');
-wp.hooks.addFilter('editor.BlockListBlock', 'beflex/hide-on-mobile-prop', bfHideOnMobileProp);
+}, 'bfHideOnProp');
+
+// wp.hooks.addFilter(
+//     'editor.BlockListBlock',
+//     'beflex/hide-on-prop',
+//     bfHideOnProp
+// );
 
 
-const bfHideOnMobileDisplay = (extraProps, blockType, attributes) => {
+const bfHideOnDisplay = (extraProps, blockType, attributes) => {
   const {
-    hideOnMobile
+    hideOnMobile,
+    hideOnDesktop
   } = attributes;
-
-  if (hideOnMobile) {
-    extraProps.className = classnames__WEBPACK_IMPORTED_MODULE_2___default()(extraProps.className, 'hide-on-mobile');
+  const {
+    className
+  } = extraProps;
+  if (!bfCheckNamespace(blockType.name)) {
+    return extraProps;
   }
+  return Object.assign({}, extraProps, {
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, {
+      'hide-on-mobile': hideOnMobile,
+      'hide-on-desktop': hideOnDesktop
+    })
+  });
 
-  return extraProps;
+  // if (hideOnMobile) {
+  //   extraProps.className = classnames(extraProps.className, 'hide-on-mobile');
+  // }
 };
+wp.hooks.addFilter('blocks.getSaveContent.extraProps', 'beflex/hide-on-display', bfHideOnDisplay);
+})();
 
-wp.hooks.addFilter('blocks.getSaveContent.extraProps', 'beflex/hide-on-mobile-display', bfHideOnMobileDisplay);
-}();
 /******/ })()
 ;
-//# sourceMappingURL=block-hide-on-mobile.js.map
+//# sourceMappingURL=block-hide-on.js.map

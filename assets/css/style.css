@@ -239,10 +239,15 @@ body.frontend .bf-block-animatein.bf-block-animatein--type-scaleout:not(.bf-bloc
 }
 
 /*--------------------------------------------------------------
-## Hide on mobile
+## Hide on
 --------------------------------------------------------------*/
 @media (max-width: 599px) {
   .hide-on-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 599px) {
+  .hide-on-desktop {
     display: none !important;
   }
 }
