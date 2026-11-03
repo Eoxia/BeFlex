@@ -1,5 +1,4 @@
-@import "block/block";
-@import "parts/parts";
-@import "pattern/pattern";
-@import "element/element";
-@import "font/font";
+@use "block/block";
+@use "parts/parts";
+@use "pattern/pattern";
+@use "element/element";
