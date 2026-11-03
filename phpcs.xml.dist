@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="Beflex">
+	<description>Coding standards for the Beflex theme.</description>
+
+	<file>.</file>
+
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/languages/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+	<arg value="sp"/>
+
+	<!-- Minimum PHP and WordPress versions, see style.css. -->
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_wp_version" value="6.6"/>
+
+	<rule ref="WordPress">
+		<!-- Line endings are normalized by git (core.autocrlf) and .editorconfig. -->
+		<exclude name="Generic.Files.LineEndings"/>
+	</rule>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="beflex"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="beflex"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

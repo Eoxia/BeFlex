@@ -1,0 +1,178 @@
+# Copyright (C) 2026 the Eoxia team
+# This file is distributed under the AGPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Beflex 4.2.0\\n"
+"Report-Msgid-Bugs-To: https://github.com/Eoxia/BeFlex/issues\\n"
+"POT-Creation-Date: 2026-11-03 00:00+0000\\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
+"Language: \\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"X-Domain: beflex\\n"
+#: style.css
+msgid "Beflex FSE"
+msgstr ""
+
+#: style.css
+msgid "BeFlex is a free Theme Block. Imagination is the only limit."
+msgstr ""
+
+#: inc/block-patterns.php
+msgid "Design"
+msgstr ""
+
+#: inc/block-patterns.php
+msgid "Headers"
+msgstr ""
+
+#: inc/block-patterns.php
+msgid "Footers"
+msgstr ""
+
+#: inc/block-patterns.php
+msgid "Query"
+msgstr ""
+
+#: inc/patterns/design-columns-media.php
+msgid "Columns with rounded media and text"
+msgstr ""
+
+#: inc/patterns/design-media-content-background.php
+msgid "Image and content with background"
+msgstr ""
+
+#: inc/patterns/header-photo.php
+msgid "Header with background banner"
+msgstr ""
+
+#: inc/patterns/query-background.php
+msgid "Call To Action - Background"
+msgstr ""
+
+#: inc/patterns/query-standard.php
+msgid "Call To Action - Standard"
+msgstr ""
+
+#: inc/patterns/design-columns-media.php
+msgid "Title"
+msgstr ""
+
+#: inc/patterns/design-columns-media.php
+msgid "Button link"
+msgstr ""
+
+#: inc/patterns/query-standard.php
+msgid "Read more"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Caribbean"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Light Grey"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Grey"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Anthracite"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Heading (Lato)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Body (Open Sans)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Monospace"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normal"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (default)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Centered header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Large header with photo"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer (default)"
+msgstr ""
+
+#: styles/dark.json
+msgctxt "Style variation name"
+msgid "Dark"
+msgstr ""
