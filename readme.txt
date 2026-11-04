@@ -25,21 +25,11 @@ Beflex is also easy to use for web developers.
 Beflex FSE, Copyright 2026 the Eoxia team.
 Beflex FSE is distributed under the terms of the AGPLv3.
 
-This theme bundles the following third-party resources:
-
-Lato font, Copyright 2010-2014 Łukasz Dziedzic
-License: SIL Open Font License, 1.1, https://openfontlicense.org
-Source: https://www.latofonts.com/
-
-Open Sans font, Copyright 2020 The Open Sans Project Authors
-License: SIL Open Font License, 1.1, https://openfontlicense.org
-Source: https://github.com/googlefonts/opensans
-
 == Changelog ==
 
 = 4.2.0 =
 * Security: replace the outdated build toolchain (gulp, @wordpress/scripts 18) and fix every npm vulnerability reported by Dependabot.
-* Privacy: Lato and Open Sans are now bundled with the theme and declared in theme.json instead of being loaded from Google Fonts.
+* Fonts: Lato and Open Sans now come from the WordPress Font Library instead of Google Fonts. After updating, install them once from Appearance > Editor > Styles > Typography > Manage fonts > Install fonts (Google Fonts collection). Until then, a system sans-serif font is used.
 * Removed: "Hide on" and "Animation in" block attributes, now provided by the EO Blocks plugin. The `hide-on-mobile` / `hide-on-desktop` classes are kept so existing content keeps working.
 * Removed: jQuery dependency, the front-end script is now vanilla JavaScript loaded with `defer`.
 * Updated: theme.json and style variations to version 3 (WordPress 6.6+).
