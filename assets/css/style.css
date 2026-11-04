@@ -17,8 +17,13 @@ Text Domain: beflex
 /*--------------------------------------------------------------
 ## Cover
 --------------------------------------------------------------*/
-.wp-block-cover .wp-block-cover__inner-container {
-  max-width: 840px;
+/**
+ * Covers without a layout (flow) take the content width of the theme.
+ * Covers with a constrained layout are already handled by WordPress,
+ * which also lets their children use the wide and full alignments.
+ */
+.wp-block-cover .wp-block-cover__inner-container:not(.is-layout-constrained) {
+  max-width: var(--wp--style--global--content-size);
 }
 
 /*--------------------------------------------------------------
@@ -51,13 +56,13 @@ Text Domain: beflex
     margin-right: calc(-1 * var(--wp--custom--spacing--outer));
   }
   .wp-block-media-text.alignfull.has-media-on-the-right .wp-block-media-text__content {
-    padding-left: calc((100vw - 1100px) / 2 - var(--wp--custom--spacing--outer));
+    padding-left: calc((100vw - var(--wp--style--global--wide-size)) / 2 - var(--wp--custom--spacing--outer));
   }
   .wp-block-media-text.alignfull:not(.has-media-on-the-right) .wp-block-media-text__media {
     margin-left: calc(-1 * var(--wp--custom--spacing--outer));
   }
   .wp-block-media-text.alignfull:not(.has-media-on-the-right) .wp-block-media-text__content {
-    padding-right: calc((100vw - 1100px) / 2 - var(--wp--custom--spacing--outer));
+    padding-right: calc((100vw - var(--wp--style--global--wide-size)) / 2 - var(--wp--custom--spacing--outer));
   }
 }
 
