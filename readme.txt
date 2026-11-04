@@ -32,6 +32,7 @@ Beflex FSE is distributed under the terms of the AGPLv3.
 * Fonts: Lato and Open Sans now come from the WordPress Font Library instead of Google Fonts. After updating, install them once from Appearance > Editor > Styles > Typography > Manage fonts > Install fonts (Google Fonts collection). Until then, a system sans-serif font is used.
 * Removed: "Hide on" and "Animation in" block attributes, now provided by the EO Blocks plugin. The `hide-on-mobile` / `hide-on-desktop` classes are kept so existing content keeps working.
 * Removed: jQuery dependency, the front-end script is now vanilla JavaScript loaded with `defer`.
+* Updated: the child theme block generator (`inc/generateBlock.js`) creates vanilla JavaScript block scripts, with no jQuery dependency, loaded in the footer with `defer`.
 * Updated: theme.json and style variations to version 3 (WordPress 6.6+).
 * Updated: single post template uses the Comments block instead of the deprecated Post Comments block.
 * Updated: query patterns use the Post Template grid layout.

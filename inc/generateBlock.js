@@ -56,33 +56,43 @@ function generateSCSSFile(folder, keywords) {
 }
 
 function generateJSFiles(folder, keywords) {
-    const jsContent = `(function($){
+    const jsContent = `/**
+ * {{blockShort}} block script (vanilla JavaScript, no jQuery).
+ */
+( function () {
+    'use strict';
+
     /**
-     * initializeBlock
-     *
      * Adds custom JavaScript to the block HTML.
      *
-     * @param   object $block The block jQuery element.
-     * @param   object attributes The block attributes (only available when editing).
-     * @return  void
+     * @param {HTMLElement|Object} block The block element. In the editor, ACF passes a jQuery object.
+     * @return {void}
      */
-    var initializeBlock = function( $block ) {
-    }
-    
-    // Initialize each block on page load (front end).
-    $(document).ready(function(){
-        $('.{{blockName}}').each(function(){
-            initializeBlock( $(this) );
-        });
-    });
-    
-    // Initialize dynamic block preview (editor).
-    if( window.acf ) {
-        window.acf.addAction( 'render_block_preview/type={{blockName}}', initializeBlock );
+    function initializeBlock( block ) {
+        var element = block && block.jquery ? block[ 0 ] : block;
+
+        if ( ! element ) {
+            return;
+        }
     }
 
-})(jQuery);
-    `;
+    // Initialize each block on page load (front end).
+    function init() {
+        document.querySelectorAll( '.{{blockName}}' ).forEach( initializeBlock );
+    }
+
+    if ( 'loading' === document.readyState ) {
+        document.addEventListener( 'DOMContentLoaded', init );
+    } else {
+        init();
+    }
+
+    // Initialize dynamic block preview (editor).
+    if ( window.acf ) {
+        window.acf.addAction( 'render_block_preview/type={{blockName}}', initializeBlock );
+    }
+}() );
+`;
     const jsFileName = `${keywords.blockName}.js`; // Utilisation du mot-clé blockName
     generatePHPFile(path.join(folder, 'assets/js'), jsFileName, jsContent, keywords);
 }
@@ -144,7 +154,7 @@ if ( ! defined( '{{blockVar}}_URL' ) ) {
  */
 function {{blockFunc}}_register_acf_blocks() {
     wp_register_style( 'block-{{blockName}}-style', {{blockVar}}_URL . '/assets/css/style.min.css' );
-    wp_register_script( 'block-{{blockName}}-script', {{blockVar}}_URL . '/assets/js/{{blockName}}.js', array('jquery'), '', true );
+    wp_register_script( 'block-{{blockName}}-script', {{blockVar}}_URL . '/assets/js/{{blockName}}.js', array(), wp_get_theme()->get( 'Version' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
     register_block_type( {{blockVar}}_DIR . '/assets/json/' );
 }
 add_action( 'init', '{{blockFunc}}_register_acf_blocks', 5 );
