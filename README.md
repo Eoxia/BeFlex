@@ -14,6 +14,16 @@ All the sections are editable from WordPress Dashboard > Appearance > Editor.
 2. Activate the theme from within `Appearance` > `Themes`.
 3. Customize templates, template parts and styles from `Appearance` > `Editor`.
 
+## Fonts
+
+The theme does not ship font files. It uses **Lato** (headings) and **Open Sans** (body text) from the WordPress Font Library:
+
+1. Go to `Appearance` > `Editor` > `Styles` > `Typography` and click **Manage fonts**.
+2. In **Install fonts**, choose the Google Fonts collection (allow access when asked).
+3. Install **Lato** and **Open Sans** with every variant.
+
+WordPress copies the files to `wp-content/uploads/fonts` and serves them from your site: visitors never connect to Google. Until the fonts are installed, a system sans-serif font is used.
+
 ## Development
 
 Requirements: Node.js 22.13+ and Composer.
