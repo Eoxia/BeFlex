@@ -2,20 +2,20 @@
 # Gutenberg Blocks
 --------------------------------------------------------------*/
 
-@import "cover";
-@import "button";
-@import "media-text";
-@import "site-title";
-@import "site-tagline";
-@import "separator";
-@import "post-terms";
-@import "post-comments";
-@import "post-excerpt";
-@import "post-author";
-@import "query-pagination";
+@use "cover";
+@use "button";
+@use "media-text";
+@use "site-title";
+@use "site-tagline";
+@use "separator";
+@use "post-terms";
+@use "post-comments";
+@use "post-excerpt";
+@use "post-author";
+@use "query-pagination";
 
 /*--------------------------------------------------------------
 # Gutenberg Blocks Attributes
 --------------------------------------------------------------*/
 
-@import "attributes/attributes";
+@use "attributes/attributes";

@@ -1,10 +1,17 @@
 <?php
 /**
- * Header photo
+ * Pattern: Header photo
+ *
+ * @package Beflex
+ * @since 4.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 return array(
-	'title'      => esc_html__( 'Header with background banner', 'beflex' ),
+	'title'      => __( 'Header with background banner', 'beflex' ),
 	'categories' => array( 'header' ),
 	'keywords'   => array( 'beflex', 'header' ),
 	'content'    => '<!-- wp:cover {"url":"' . esc_url( get_theme_file_uri( 'assets/images/banner.jpg' ) ) . '","id":20,"hasParallax":true,"dimRatio":50,"isDark":false,"align":"full"} -->

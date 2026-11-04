@@ -1,5 +1,8 @@
+@use "../../../variable/variable" as *;
+
 /*--------------------------------------------------------------
-## Hide on
+## Hide on (legacy)
+Kept so blocks saved with the removed "Hide on" attribute keep working.
 --------------------------------------------------------------*/
 
 @media ( max-width: $media__mobile ) {

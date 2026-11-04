@@ -1,12 +1,31 @@
 # Beflex - WordPress Theme
 
-Beflex is an block based WordPress theme (currently in developpment).
-All the sections are editable from WordPress Dashboard > Site Editor
+Beflex is a block based WordPress theme.
+All the sections are editable from WordPress Dashboard > Appearance > Editor.
+
+## Requirements
+
+- WordPress 6.6 or later
+- PHP 7.4 or later
 
 ## Instructions to Get Started
 
 1. Clone this repository or upload a zip of the theme into your site’s themes directory.
-2. Install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin.
-3. Enable the "Full Site Editing" experiment in the `Gutenberg` > `Experiments panel`.
-4. Activate the new theme from within `Appearance` > `Themes`.
-5. Enable navigation screen from within `Gutenberg` > `Experiments` > `Enable navigation screen`.
+2. Activate the theme from within `Appearance` > `Themes`.
+3. Customize templates, template parts and styles from `Appearance` > `Editor`.
+
+## Development
+
+Requirements: Node.js 22.13+ and Composer.
+
+```bash
+npm install       # Install the CSS build tools
+npm run build     # Compile assets/scss into assets/css/style.css and style.min.css
+npm start         # Same, then rebuild on every SCSS change
+
+composer install  # Install PHP_CodeSniffer, WordPress Coding Standards and PHPCompatibility
+composer lint     # Check the PHP code
+composer lint:fix # Fix what can be fixed automatically
+```
+
+Translations live in `languages/` (`beflex.pot` template, `fr_FR` translation).

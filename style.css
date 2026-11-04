@@ -3,11 +3,12 @@ Theme Name: Beflex FSE
 Author: the Eoxia team
 Author URI: https://www.eoxia.com
 Description: BeFlex is a free Theme Block. Imagination is the only limit.
-Requires at least: 5.3
-Tested up to: 5.5
-Requires PHP: 5.6
-Version: 4.0
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 4.2.0
 License: AGPLv3
 License URI: https://spdx.org/licenses/AGPL-3.0-or-later.html
 Text Domain: beflex
+Domain Path: /languages
 */
