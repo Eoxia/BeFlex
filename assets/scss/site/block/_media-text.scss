@@ -22,7 +22,7 @@
         margin-right: calc(-1*var(--wp--custom--spacing--outer));
       }
       .wp-block-media-text__content {
-        padding-left: calc( ((100vw - 1100px) / 2) - var(--wp--custom--spacing--outer) );
+        padding-left: calc( ((100vw - var(--wp--style--global--wide-size)) / 2) - var(--wp--custom--spacing--outer) );
       }
     }
     &.alignfull:not(.has-media-on-the-right) {
@@ -30,7 +30,7 @@
         margin-left: calc(-1*var(--wp--custom--spacing--outer));
       }
       .wp-block-media-text__content {
-        padding-right: calc( ((100vw - 1100px) / 2) - var(--wp--custom--spacing--outer) );
+        padding-right: calc( ((100vw - var(--wp--style--global--wide-size)) / 2) - var(--wp--custom--spacing--outer) );
       }
     }
   }

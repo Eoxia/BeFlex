@@ -36,6 +36,7 @@ Beflex FSE is distributed under the terms of the AGPLv3.
 * Updated: single post template uses the Comments block instead of the deprecated Post Comments block.
 * Updated: query patterns use the Post Template grid layout.
 * Updated: SCSS uses the Sass module system (`@use`) instead of the deprecated `@import`.
+* Fixed: the Cover inner container and the full-width Media & Text block follow the content and wide sizes set in theme.json instead of hardcoded widths (#67).
 * i18n: English source strings and French translation.
 * Compatibility: tested on PHP 7.4 to 8.3 (PHPCompatibility checked for later versions) and WordPress 7.1, requires WordPress 6.6+.
 * Coding standards: PHP code follows the WordPress Coding Standards (PHPCS configuration included).
