@@ -6,18 +6,29 @@
  * @since 4.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Register the theme block pattern categories and block patterns.
+ *
+ * @since 4.0.0
+ *
+ * @return void
+ */
 function beflex_register_block_patterns() {
 	$block_pattern_categories = array(
 		'design' => array( 'label' => __( 'Design', 'beflex' ) ),
 		'header' => array( 'label' => __( 'Headers', 'beflex' ) ),
 		'footer' => array( 'label' => __( 'Footers', 'beflex' ) ),
-		'query'  => array( 'label' => __( 'Requête', 'beflex' ) ),
+		'query'  => array( 'label' => __( 'Query', 'beflex' ) ),
 	);
 
 	/**
 	 * Filters the theme block pattern categories.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since 4.0.0
 	 *
 	 * @param array[] $block_pattern_categories {
 	 *     An associative array of block pattern categories, keyed by category name.
@@ -48,7 +59,7 @@ function beflex_register_block_patterns() {
 	/**
 	 * Filters the theme block patterns.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since 4.0.0
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
@@ -56,6 +67,10 @@ function beflex_register_block_patterns() {
 
 	foreach ( $block_patterns as $block_pattern ) {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
+
+		if ( ! is_readable( $pattern_file ) ) {
+			continue;
+		}
 
 		register_block_pattern(
 			'beflex/' . $block_pattern,

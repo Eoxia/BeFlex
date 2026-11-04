@@ -1,0 +1,179 @@
+# Copyright (C) 2026 the Eoxia team
+# This file is distributed under the AGPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Beflex 4.2.0\\n"
+"Report-Msgid-Bugs-To: https://github.com/Eoxia/BeFlex/issues\\n"
+"POT-Creation-Date: 2026-11-03 00:00+0000\\n"
+"PO-Revision-Date: 2026-11-03 00:00+0000\\n"
+"Language: fr_FR\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\\n"
+"X-Domain: beflex\\n"
+#: style.css
+msgid "Beflex FSE"
+msgstr "Beflex FSE"
+
+#: style.css
+msgid "BeFlex is a free Theme Block. Imagination is the only limit."
+msgstr "BeFlex est un thème bloc gratuit. L’imagination est la seule limite."
+
+#: inc/block-patterns.php
+msgid "Design"
+msgstr "Design"
+
+#: inc/block-patterns.php
+msgid "Headers"
+msgstr "En-têtes"
+
+#: inc/block-patterns.php
+msgid "Footers"
+msgstr "Pieds de page"
+
+#: inc/block-patterns.php
+msgid "Query"
+msgstr "Requête"
+
+#: inc/patterns/design-columns-media.php
+msgid "Columns with rounded media and text"
+msgstr "Colonnes avec média arrondi et texte"
+
+#: inc/patterns/design-media-content-background.php
+msgid "Image and content with background"
+msgstr "Image et contenu avec arrière-plan"
+
+#: inc/patterns/header-photo.php
+msgid "Header with background banner"
+msgstr "En-tête avec bannière en arrière-plan"
+
+#: inc/patterns/query-background.php
+msgid "Call To Action - Background"
+msgstr "Appel à l’action - Arrière-plan"
+
+#: inc/patterns/query-standard.php
+msgid "Call To Action - Standard"
+msgstr "Appel à l’action - Standard"
+
+#: inc/patterns/design-columns-media.php
+msgid "Title"
+msgstr "Titre"
+
+#: inc/patterns/design-columns-media.php
+msgid "Button link"
+msgstr "Lien du bouton"
+
+#: inc/patterns/query-standard.php
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Principale"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secondaire"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Tertiaire"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Caribbean"
+msgstr "Caraïbes"
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr "Blanc"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Light Grey"
+msgstr "Gris clair"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Grey"
+msgstr "Gris"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Anthracite"
+msgstr "Anthracite"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr "Noir"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Heading (Lato)"
+msgstr "Police de titre (Lato)"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Body (Open Sans)"
+msgstr "Police de contenu (Open Sans)"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Monospace"
+msgstr "Monospace"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Serif"
+msgstr "Serif"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Petite"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normal"
+msgstr "Normale"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Grande"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr "Très grande"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (default)"
+msgstr "Entête (défaut)"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Centered header"
+msgstr "Entête centré"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Large header with photo"
+msgstr "Entête large avec photo"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer (default)"
+msgstr "Pied de page (défaut)"
+
+#: styles/dark.json
+msgctxt "Style variation name"
+msgid "Dark"
+msgstr "Sombre"

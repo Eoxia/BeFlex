@@ -1,7 +1,21 @@
 /*--------------------------------------------------------------
-## Post Comments
+## Comments
 --------------------------------------------------------------*/
 
+.wp-block-comments {
+  .beflex-comment {
+    background: var(--wp--preset--color--light-grey);
+    padding: 1em;
+    border-radius: 6px;
+    margin-bottom: 1.5em;
+  }
+
+  input[type="submit"] {
+    border: 0;
+  }
+}
+
+/** Legacy core/post-comments block (templates customized before 4.2.0). */
 .wp-block-post-comments {
   .comment {
     .comment-body {

@@ -1,0 +1,17 @@
+@use "../../../variable/variable" as *;
+
+/*--------------------------------------------------------------
+## Hide on (legacy)
+Kept so blocks saved with the removed "Hide on" attribute keep working.
+--------------------------------------------------------------*/
+
+@media ( max-width: $media__mobile ) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+@media ( min-width: $media__mobile ) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}

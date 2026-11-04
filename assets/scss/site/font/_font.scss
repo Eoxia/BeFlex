@@ -1,3 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+/**
+ * Lato and Open Sans are installed from the WordPress Font Library
+ * (Google Fonts collection), which defines these presets on :root.
+ * Until they are installed, fall back to the system sans-serif font.
+ * The html selector is less specific than :root, so installed fonts win.
+ */
+html {
+  --wp--preset--font-family--lato: sans-serif;
+  --wp--preset--font-family--open-sans: sans-serif;
+}

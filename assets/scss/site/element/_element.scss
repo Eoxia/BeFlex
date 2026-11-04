@@ -1,9 +1,9 @@
-@import "markup";
-@import "site-container";
+@use "markup";
+@use "site-container";
 
 /*--------------------------------------------------------------
 # CSS Modules
 Used for development
 --------------------------------------------------------------*/
-@import "bf-button";
-@import "bf-grid";
+@use "bf-button";
+@use "bf-grid";
