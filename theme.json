@@ -57,16 +57,6 @@
 			"defaultFontSizes": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "Lato, sans-serif",
-					"name": "Heading (Lato)",
-					"slug": "lato"
-				},
-				{
-					"fontFamily": "\"Open Sans\", sans-serif",
-					"name": "Body (Open Sans)",
-					"slug": "open-sans"
-				},
-				{
 					"fontFamily": "Consolas, \"Andale Mono WT\", \"Andale Mono\", \"Lucida Console\", \"Lucida Sans Typewriter\", \"DejaVu Sans Mono\", \"Bitstream Vera Sans Mono\", \"Liberation Mono\", \"Nimbus Mono L\", Monaco, \"Courier New\", Courier, monospace",
 					"name": "Monospace",
 					"slug": "monospace"

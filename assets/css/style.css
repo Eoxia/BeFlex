@@ -774,3 +774,17 @@ Used for development
     grid-column: auto/span 1 !important;
   }
 }
+
+/*--------------------------------------------------------------
+## Fonts
+--------------------------------------------------------------*/
+/**
+ * Lato and Open Sans are installed from the WordPress Font Library
+ * (Google Fonts collection), which defines these presets on :root.
+ * Until they are installed, fall back to the system sans-serif font.
+ * The html selector is less specific than :root, so installed fonts win.
+ */
+html {
+  --wp--preset--font-family--lato: sans-serif;
+  --wp--preset--font-family--open-sans: sans-serif;
+}
